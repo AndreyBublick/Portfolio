@@ -4,13 +4,23 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import { App } from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { GlobalStyles } from './styles/GlobalStyles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+
+    <GlobalStyles />
+
+      <App />
+
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 
