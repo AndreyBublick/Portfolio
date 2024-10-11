@@ -3,7 +3,7 @@ import spriteSVG from '../../assets/images/code-svg.svg';
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
-type propsType = {
+export type propsIconType = {
   id: string;
   width?: number;
   height?: number;
@@ -18,7 +18,7 @@ type svgStyledType = {
 };
 
 
-export const Icon: FC<propsType> = ({ id, width, height, viewBox,color }) => {
+export const Icon: FC<propsIconType> = ({ id, width, height, viewBox,color }) => {
   return <SvgStyled color={color} width={width} height={height} viewBox={viewBox}>
 
     <use xlinkHref={`${spriteSVG}#${id}`}></use>

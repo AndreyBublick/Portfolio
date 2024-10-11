@@ -12,5 +12,10 @@ export const theme = {
     fontSize:{
         link:'20px',
     },
+    container:{
+        width:'1240px',
+        leftAndRight:'20px',
+    },
+
     
 };

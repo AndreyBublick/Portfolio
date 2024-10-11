@@ -32,8 +32,9 @@ export const Main = () => {
 const MainStyled = styled.section`
 
 
-max-width:1240px;
-padding:0 20px;
+max-width:${theme.container.width};
+width:100%;
+padding:0 ${theme.container.leftAndRight};
 margin: 0 auto;
 
 
@@ -75,7 +76,7 @@ img{
 }
 }
 `; 
-const MainTitleStyled = styled.section`
+const MainTitleStyled = styled.h2`
 
 
 
