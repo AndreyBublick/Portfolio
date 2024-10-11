@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import { theme } from '../../styles/theme'
 
 export const Menu = () => {
     return <MenuStyled>
@@ -24,5 +25,14 @@ gap:50px;
 li{
 
 }
-a{}
+a{
+    color:${theme.colors.text};
+font-family: 'DM Sans','Poppins';
+font-size: ${theme.fontSize.link};
+font-weight: 500;
+line-height: 1.3;
+padding:8px 0;
+
+
+}
 `;
