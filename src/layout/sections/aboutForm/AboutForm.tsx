@@ -12,7 +12,7 @@ export const AboutForm = () => {
     <AboutFormStyled>
         <SectionTitle>Contact</SectionTitle>
         <SectionSubTitle>Me</SectionSubTitle>
-        <form action="#" method='post'>
+        <FormStyled action="#" method='post'>
         <FlexWrapper alignItems={'center'} gap={15} flexDirection={'column'}>
         <Input />
         <Input />
@@ -20,7 +20,7 @@ export const AboutForm = () => {
         <button>SEND</button>
         </FlexWrapper>
         
-        </form>
+        </FormStyled>
     </AboutFormStyled>
   )
 }
@@ -31,3 +31,4 @@ width:100%;
 padding:0 ${theme.container.leftAndRight};
 margin: 0 auto;
 `;
+const FormStyled = styled.form``;
