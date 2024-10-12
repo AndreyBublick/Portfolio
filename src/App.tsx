@@ -7,6 +7,8 @@ import { Main } from "./layout/sections/main/Main";
 import { Skills } from "./layout/sections/skills/Skills";
 import { FlexWrapper } from "./components/FlexWrapper";
 import { Projects } from "./layout/sections/projects/Projects";
+import { Contacts } from "./layout/sections/contacts/Contacts";
+import { AboutForm } from "./layout/sections/aboutForm/AboutForm";
 
 export const App = () => {
   return (
@@ -16,6 +18,8 @@ export const App = () => {
       <Main />
       <Skills />
       <Projects />
+      <Contacts />
+      <AboutForm />
 
 
     </FlexWrapper>

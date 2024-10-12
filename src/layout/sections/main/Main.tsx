@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { spin } from '../../../styles/animations/animations';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/theme';
+import { GradientWord } from '../../../components/GradientWord';
 
 export const Main = () => {
     return <MainStyled>
@@ -12,7 +13,7 @@ export const Main = () => {
             <MainTitleStyled>
                 Hi 👋,<br />
                 My name is<br />
-                <span>Pavan MG</span>
+                <GradientWord>Pavan MG</GradientWord>
                 I build things for web
             </MainTitleStyled>
             <div className='image'>
