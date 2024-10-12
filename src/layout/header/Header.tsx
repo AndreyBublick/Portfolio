@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
@@ -10,10 +10,13 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 
 
 export const Header: FC = () => {
+
+const [links,setLinks] = useState(['Home','About','Tech Stack','Projects','Contact',]);
+
     return (<HeaderStyled>
 
         <Logo />
-        <Menu />
+        <Menu links={links} />
         <FlexWrapper gap={20}>
             <Icon id={'git'} />
             <Icon id={'twitter'} width={32} height={32} viewBox={'0 0 32 32'} />

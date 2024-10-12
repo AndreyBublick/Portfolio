@@ -6,6 +6,7 @@ import { Header } from "./layout/header/Header";
 import { Main } from "./layout/sections/main/Main";
 import { Skills } from "./layout/sections/skills/Skills";
 import { FlexWrapper } from "./components/FlexWrapper";
+import { Projects } from "./layout/sections/projects/Projects";
 
 export const App = () => {
   return (
@@ -14,7 +15,7 @@ export const App = () => {
       <Header />
       <Main />
       <Skills />
-
+      <Projects />
 
 
     </FlexWrapper>

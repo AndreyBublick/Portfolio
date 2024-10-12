@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
-export const Menu = () => {
+
+type propsType = {
+    links:Array<string>,
+};
+
+export const Menu:FC<propsType> = ({links}) => {
     return <MenuStyled>
         <ul>
-            <li><NavLink to={'/home'}>Home</NavLink></li>
-            <li><NavLink to={'/about'}>About</NavLink></li>
-            <li><NavLink to={'/tech_stack'}>Tech Stack</NavLink></li>
-            <li><NavLink to={'/projects'}>Projects</NavLink></li>
-            <li><NavLink to={'/contact'}>Contact</NavLink></li>
+
+            {links.map((link)=><li><NavLink key={link} to={`/${link.toLowerCase().split('').map((letter)=> letter===' ' ? '_' : letter).join('')}`}>{link}</NavLink></li>)}
+           
         </ul>
 
     </MenuStyled>
