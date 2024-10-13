@@ -14,7 +14,7 @@ export const Textarea = () => {
 
 
 const TextareaStyled = styled.textarea`
-width:600px;
+width:710px;
 
 background-color:transparent;
 color:${theme.colors.gradiend.color1};

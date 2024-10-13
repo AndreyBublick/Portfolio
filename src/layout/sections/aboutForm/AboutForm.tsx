@@ -11,7 +11,7 @@ export const AboutForm = () => {
   return (
     <AboutFormStyled>
         <SectionTitle>Contact</SectionTitle>
-        <SectionSubTitle>Me</SectionSubTitle>
+        <SectionSubTitle>Send Me</SectionSubTitle>
         <FormStyled action="#" method='post'>
         <FlexWrapper alignItems={'center'} gap={15} flexDirection={'column'}>
         <Input />
@@ -30,5 +30,8 @@ max-width:${theme.container.width};
 width:100%;
 padding:0 ${theme.container.leftAndRight};
 margin: 0 auto;
+&>span{
+  margin-bottom:48px;
+}
 `;
 const FormStyled = styled.form``;
