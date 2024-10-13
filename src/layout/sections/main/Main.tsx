@@ -6,16 +6,21 @@ import { spin } from '../../../styles/animations/animations';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/theme';
 import { GradientWord } from '../../../components/GradientWord';
+import { SectionTitle } from '../../../components/SectionTitle';
 
 export const Main = () => {
     return <MainStyled>
         <FlexWrapper gap={170}>
-            <MainTitleStyled>
+            <SectionTitle fSize={'58px'} textAlign={'left'}>
                 Hi 👋,<br />
                 My name is<br />
                 <GradientWord>Pavan MG</GradientWord>
                 I build things for web
-            </MainTitleStyled>
+            </SectionTitle>
+
+
+
+
             <div className='image'>
 
                 <div className='image_body'>
@@ -76,7 +81,7 @@ img{
     object-fit:cover;
 }
 }
-`; 
+`;
 const MainTitleStyled = styled.h2`
 
 
@@ -88,13 +93,7 @@ line-height: 1.3;
 letter-spacing: -1px;
 
 
-span{
-    display:block;
-    background: linear-gradient(270deg, ${theme.colors.gradiend.color1},${theme.colors.gradiend.color2} 120%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Для поддержки WebKit-браузеров */
-  background-clip: text; /* Для остальных браузеров */
-}
+
 
 
 

@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import { theme } from "../styles/theme";
 
+type propsType = {
+    textAlign?:'start'|'end'|'left'|'right',
+   fSize?:string,  
+   mBottom?:string;  
 
+};
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled.h2<propsType>`
        
-
-font-size: 48px;
+font-size: ${ props => props.fSize || '48px'};
 font-weight: 700;
 line-height: 1/* 0.54 */;
-text-align: center;
+text-align: ${props=> props.textAlign ? props.textAlign : 'center'};
 color:${theme.colors.title};
-margin-bottom:1em;
+margin-bottom: ${props =>   props.mBottom || '1em'}  ;
 
 `; 

@@ -9,6 +9,7 @@ import { FlexWrapper } from "./components/FlexWrapper";
 import { Projects } from "./layout/sections/projects/Projects";
 import { Contacts } from "./layout/sections/contacts/Contacts";
 import { AboutForm } from "./layout/sections/aboutForm/AboutForm";
+import { AboutMe } from "./layout/sections/aboutMe/AboutMe";
 
 export const App = () => {
   return (
@@ -16,9 +17,11 @@ export const App = () => {
 
       <Header />
       <Main />
+      <AboutMe />
       <Skills />
       <Projects />
       <Contacts />
+      
       <AboutForm />
 
 
