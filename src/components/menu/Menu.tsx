@@ -6,13 +6,18 @@ import { theme } from '../../styles/theme'
 
 type propsType = {
     links:Array<string>,
+    FZ?:string,
+};
+type MenuStyledPorpsType = {
+    FZ?:string,
+
 };
 
-export const Menu:FC<propsType> = ({links}) => {
-    return <MenuStyled>
+export const Menu:FC<propsType> = ({links,FZ}) => {
+    return <MenuStyled FZ={FZ}>
         <ul>
 
-            {links.map((link)=><li><NavLink key={link} to={`/${link.toLowerCase().split('').map((letter)=> letter===' ' ? '_' : letter).join('')}`}>{link}</NavLink></li>)}
+            {links.map((link)=><li key={link}><NavLink  to={`/${link.toLowerCase().split('').map((letter)=> letter===' ' ? '_' : letter).join('')}`}>{link}</NavLink></li>)}
            
         </ul>
 
@@ -20,7 +25,7 @@ export const Menu:FC<propsType> = ({links}) => {
 }
 
 
-const MenuStyled = styled.nav`
+const MenuStyled = styled.nav<MenuStyledPorpsType>`
 ul{
     display:flex;
 gap:50px;
@@ -29,9 +34,9 @@ li{
 
 }
 a{
-    color:${theme.colors.text};
+    
 font-family: 'DM Sans','Poppins';
-font-size: ${theme.fontSize.link};
+font-size: ${props=> props.FZ || theme.fontSize.link};
 font-weight: 500;
 line-height: 1.3;
 padding:8px 0;

@@ -6,26 +6,27 @@ import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Input } from '../../../components/input/Input';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Textarea } from '../../../components/textarea/Textarea';
+import { Button } from '../../../components/button/Button';
 
-export const AboutForm = () => {
+export const ContactForm = () => {
   return (
-    <AboutFormStyled>
+    <ContactFormStyled>
         <SectionTitle>Contact</SectionTitle>
         <SectionSubTitle>Send Me</SectionSubTitle>
         <FormStyled action="#" method='post'>
         <FlexWrapper alignItems={'center'} gap={15} flexDirection={'column'}>
-        <Input />
-        <Input />
+        <Input placeholderBody={'your First Name'} />
+        <Input placeholderBody={'your Last Name'}/>
         <Textarea />
-        <button>SEND</button>
+        <Button textBody={'send'} />
         </FlexWrapper>
         
         </FormStyled>
-    </AboutFormStyled>
+    </ContactFormStyled>
   )
 }
 
-const AboutFormStyled = styled.section`
+const ContactFormStyled = styled.section`
 max-width:${theme.container.width};
 width:100%;
 padding:0 ${theme.container.leftAndRight};

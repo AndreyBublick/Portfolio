@@ -11,7 +11,7 @@ export const theme = {
         },
 
         gradiend:{
-            color1:'#E70FAA',
+            color1:'#E70FAA', //* green beautiful + #00C0FD  *//
             color2:'#00C0FD',
         },
         border:'#EBEAED',

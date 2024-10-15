@@ -32,7 +32,7 @@ const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) =
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg",
 }))<svgStyledType>`
- fill:${({color})=> color || `${theme.colors.text}`};
+ fill:${({color})=> color || 'currentColor'};
 /* cursor: pointer; */
 
  &:hover{

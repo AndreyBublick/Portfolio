@@ -23,5 +23,9 @@ border-radius:0.4em;
 resize: none;
 padding: 10px 15px;
 min-height:300px;
+&::placeholder{
+    color:${theme.colors.gradiend.color2};
+    font-weight: 300;
+}
 `;
 

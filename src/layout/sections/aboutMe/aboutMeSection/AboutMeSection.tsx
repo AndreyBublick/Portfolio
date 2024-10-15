@@ -21,7 +21,7 @@ export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
             <SectionTitle mBottom={'38px'} textAlign={'left'} fSize={'42px'}>{title}</SectionTitle>
 
             <FlexWrapper gap={33} flexDirection={'column'}>
-                {experiences.map(({buttonBody,date,location,title})=> <Experience buttonBody={buttonBody} date={date} location={location} title={title} /> )}
+                {experiences.map(({buttonBody,date,location,title},index)=> <Experience key={index} buttonBody={buttonBody} date={date} location={location} title={title} /> )}
                 
                 
             </FlexWrapper>

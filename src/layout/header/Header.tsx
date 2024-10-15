@@ -6,22 +6,24 @@ import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { ListLink } from '../../components/listLink/ListLink';
 
 
 
 export const Header: FC = () => {
 
-const [links,setLinks] = useState(['Home','About','Tech Stack','Projects','Contact',]);
+    const [links, setLinks] = useState(['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]);
 
     return (<HeaderStyled>
 
         <Logo />
         <Menu links={links} />
-        <FlexWrapper gap={20}>
-            <Icon id={'git'} />
-            <Icon id={'twitter'} width={32} height={32} viewBox={'0 0 32 32'} />
-            <Icon id={'in'} />
-        </FlexWrapper>
+
+
+        <ListLink />
+
+
+
 
     </HeaderStyled>);
 
@@ -33,18 +35,27 @@ width:100%;
 
 padding:0 20px;
 margin: 0 auto;
+color:${theme.colors.text};
 
 
 
      &>a{
         margin-right:auto;
      }
+     &>nav>ul>li>a{
+        color:inherit;
+
+     }
+     &>ul>li>a{
+        color:inherit;
+
+     }
      
 display:flex;
 gap:51px;
 justify-content:space-between;
 padding:41px 20px;
-    background-color:${theme.colors.white};
+background-color:${theme.colors.white};
 
 
 `;

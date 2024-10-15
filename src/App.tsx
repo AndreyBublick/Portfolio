@@ -8,21 +8,22 @@ import { Skills } from "./layout/sections/skills/Skills";
 import { FlexWrapper } from "./components/FlexWrapper";
 import { Projects } from "./layout/sections/projects/Projects";
 import { Contacts } from "./layout/sections/contacts/Contacts";
-import { AboutForm } from "./layout/sections/aboutForm/AboutForm";
+import { ContactForm } from "./layout/sections/ContactForm/ContactForm";
 import { AboutMe } from "./layout/sections/aboutMe/AboutMe";
+import { Footer } from "./layout/footer/Footer";
+import { routes } from "./routes/routes";
+import { Route, Routes } from "react-router-dom";
 
 export const App = () => {
   return (
     <FlexWrapper gap={200} flexDirection={"column"}>
 
       <Header />
-      <Main />
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <Contacts />
-      
-      <AboutForm />
+      <Routes>
+        {routes.map(({path,element}) =><Route key={path} path={path} element={element} />  )}
+      </Routes>
+    
+      <Footer />
 
 
     </FlexWrapper>
