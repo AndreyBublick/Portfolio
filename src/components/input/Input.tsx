@@ -21,16 +21,18 @@ export const Input:FC<propsType> = ({placeholderBody,inputType}) => {
 
 const InputStyled = styled.input`
 width:710px;
-
+box-shadow:0 0 3px 1px ${theme.colors.gradient.color2};
 background-color:transparent;
-color:${theme.colors.gradiend.color1};
-border:2px solid ${theme.colors.gradiend.color2};
+color:${theme.colors.gradient.color1};
+border:2px solid ${theme.colors.gradient.color2};
 border-radius:2em;
 line-height: 2.5;
 padding:0 15px;
 &::placeholder{
-    color:${theme.colors.gradiend.color2};
+    color:${theme.colors.gradient.color2};
     font-weight: 300;
 }
+
+
 `;
 

@@ -18,7 +18,7 @@ type svgStyledType = {
 };
 
 
-export const Icon: FC<propsIconType> = ({ id, width, height, viewBox,color }) => {
+export const Icon: FC<propsIconType> = ({ id, width, height, viewBox, color }) => {
   return <SvgStyled color={color} width={width} height={height} viewBox={viewBox}>
 
     <use xlinkHref={`${spriteSVG}#${id}`}></use>
@@ -31,8 +31,8 @@ const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) =
   viewBox: viewBox && viewBox || "0 0 30 30",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg",
-}))<svgStyledType>`
- fill:${({color})=> color || 'currentColor'};
+})) <svgStyledType>`
+ fill:${({ color }) => color || 'currentColor'};
 /* cursor: pointer; */
 
  &:hover{
@@ -40,6 +40,7 @@ const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) =
 
  }
 `;
+
 
 
 

@@ -7,20 +7,22 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/theme';
 import { Experience } from './aboutMeSection/experience/Experience';
 import { AboutMeSection } from './aboutMeSection/AboutMeSection';
+import wall from '../../../assets/images/wall.webp';
+import svgs from '../../../assets/images/code-svg.svg';
 
 export type experienceType = {
-  
-    title: string,
-    buttonBody: 'Full Time'|'Internship',
-    date: string,
-    location: {
-      building: string,
-      country: string,
-    },
-  
+
+  title: string,
+  buttonBody: 'Full Time' | 'Internship',
+  date: string,
+  location: {
+    building: string,
+    country: string,
+  },
+
 };
 
-export const AboutMe:FC = () => {
+export const AboutMe: FC = () => {
 
   const [workExperiences, setWorkExperiences] = useState<Array<experienceType>>([
     {
@@ -82,6 +84,9 @@ export const AboutMe:FC = () => {
 
 
 const AboutMeStyled = styled.section`
+
+position:relative;
+
 max-width:${theme.container.width};
 width:100%;
 padding:0 ${theme.container.leftAndRight};
@@ -93,6 +98,17 @@ margin: 0 auto;
   width:100%;
 }
 
+&::before{
+  content:'';
+  position:absolute;
+  background: url(${wall}) right center/auto no-repeat fixed;
+  width:100%;
+  height: 100%;
+  top: -50px;
+  left:350px;
+
+
+}
 `;
 
 const AboutMeDescriptionStyled = styled.p`

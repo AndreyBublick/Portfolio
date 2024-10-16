@@ -10,7 +10,7 @@ export const theme = {
             bg:'#D7FFE0',
         },
 
-        gradiend:{
+        gradient:{
             color1:'#E70FAA', //* green beautiful + #00C0FD  *//
             color2:'#00C0FD',
         },

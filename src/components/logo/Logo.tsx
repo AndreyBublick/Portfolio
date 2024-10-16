@@ -12,7 +12,7 @@ export const Logo = () => {
         homePage.current?.scrollIntoView({behavior:'smooth'});
     };
 
-    return <Link onClick={onClickAnchor} to={'/'}>
+    return <Link aria-label='Логотип' onClick={onClickAnchor} to={'/'}>
 
         <Icon id='logo' width={97} height={59} viewBox="0 0 97 59" />
 

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -17,5 +18,37 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+body{
+    overflow-x:hidden;
+}
+*{
+    scrollbar-width:thin;
+    scrollbar-color:#E70FAA white;
+}
+*::selection{
+  color: white;
+  background-color: darkviolet;
+  -webkit-text-fill-color: white;
+/*   background-image: linear-gradient(0deg,red,red); */
+
+}
+*{
+    @media (prefers-reduced-motion: reduce) {
+    .animated-element {
+        animation: none; /* Отключите анимацию */
+        transition: none; /* Отключите переходы */
+    }
+}
+}
+*:focus-visible{
+    border:2px solid ${theme.colors.gradient.color1};
+    background-color:${theme.colors.border};
+    
+}
+/* input:focus-visible,textarea:focus-visible{
+    
+    border-image:none;
+} */
 
 `;

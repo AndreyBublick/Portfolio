@@ -53,7 +53,7 @@ margin: 0 auto;
     &::before{
         content:'';
         top: 0;
-        background:linear-gradient(90deg, ${theme.colors.gradiend.color1} ,${theme.colors.gradiend.color2} );
+        background:linear-gradient(90deg, ${theme.colors.gradient.color1} ,${theme.colors.gradient.color2} );
        
         left: 0;
         width: 100%;

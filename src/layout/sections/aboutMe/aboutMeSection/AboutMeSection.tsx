@@ -10,6 +10,9 @@ import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Experience } from './experience/Experience';
 import { experienceType } from '../AboutMe';
 
+
+
+
 type propsType = {
     title:string,
     experiences:Array<experienceType>,
@@ -25,9 +28,11 @@ export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
                 
                 
             </FlexWrapper>
+            
         </AboutMeSectionStyled>
     )
 }
 
 const AboutMeSectionStyled = styled.div`
+
 `;
