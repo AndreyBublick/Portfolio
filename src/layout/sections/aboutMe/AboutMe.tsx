@@ -9,6 +9,7 @@ import { Experience } from './aboutMeSection/experience/Experience';
 import { AboutMeSection } from './aboutMeSection/AboutMeSection';
 import wall from '../../../assets/images/wall.webp';
 import svgs from '../../../assets/images/code-svg.svg';
+import { Container } from '../../../components/Container';
 
 export type experienceType = {
 
@@ -66,17 +67,18 @@ export const AboutMe: FC = () => {
 
 
   return <AboutMeStyled>
-    <FlexWrapper gap={38} flexDirection={'column'}>
-      <SectionTitle mBottom={'0px'} textAlign={'left'} fSize={'42px'}>About Me</SectionTitle>
-      <AboutMeDescriptionStyled>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</AboutMeDescriptionStyled>
+    <Container>
+      <FlexWrapper gap={38} flexDirection={'column'}>
+        <SectionTitle mBottom={'0px'} textAlign={'left'} fSize={'42px'}>About Me</SectionTitle>
+        <AboutMeDescriptionStyled>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</AboutMeDescriptionStyled>
 
-      <AboutMeSection title={'Work Experience'} experiences={workExperiences} />
-      <AboutMeSection title={'Education'} experiences={educations} />
-
-
-    </FlexWrapper>
+        <AboutMeSection title={'Work Experience'} experiences={workExperiences} />
+        <AboutMeSection title={'Education'} experiences={educations} />
 
 
+      </FlexWrapper>
+
+    </Container>
   </AboutMeStyled>
 
 }
@@ -86,17 +88,13 @@ export const AboutMe: FC = () => {
 const AboutMeStyled = styled.section`
 
 position:relative;
+${FlexWrapper} > div{
+   width:100%; 
+}
+${FlexWrapper}{
+  max-width:710px;
+}
 
-max-width:${theme.container.width};
-width:100%;
-padding:0 ${theme.container.leftAndRight};
-margin: 0 auto;
-&>div{
-  width:710px;
-}
-&>div>div{
-  width:100%;
-}
 
 &::before{
   content:'';

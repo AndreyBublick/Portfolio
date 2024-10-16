@@ -6,9 +6,11 @@ import { theme } from '../../../styles/theme';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Skill } from './Skill/Skill';
+import { Container } from '../../../components/Container';
 
 export const Skills:FC = () => {
     return <SkillsStyled>
+<Container>
 
         <SectionTitle>My Tech Stack</SectionTitle>
         <SectionSubTitle> Technologies I’ve been working with recently</SectionSubTitle>
@@ -28,7 +30,7 @@ export const Skills:FC = () => {
         </FlexWrapper>
 
 
-
+        </Container>
     </SkillsStyled>
 
 
@@ -36,10 +38,7 @@ export const Skills:FC = () => {
 }
 
 const SkillsStyled = styled.section`
-max-width:1240px;
-width:100%;
-padding:0 20px;
-margin: 0 auto;
+
 `;
 
 

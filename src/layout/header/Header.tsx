@@ -7,53 +7,61 @@ import { Menu } from '../../components/menu/Menu';
 import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { ListLink } from '../../components/listLink/ListLink';
+import { Container } from '../../components/Container';
 
 
 
 export const Header: FC = () => {
 
-    const [links, setLinks] = useState(['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]);
+   const [links, setLinks] = useState(['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]);
 
-    return (<HeaderStyled>
-
-        <Logo />
-        <Menu links={links} />
-
-
-        <ListLink />
+   return (<HeaderStyled>
+      <Container>
+         <FlexWrapper justifyContent={'space-between'} gap={51}>
+            <Logo />
+            <Menu links={links} />
 
 
+            <ListLink />
+         </FlexWrapper>
 
 
-    </HeaderStyled>);
+      </Container>
+
+
+
+
+
+   </HeaderStyled>);
 
 }
 
 const HeaderStyled = styled.header`
-max-width:1240px;
-width:100%;
 
-padding:0 20px;
-margin: 0 auto;
 color:${theme.colors.text};
 
 
 
-     &>a{
+     ${Container}>a{
         margin-right:auto;
      }
-     &>nav>ul>li>a{
+     ${Container}>nav>ul>li>a{
         color:inherit;
 
      }
-     &>ul>li>a{
+     ${Container}>ul>li>a{
         color:inherit;
 
      }
      
-display:flex;
-gap:51px;
-justify-content:space-between;
+
+     ${Container}>${FlexWrapper}{
+
+     }
+
+
+
+
 padding:41px 20px;
 background-color:${theme.colors.white};
 

@@ -34,6 +34,7 @@ li{
 
 }
 a{
+    color:inherit;
     
 font-family: 'DM Sans','Poppins';
 font-size: ${props=> props.FZ || theme.fontSize.link};

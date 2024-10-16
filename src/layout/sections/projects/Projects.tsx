@@ -11,9 +11,9 @@ import image3 from '.././../../assets/images/3.webp';
 import image4 from '.././../../assets/images/4.webp';
 import image5 from '.././../../assets/images/5.webp';
 import image6 from '.././../../assets/images/6.webp';
-import { theme } from '../../../styles/theme';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
+import { Container } from '../../../components/Container';
 
 
 
@@ -21,51 +21,54 @@ import { SectionSubTitle } from '../../../components/SectionSubTitle';
 
 export const Projects: FC = () => {
 
-    const [projectsArray,setProjectsArray] = useState([
+    const [projectsArray, setProjectsArray] = useState([
         {
-            title:'Project Tile goes here',
-            description:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-            image:image1,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            image: image1,
         },
         {
-            title:'Project Tile goes here',
-            description:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-            image:image2,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            image: image2,
         },
         {
-            title:'Project Tile goes here',
-            description:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-            image:image3,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            image: image3,
         },
         {
-            title:'Project Tile goes here',
-            description:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-            image:image4,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            image: image4,
         },
         {
-            title:'Project Tile goes here',
-            description:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-            image:image5,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            image: image5,
         },
         {
-            title:'Project Tile goes here',
-            description:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
-            image:image6,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            image: image6,
         },
-      
+
     ]);
 
     return <ProjectsStyled>
+        <Container>
 
-        <SectionTitle>Projects</SectionTitle>
-        <SectionSubTitle>Things I’ve built so far</SectionSubTitle>
 
-        <FlexWrapper justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
+            <SectionTitle>Projects</SectionTitle>
+            <SectionSubTitle>Things I’ve built so far</SectionSubTitle>
 
-            
-            {projectsArray.map(({title,description,image}) => <Project key={image} title={title} description={description} image={image} /> )}
+            <FlexWrapper justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
 
-        </FlexWrapper>
+
+                {projectsArray.map(({ title, description, image }) => <Project key={image} title={title} description={description} image={image} />)}
+
+            </FlexWrapper>
+        </Container>
     </ProjectsStyled>
 
 }
@@ -73,10 +76,7 @@ export const Projects: FC = () => {
 
 
 const ProjectsStyled = styled.section`
-max-width:${theme.container.width};
-width:100%;
-padding:0 ${theme.container.leftAndRight};
-margin: 0 auto;
+
 `;
 
 

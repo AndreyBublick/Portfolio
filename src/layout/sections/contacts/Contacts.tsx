@@ -7,9 +7,11 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { GradientWord } from '../../../components/GradientWord';
 import { theme } from '../../../styles/theme';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Container } from '../../../components/Container';
 
 export const Contacts = () => {
     return <ContactsStyled>
+<Container>
 
         <SectionTitle>
             <FlexWrapper gap={9} flexDirection={'column'} alignItems={'center'}>
@@ -17,16 +19,14 @@ export const Contacts = () => {
 
             </FlexWrapper>
         </SectionTitle>
+        </Container>
 
     </ContactsStyled>
 
 }
 
 const ContactsStyled = styled.section`
-max-width:${theme.container.width};
-width:100%;
-padding:0 ${theme.container.leftAndRight};
-margin: 0 auto;
+
 h2{
     margin:0;
 }

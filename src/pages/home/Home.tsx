@@ -8,6 +8,7 @@ import { Skills } from '../../layout/sections/skills/Skills'
 import { Projects } from '../../layout/sections/projects/Projects'
 import { Contacts } from '../../layout/sections/contacts/Contacts'
 import { ContactForm } from '../../layout/sections/ContactForm/ContactForm'
+import { Map } from '../../layout/sections/map/Map'
 
 export const Home = () => {
     return <>
@@ -17,6 +18,8 @@ export const Home = () => {
         <Projects />
         <Contacts />
         <ContactForm />
+        <Map />
+      
     </>
 
 }

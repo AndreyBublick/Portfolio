@@ -22,6 +22,7 @@ display:flex;
 gap:20px;
 
 a{
+    color:inherit;
 display:flex;
 align-items:center;
 }

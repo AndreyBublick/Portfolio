@@ -7,9 +7,13 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/theme';
 import { GradientWord } from '../../../components/GradientWord';
 import { SectionTitle } from '../../../components/SectionTitle';
+import { Container } from '../../../components/Container';
 
 export const Main = () => {
     return <MainStyled>
+        <Container>
+
+        
         <FlexWrapper gap={170}>
             <SectionTitle fSize={'58px'} textAlign={'left'}>
                 Hi 👋,<br />
@@ -30,7 +34,7 @@ export const Main = () => {
             </div>
         </FlexWrapper>
 
-
+        </Container>
     </MainStyled>
 
 }
@@ -38,10 +42,6 @@ export const Main = () => {
 const MainStyled = styled.section`
 
 
-max-width:${theme.container.width};
-width:100%;
-padding:0 ${theme.container.leftAndRight};
-margin: 0 auto;
 
 
 .image{
