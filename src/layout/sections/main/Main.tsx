@@ -14,16 +14,13 @@ export const Main = () => {
         <Container>
 
         
-        <FlexWrapper gap={170}>
+        <FlexWrapper gap={170} alignItems={'center'}>
             <SectionTitle fSize={'58px'} textAlign={'left'}>
                 Hi 👋,<br />
                 My name is<br />
                 <GradientWord>Pavan MG</GradientWord>
                 I build things for web
             </SectionTitle>
-
-
-
 
             <div className='image'>
 
@@ -41,7 +38,8 @@ export const Main = () => {
 
 const MainStyled = styled.section`
 
-
+min-height:80vh;
+display:flex;
 
 
 .image{
@@ -82,20 +80,8 @@ img{
 }
 }
 `;
-const MainTitleStyled = styled.h2`
-
-
-
-    color:${theme.colors.title};
-font-size: 58px;
-font-weight: 700;
-line-height: 1.3;
-letter-spacing: -1px;
 
 
 
 
 
-
-
-`;

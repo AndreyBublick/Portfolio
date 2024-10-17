@@ -37,8 +37,13 @@ export const Header: FC = () => {
 }
 
 const HeaderStyled = styled.header`
-
-color:${theme.colors.text};
+position:sticky;
+top:0;
+left:0;
+z-index:999;
+color:${theme.colors.font};
+padding:41px 20px;
+background-color:${theme.colors.primaryBg};
 
 
 
@@ -62,8 +67,7 @@ color:${theme.colors.text};
 
 
 
-padding:41px 20px;
-background-color:${theme.colors.white};
+
 
 
 `;

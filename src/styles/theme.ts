@@ -1,10 +1,15 @@
 export const theme = {
 
     colors:{
-        white:'#ffffff',
+        primaryBg:'#ffffff',
+
+        
+        font:'#666666',
+        fontLight:'#A7A7A7',
+        
         title:'#42446E',
-        text:'#666666',
-        textExperience:'#A7A7A7',
+        
+       
         buttonExperience:{
             color:'#018C0F',
             bg:'#D7FFE0',

@@ -53,7 +53,7 @@ flex:0 0  calc(375px);
 } */
 border-radius:20px;
 overflow:hidden;
-background-color:${theme.colors.white};
+background-color:${theme.colors.primaryBg};
 box-shadow:0px 0px 100px 0px gray;
 
 `;
@@ -91,7 +91,7 @@ const ProjectDescriptionStyled = styled.p`
 font-size: 18px;
 font-weight: 300;
 line-height: calc(26/18);
-color:${theme.colors.text};
+color:${theme.colors.font};
 margin-bottom:12px;
 `;
 const ProjectPSStyled = styled.p`
@@ -130,7 +130,7 @@ transition: all 0.15s ease-in;
 
 }
  a:hover{
-    color:${theme.colors.text};
+    color:${theme.colors.font};
 }
 `;
 

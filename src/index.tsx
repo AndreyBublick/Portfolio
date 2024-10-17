@@ -5,7 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { App } from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { GlobalStyles } from './styles/GlobalStyles';
+import { GlobalStyles } from './styles/Global.styled';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

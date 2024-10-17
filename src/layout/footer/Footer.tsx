@@ -47,6 +47,8 @@ export const Footer = () => {
 
 const FooterStyled = styled.footer`
 padding-bottom:60px;
+
+
 ${Container} > ${FlexWrapper} > div{
 width:100%;
 }
@@ -71,7 +73,7 @@ ${FlexWrapper}>${FlexWrapper}{
 }
 
 ${FlexWrapper}>${FlexWrapper}:first-child {
-    border-bottom:2px solid ${theme.colors.text};
+    border-bottom:2px solid ${theme.colors.font };
     padding-bottom:40px;
     margin-bottom:45px;
 }
@@ -84,7 +86,8 @@ const Email = styled.a`
 `;
 const PS = styled.small`
 font-size: 18px;
-line-height: calc(26/18) ;
+line-height: calc(26/18);
+color:${theme.colors.font};
 span{
 
 display:inline;

@@ -112,7 +112,7 @@ ${FlexWrapper}{
 const AboutMeDescriptionStyled = styled.p`
 font-size: 18px;
 line-height: calc(26/18);
-color:${theme.colors.text};
+color:${theme.colors.font};
 `;
 
 

@@ -8,5 +8,5 @@ display:block;
 line-height: 0.81;
 text-align: center;
 margin-bottom:124px;
-color:${theme.colors.text};
+color:${theme.colors.font};
 `;

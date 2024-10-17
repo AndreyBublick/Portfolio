@@ -54,7 +54,7 @@ font-size: 12px;
 font-weight: 500;
 line-height: calc(28/12);
 letter-spacing: 1px;
-color:${theme.colors.textExperience};
+color:${theme.colors.fontLight};
 padding-bottom:24px;
 
 border-bottom:2px solid ${theme.colors.border};
@@ -63,10 +63,10 @@ border-bottom:2px solid ${theme.colors.border};
 
 const ExperienceTitleStyled = styled.h3`
 font-size: 20px;
-line-height: calc(28/20);
+
 letter-spacing: 1px;
 font-weight:400;
-color:${theme.colors.text};
+color:${theme.colors.font};
 
 `;
 

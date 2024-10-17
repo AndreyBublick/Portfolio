@@ -17,5 +17,6 @@ justify-content:${props => props.justifyContent || 'flex-start'};
 align-items:${props => props.alignItems || 'flex-start'};
 flex-direction:${props => props.flexDirection || 'row'};
 flex-wrap:${props => props.flexWrap || 'nowrap'};
-gap:${props=>props.gap ? `${props.gap}px`: `${0}px` }
+gap:${props=>props.gap ? `${props.gap}px`: `${0}px` };
+height:100%;
 `;

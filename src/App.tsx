@@ -10,10 +10,12 @@ import { Route, Routes } from "react-router-dom";
 import { Wrapper } from "./components/Wrapper";
 
 export const App = () => {
-  return (
+  return (<>
+ 
+    <Header />
     <Wrapper>
       
-      <Header />
+      
       <Routes>
         {routes.map(({path,element}) =><Route key={path} path={path} element={element} />  )}
       </Routes>
@@ -21,10 +23,10 @@ export const App = () => {
       <Footer />
     </Wrapper>
 
-      
 
 
-    
+
+</>
   );
 };
 
