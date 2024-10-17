@@ -22,7 +22,7 @@ color:${theme.colors.gradient.color1};
 
 
 border:2px solid;
-border-radius:0.4em;
+/* border-radius:0.4em; */
 border-image:linear-gradient(0deg,${theme.colors.gradient.color1} 0%,${theme.colors.gradient.color1} 40%,${theme.colors.gradient.color2}) 1;
 resize: none;
 padding: 10px 15px;

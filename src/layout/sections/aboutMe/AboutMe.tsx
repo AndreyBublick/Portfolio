@@ -95,24 +95,28 @@ ${FlexWrapper}{
   max-width:710px;
 }
 
+z-index:0;
+
 
 &::before{
   content:'';
   position:absolute;
-  background: url(${wall}) right center/auto no-repeat fixed;
+  background:  url(${wall}) right center/auto no-repeat fixed;
   width:100%;
   height: 100%;
   top: -50px;
   left:350px;
+  z-index: -1;
 
+ 
 
 }
 `;
 
 const AboutMeDescriptionStyled = styled.p`
 font-size: 18px;
-line-height: calc(26/18);
-color:${theme.colors.font};
+
+
 `;
 
 

@@ -38,7 +38,7 @@ export const Main = () => {
 
 const MainStyled = styled.section`
 
-min-height:80vh;
+min-height:90vh;
 display:flex;
 
 

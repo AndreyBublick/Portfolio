@@ -62,5 +62,10 @@ body{
 }
 section{
   background-color:${theme.colors.primaryBg};
+  padding:100px 0;
+}
+p{
+  color:${theme.colors.font};
+ font-weight: 400; 
 }
 `;

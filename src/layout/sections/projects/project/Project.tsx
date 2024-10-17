@@ -28,9 +28,19 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
             <ProjectDescriptionStyled className={'description'}>{description}</ProjectDescriptionStyled>
             <ProjectPSStyled><span>Tech stack :</span>  HTML , JavaScript, SASS, React</ProjectPSStyled>
             <ProjectLinksStyled>
-                <FlexWrapper justifyContent={'space-between'}>
-                    <FlexWrapper alignItems={'center'} gap={12}><Icon id={'chain'} height={18} width={18} viewBox={"0 0 18 18"} /><Link to={'/view_preview'}>live preview</Link></FlexWrapper>
-                    <FlexWrapper alignItems={'center'} gap={12}><Icon id={'SMALL_GIT_HUB'} height={20} width={20} viewBox={"0 0 20 20"} /><Link to={'/view_code'}>view code</Link></FlexWrapper>
+                <FlexWrapper gap={15} alignItems={'center'} justifyContent={'space-between'}>
+                    <FlexWrapper alignItems={'center'} gap={12}>
+                        <LinkIconChain href={'#'} target={'_blank'}>
+                            <Icon id={'chain'} height={18} width={18} viewBox={"0 0 18 18"} />
+                        </LinkIconChain>
+                        <a href={'#'} target={'_blank'}>live preview</a>
+                    </FlexWrapper>
+                    <FlexWrapper alignItems={'center'} gap={12}>
+                        <LinkIconGitHub href={'#'} target={'_blank'}>
+                            <Icon id={'SMALL_GIT_HUB'} height={20} width={20} viewBox={"0 0 20 20"} />
+                        </LinkIconGitHub>
+                        <a href={'#'} target={'_blank'}>view code</a>
+                    </FlexWrapper>
                 </FlexWrapper>
             </ProjectLinksStyled>
 
@@ -42,8 +52,40 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
 }
 
 
+const LinkIconGitHub = styled.a`
+transition:0.1s fill linear;
+ fill:#000000;
+ &:hover{
+    &>    svg{
 
-const ProjectStyled = styled.section`
+    fill:${theme.colors.gradient.color1};
+    }
+ }
+ &>svg{
+    transition:inherit;
+    display:flex;
+    }
+`;
+const LinkIconChain = styled.a`
+transition:0.1s stroke linear;
+stroke:#000000; 
+&:hover{
+    &>svg{
+        
+        stroke:${theme.colors.gradient.color2};;
+
+    }
+}
+&>svg{
+    transition:inherit;
+    display:flex;
+}
+ 
+`;
+
+
+
+const ProjectStyled = styled.div`
 
 flex:0 0  calc(375px);
 
@@ -90,8 +132,8 @@ margin-bottom:17px;
 const ProjectDescriptionStyled = styled.p`
 font-size: 18px;
 font-weight: 300;
-line-height: calc(26/18);
-color:${theme.colors.font};
+
+line-height:1.6;
 margin-bottom:12px;
 `;
 const ProjectPSStyled = styled.p`
@@ -99,12 +141,12 @@ const ProjectPSStyled = styled.p`
 
 font-size: 14px;
 font-weight: 300;
-line-height: calc(26 / 14);
+
 
 span{
 font-size: 16px;
 font-weight: 400;
-line-height: calc(26/16);
+
  
 }
 

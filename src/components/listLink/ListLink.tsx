@@ -4,6 +4,7 @@
 import React, { FC } from 'react'
 import { Icon } from '../icon/Icon'
 import styled from 'styled-components';
+import { theme } from '../../styles/theme';
 /* 
 type propstType = {
     color:``;
@@ -25,5 +26,20 @@ a{
     color:inherit;
 display:flex;
 align-items:center;
+
+
+& > svg {
+    transition:all 0.3s linear;
+border:2px solid transparent;
+border-radius:50%;
+
+&:hover{
+border:2px solid ${theme.colors.gradient.color1};
+
+  fill:white;
+    filter:drop-shadow( 0px 0px 3px ${theme.colors.gradient.color2});
+}
+}
+
 }
 `;

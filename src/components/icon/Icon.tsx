@@ -25,6 +25,11 @@ export const Icon: FC<propsIconType> = ({ id, width, height, viewBox, color }) =
   </SvgStyled>
 }
 
+
+
+const Mask = styled.span``;
+
+
 const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) => ({
   width: width && width || '30',
   height: height && height || '30',
@@ -35,10 +40,7 @@ const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) =
  fill:${({ color }) => color || 'currentColor'};
 /* cursor: pointer; */
 
- &:hover{
- /* fill:black; */
 
- }
 `;
 
 

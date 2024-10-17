@@ -60,18 +60,20 @@ ${FlexWrapper}>${FlexWrapper}{
     color:inherit;
     flex:0 0 55%; 
     a{
-        color:inherit;
+        
         font-family: DM Sans;
         font-size: 18px;
         line-height: calc(26/18);
         
 
     }
-    ul{
-        
-    }
+   
 }
-
+${FlexWrapper}>${FlexWrapper}:first-of-type{
+a{
+     color:inherit; 
+}
+}
 ${FlexWrapper}>${FlexWrapper}:first-child {
     border-bottom:2px solid ${theme.colors.font };
     padding-bottom:40px;
@@ -87,7 +89,7 @@ const Email = styled.a`
 const PS = styled.small`
 font-size: 18px;
 line-height: calc(26/18);
-color:${theme.colors.font};
+
 span{
 
 display:inline;
