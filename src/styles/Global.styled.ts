@@ -59,6 +59,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   line-height: 1.2; 
+  
 }
 section{
   background-color:${theme.colors.primaryBg};
@@ -67,5 +68,15 @@ section{
 p{
   color:${theme.colors.font};
  font-weight: 400; 
+}
+h1,h2{
+
+}
+h3{
+  font-size: 28px;
+font-weight: 500;
+line-height: calc(26 / 28) ;
+margin-bottom:17px;
+
 }
 `;

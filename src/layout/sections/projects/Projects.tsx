@@ -29,7 +29,7 @@ export const Projects: FC = () => {
         },
         {
             title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum gen ption random things are here in description This is sample project lorem ipsum generator for dummy contenterator for dummy content',
             image: image2,
         },
         {
@@ -62,7 +62,7 @@ export const Projects: FC = () => {
             <SectionTitle>Projects</SectionTitle>
             <SectionSubTitle>Things I’ve built so far</SectionSubTitle>
 
-            <FlexWrapper justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
+            <FlexWrapper alignItems={'flex-start'} justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
 
 
                 {projectsArray.map(({ title, description, image }) => <Project key={image} title={title} description={description} image={image} />)}
