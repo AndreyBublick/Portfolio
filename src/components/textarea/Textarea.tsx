@@ -26,7 +26,7 @@ border:2px solid;
 resize: none;
 padding: 10px 15px;
 min-height:300px;
-transition:box-shadow 0.25s linear;
+transition:box-shadow 0.25s linear,border 0.25s linear;
 border-image:linear-gradient(0deg,${theme.colors.gradient.color1} 0%,${theme.colors.gradient.color1} 40%,${theme.colors.gradient.color2}) 1;
 
 
@@ -37,6 +37,9 @@ border-image:linear-gradient(0deg,${theme.colors.gradient.color1} 0%,${theme.col
 }
 &:focus-visible{
     background-color:transparent;
+    border-image:linear-gradient(0deg,${theme.colors.gradient.color1} 0%,${theme.colors.gradient.color1} 40%,${theme.colors.gradient.color2}) 1;
+
+
     box-shadow: 2px 0 3px -0px darkviolet,
             -2px 0 3px -0px darkviolet,
             0 -2px 3px -0px ${theme.colors.gradient.color2},

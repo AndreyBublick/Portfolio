@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/logo/Logo";
-import { ListLink } from "../../components/listLink/ListLink";
+import { ListSocial } from "../../components/listSocial/ListSocial";
 import { theme } from "../../styles/theme";
 import { Menu } from "../../components/menu/Menu";
 import { useState } from "react";
@@ -28,7 +28,7 @@ export const Footer = () => {
                         <Telephone href="tel:+1 555 505 5050">+1 555 505 5050</Telephone>
                         <Email href="mailto:info@designmodo.com">info@designmodo.com</Email>
 
-                        <ListLink />
+                        <ListSocial />
                     </FlexWrapper>
 
                 </FlexWrapper>
@@ -46,7 +46,9 @@ export const Footer = () => {
 };
 
 const FooterStyled = styled.footer`
+padding-top:100px;
 padding-bottom:60px;
+background-color:${theme.colors.primaryBg};
 
 
 ${Container} > ${FlexWrapper} > div{

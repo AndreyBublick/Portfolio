@@ -31,7 +31,7 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
                 <FlexWrapper gap={15} alignItems={'center'} justifyContent={'space-between'}>
                     <FlexWrapper alignItems={'center'} gap={12}>
                         <LinkIconChain href={'#'} target={'_blank'}>
-                            <Icon id={'chain'} height={18} width={18} viewBox={"0 0 18 18"} />
+                            <Icon id={'chain'} height={20} width={20} viewBox={"0 0 20 20"} />
                         </LinkIconChain>
                         <a href={'#'} target={'_blank'}>live preview</a>
                     </FlexWrapper>
@@ -54,11 +54,15 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
 
 const LinkIconGitHub = styled.a`
 transition:0.1s fill linear;
- fill:#000000;
+ color:#000000;
+ 
  &:hover{
+    
     &>    svg{
-
-    fill:${theme.colors.gradient.color1};
+    outline:none;
+    filter:none;
+    color:inherit;
+   
     }
  }
  &>svg{
@@ -68,17 +72,22 @@ transition:0.1s fill linear;
 `;
 const LinkIconChain = styled.a`
 transition:0.1s stroke linear;
-stroke:#000000; 
+
+outline:none;
 &:hover{
+    
     &>svg{
-        
-        stroke:${theme.colors.gradient.color2};
+    outline:none;
+    filter:none;
+    color:inherit;        
+    
 
     }
 }
 &>svg{
     transition:inherit;
     display:flex;
+    transform:translateY(2px);
 }
  
 `;
@@ -195,13 +204,15 @@ line-height: calc(26/16);
 text-transform: capitalize;
 color:#000000;
 text-decoration:underline;
-transition: all 0.15s ease-in;
+transition: color 0.15s linear;
     
 
 
 }
  a:hover{
     color:${theme.colors.font};
+    border:none;
+    outline:none;
 }
 `;
 

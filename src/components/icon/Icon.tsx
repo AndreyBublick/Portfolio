@@ -27,7 +27,7 @@ export const Icon: FC<propsIconType> = ({ id, width, height, viewBox, color }) =
 
 
 
-const Mask = styled.span``;
+
 
 
 const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) => ({
@@ -37,11 +37,29 @@ const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) =
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg",
 })) <svgStyledType>`
- fill:${({ color }) => color || 'currentColor'};
+ color:${({ color }) => color || 'currentColor'};
 /* cursor: pointer; */
 
 
+  transition:all 0.3s linear;
+outline:2px solid transparent;
+border-radius:50%;
+position: relative;
+
+&:hover{
+  outline:2px solid ${theme.colors.gradient.color1};
+
+
+  color:white;
+  filter:drop-shadow( 0px 0px 3px ${theme.colors.gradient.color2});
+}
+
 `;
+
+
+
+
+
 
 
 

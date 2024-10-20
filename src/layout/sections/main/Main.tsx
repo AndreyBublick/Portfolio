@@ -14,7 +14,7 @@ export const Main = () => {
         <Container>
 
         
-        <FlexWrapper gap={170} alignItems={'center'}>
+        <FlexWrapper gap={170} alignItems={'center'}> 
             <SectionTitle fSize={'58px'} textAlign={'left'}>
                 Hi 👋,<br />
                 My name is<br />

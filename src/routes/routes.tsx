@@ -1,4 +1,4 @@
-import { ContactForm } from "../layout/sections/ContactForm/ContactForm";
+import { ContactForm } from "../layout/sections/contacts/сontactForm/ContactForm";
 import { AboutMe } from "../layout/sections/aboutMe/AboutMe";
 import { Contacts } from "../layout/sections/contacts/Contacts";
 import { Main } from "../layout/sections/main/Main";

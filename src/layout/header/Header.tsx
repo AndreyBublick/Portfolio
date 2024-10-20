@@ -6,7 +6,7 @@ import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
-import { ListLink } from '../../components/listLink/ListLink';
+import { ListSocial } from '../../components/listSocial/ListSocial';
 import { Container } from '../../components/Container';
 
 
@@ -22,7 +22,7 @@ export const Header: FC = () => {
             <Menu links={links} />
 
 
-            <ListLink />
+            <ListSocial />
          </FlexWrapper>
 
 

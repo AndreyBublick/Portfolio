@@ -34,7 +34,9 @@ transition:box-shadow 0.15s linear;
     font-weight: 300;
 }
 &:focus-visible{
+    border:2px solid ${theme.colors.gradient.color2};
     box-shadow:0 0 3px 1px ${theme.colors.gradient.color2};
+
     background-color:transparent;
 }
 
