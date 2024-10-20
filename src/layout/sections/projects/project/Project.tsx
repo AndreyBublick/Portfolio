@@ -53,42 +53,15 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
 
 
 const LinkIconGitHub = styled.a`
-transition:0.1s fill linear;
- color:#000000;
  
- &:hover{
-    
-    &>    svg{
-    outline:none;
-    filter:none;
-    color:inherit;
-   
-    }
- }
- &>svg{
-    transition:inherit;
-    display:flex;
-    }
+ 
+ 
 `;
 const LinkIconChain = styled.a`
-transition:0.1s stroke linear;
 
-outline:none;
-&:hover{
-    
-    &>svg{
-    outline:none;
-    filter:none;
-    color:inherit;        
-    
 
-    }
-}
-&>svg{
-    transition:inherit;
-    display:flex;
-    transform:translateY(2px);
-}
+
+
  
 `;
 
@@ -205,15 +178,28 @@ text-transform: capitalize;
 color:#000000;
 text-decoration:underline;
 transition: color 0.15s linear;
-    
 
-
-}
- a:hover{
-    color:${theme.colors.font};
+& > svg{
+    transition:inherit;
+    display:flex;
+    filter:none;
     border:none;
     outline:none;
+
 }
+&:hover{
+   & > svg{
+    filter:none;
+    border:none;
+    outline:none;
+    color:inherit;
+    }
+    
+    color:${theme.colors.font};
+    
+}
+}
+ 
 `;
 
 
