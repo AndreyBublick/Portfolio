@@ -79,4 +79,10 @@ line-height: calc(26 / 28) ;
 margin-bottom:17px;
 
 }
+input::placeholder{
+    color:red;
+  }
+input,textarea{
+  
+}
 `;

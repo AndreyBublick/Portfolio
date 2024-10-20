@@ -30,13 +30,13 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
             <ProjectLinksStyled>
                 <FlexWrapper gap={15} alignItems={'center'} justifyContent={'space-between'}>
                     <FlexWrapper alignItems={'center'} gap={12}>
-                        <LinkIconChain href={'#'} target={'_blank'}>
+                        <LinkIconChain aria-label='ссылка live preview' href={'#'} target={'_blank'}>
                             <Icon id={'chain'} height={20} width={20} viewBox={"0 0 20 20"} />
                         </LinkIconChain>
                         <a href={'#'} target={'_blank'}>live preview</a>
                     </FlexWrapper>
                     <FlexWrapper alignItems={'center'} gap={12}>
-                        <LinkIconGitHub href={'#'} target={'_blank'}>
+                        <LinkIconGitHub aria-label='ссылка view code' href={'#'} target={'_blank'}>
                             <Icon id={'SMALL_GIT_HUB'} height={20} width={20} viewBox={"0 0 20 20"} />
                         </LinkIconGitHub>
                         <a href={'#'} target={'_blank'}>view code</a>
@@ -182,10 +182,6 @@ transition: color 0.15s linear;
 & > svg{
     transition:inherit;
     display:flex;
-    filter:none;
-    border:none;
-    outline:none;
-
 }
 &:hover{
    & > svg{

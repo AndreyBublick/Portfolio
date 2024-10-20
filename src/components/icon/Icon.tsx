@@ -41,18 +41,7 @@ const SvgStyled = styled.svg.attrs<svgStyledType>(({ width, height, viewBox }) =
 /* cursor: pointer; */
 
 
-  transition:all 0.3s linear;
-outline:2px solid transparent;
-border-radius:50%;
-position: relative;
-
-&:hover{
-  outline:2px solid ${theme.colors.gradient.color1};
-
-
-  color:white;
-  filter:drop-shadow( 0px 0px 3px ${theme.colors.gradient.color2});
-}
+  
 
 `;
 
