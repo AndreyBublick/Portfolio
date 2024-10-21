@@ -18,7 +18,7 @@ export const Footer = () => {
     return <FooterStyled>
         <Container>
 
-            <FlexWrapper flexDirection={"column"}>
+            <FlexWrapper flexDirection={"column"} justifyContent={"center"}>
 
 
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
@@ -33,7 +33,7 @@ export const Footer = () => {
 
                 </FlexWrapper>
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
-                    <Menu FZ={'18px'} links={links} />
+                    <Menu  links={links} />
 
                     <PS>Designed and built by <GradientWord>Pavan MG</GradientWord> with <GradientWord>Love</GradientWord> & <GradientWord>Coffee</GradientWord></PS>
 
@@ -51,15 +51,12 @@ padding-bottom:60px;
 background-color:${theme.colors.primaryBg};
 
 
-${Container} > ${FlexWrapper} > div{
-width:100%;
-}
 
 
-color:${theme.colors.title};
+
+color:${theme.colors.title}; ///main color
 
 ${FlexWrapper}>${FlexWrapper}{
-    color:inherit;
     flex:0 0 55%; 
     a{
         
@@ -72,17 +69,31 @@ ${FlexWrapper}>${FlexWrapper}{
    
 }
 ${FlexWrapper}>${FlexWrapper}:first-of-type{
+    border-bottom:2px solid ${theme.colors.font };
+    padding-bottom:40px;
+    margin-bottom:45px;
 a{
      color:inherit; 
 }
 }
-${FlexWrapper}>${FlexWrapper}:first-child {
-    border-bottom:2px solid ${theme.colors.font };
-    padding-bottom:40px;
-    margin-bottom:45px;
-}
 
+nav{
+    font-size: 18px;   
+}
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const Telephone = styled.a`
 `;

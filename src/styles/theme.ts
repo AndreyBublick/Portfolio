@@ -28,6 +28,12 @@ export const theme = {
         width:'1240px',
         leftAndRight:'20px',
     },
+    media:{
+        
+        desktop:'screen and (max-width: 1200px)',
+        tablet:'screen and (max-width: 768px)',
+        mobile:'screen and (max-width: 576px)',
+    },
 
     
 };

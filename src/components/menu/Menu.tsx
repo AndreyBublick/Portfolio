@@ -17,7 +17,7 @@ export const Menu: FC<propsType> = ({ links, FZ }) => {
     return <MenuStyled FZ={FZ}>
         <List>
 
-            {links.map((link) => <li key={link}><NavLink to={`/${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}<Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask></NavLink></li>)}
+            {links.map((link) => <li key={link}><Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask><NavLink to={`/${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}</NavLink></li>)}
 
         </List>
 
@@ -28,40 +28,51 @@ export const Menu: FC<propsType> = ({ links, FZ }) => {
 
 
 const Mask = styled.span`
-color:${theme.colors.font};
-
+color:inherit;
+transition:inherit;
 position: absolute;
-top: 0%;
-left:0%;
+overflow:hidden;
+z-index:-1;
+
+
 transform:translate(-0%,-0%) skew(0);
 
 width:100%;
 height:50%;
-overflow:hidden;
 
+&>span{
+    position:absolute;
+    /* overflow:hidden; */
+    transition:inherit;
+    width:100%;
+    height:100%;    
+    }
 
-&:last-of-type{
+    &:first-of-type{
+        top: 0%;
+        left:0%;
+        &>span{
+            top:50%;
+            transform:translateY(-50%);
+    }
+    }
+
+    &:last-of-type{
+        left:0;
+        bottom:0%;
     
-    
-    top:50%;
-    overflow:hidden;
 
     & > span{
-        position:absolute;
-        top:-100%;
-        left:0;
-        width:100%;
-        height:100%;
-        
+      
+        top:-50%;
+        transform:translateY(-50%);
         
 
     
     }
     }
 
-    &>span{
-        transition:inherit;
-    }
+
 
 `;
 
@@ -73,14 +84,43 @@ overflow:hidden;
 
 const MenuStyled = styled.nav<MenuStyledPorpsType>`
 
- a{
-    color:transparent;
+`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const List = styled.ul<MenuStyledPorpsType>`
+   display:flex;
+   gap:50px;
    
-    /* color:inherit; */
+   li{
+    
+    z-index:0;
+   
+   
     position:relative;
     
-    font-family: 'DM Sans','Poppins';
-    font-size: ${props => props.FZ || theme.fontSize.link};
+    font-family: 'DM Sans',sans-serif;
+   
     font-weight: 500;
     
     transition:all 0.2s ease-in;
@@ -90,12 +130,13 @@ const MenuStyled = styled.nav<MenuStyledPorpsType>`
     transition:inherit;
     content:'';
     position:absolute;
+    z-index:-1;
     width:120%;
     top: 50%;
     left: 50%;
     height:2px;
     background-color:${theme.colors.title};
-    z-index:2;
+    
     transform:translate(-50%,-50%);
     opacity:0;
 
@@ -127,20 +168,11 @@ const MenuStyled = styled.nav<MenuStyledPorpsType>`
 
 
 
-}
-
-${Mask}{
-    transition:inherit;
-}
-`;
-
-
-
-
-
-
-const List = styled.ul`
-   display:flex;
-   gap:50px;
+a{
+    display:inline-block;
+    color:transparent;
+    
+ }
+   }
 `;
 

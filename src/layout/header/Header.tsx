@@ -17,7 +17,7 @@ export const Header: FC = () => {
 
    return (<HeaderStyled>
       <Container>
-         <FlexWrapper justifyContent={'space-between'} gap={51}>
+         <FlexWrapper justifyContent={'space-between'} gap={50}>
             <Logo />
             <Menu links={links} />
 
@@ -42,34 +42,38 @@ top:0;
 left:0;
 z-index:999;
 color:${theme.colors.font};
-padding:41px 20px;
+padding:40px 0px;
 background-color:${theme.colors.primaryBg};
 
+font-size:20px;
 
 
-     ${Container}>a{
-        margin-right:auto;
-     }
-     ${Container}>nav>ul>li>a{
-        color:inherit;
-
-     }
-     ${Container}>ul>li>a{
-        color:inherit;
-
-     }
+     
+     
+     
      
 
-     ${Container}>${FlexWrapper}{
-
-     }
 
 
 
 
 
 
+@media ${theme.media.tablet} {
+   
+   nav{
+      display:none;
+   }
+   
+}
+@media ${theme.media.desktop}{
+   
+   
+   & ${FlexWrapper} > ul {
+      display:none;
 
+   }
+}
 `;
 
 
