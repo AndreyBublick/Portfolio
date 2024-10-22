@@ -44,6 +44,18 @@ export const Footer = () => {
     </FooterStyled>
 
 };
+const PS = styled.small`
+font-size: 18px;
+line-height: calc(26/18);
+
+span{
+
+display:inline;
+}
+
+`;
+
+
 
 const FooterStyled = styled.footer`
 padding-top:100px;
@@ -55,6 +67,10 @@ background-color:${theme.colors.primaryBg};
 
 
 color:${theme.colors.title}; ///main color
+
+
+
+
 
 ${FlexWrapper}>${FlexWrapper}{
     flex:0 0 55%; 
@@ -68,6 +84,16 @@ ${FlexWrapper}>${FlexWrapper}{
     }
    
 }
+@media ${theme.media.desktop} {
+    ${FlexWrapper}>${FlexWrapper} > nav{
+    display:none;   
+   
+}    
+${PS}{
+margin:0 auto;
+}
+}
+
 ${FlexWrapper}>${FlexWrapper}:first-of-type{
     border-bottom:2px solid ${theme.colors.font };
     padding-bottom:40px;
@@ -78,7 +104,32 @@ a{
 }
 
 nav{
-    font-size: 18px;   
+    font-size: 18px;  
+    ul > li > span {
+        &:first-of-type{
+        top: 0%;
+        left:0%;
+        &>span{
+            top:70%;
+            transform:translateY(-50%);
+    }
+    }
+
+    &:last-of-type{
+        left:0;
+        bottom:0%;
+    
+
+    & > span{
+      
+        top:-30%;
+        transform:translateY(-50%);
+        
+
+    
+    }
+    }
+    } 
 }
 `;
 
@@ -99,15 +150,6 @@ const Telephone = styled.a`
 `;
 const Email = styled.a`
 `;
-const PS = styled.small`
-font-size: 18px;
-line-height: calc(26/18);
 
-span{
-
-display:inline;
-}
-
-`;
 
 

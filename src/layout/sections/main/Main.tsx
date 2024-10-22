@@ -14,8 +14,8 @@ export const Main = () => {
         <Container>
 
         
-        <FlexWrapper gap={170} alignItems={'center'}> 
-            <SectionTitle fSize={'58px'} textAlign={'left'}>
+        <FlexWrapper gap={170} alignItems={'center'} flexWrap={'wrap-reverse'}> 
+            <SectionTitle >
                 Hi 👋,<br />
                 My name is<br />
                 <GradientWord>Pavan MG</GradientWord>
@@ -42,7 +42,13 @@ min-height:90vh;
 display:flex;
 
 
+${SectionTitle}{
+    font-size: calc( (min(100vw, 1600px) - 360px)/(1600 - 360) * (58 - 28) + 28px);
+    
+    text-align:left;
+}
 .image{
+    margin:0 auto;
     flex: 0 0 350px;
     border-radius:50%;
     overflow:hidden;
@@ -60,6 +66,7 @@ display:flex;
         animation:${spin} 3.0s infinite linear;
         transition:transform 3.0s;
     }
+    
 }
 .image_body{
    

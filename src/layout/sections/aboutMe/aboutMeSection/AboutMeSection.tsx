@@ -21,7 +21,7 @@ type propsType = {
 export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
     return (
         <AboutMeSectionStyled>
-            <SectionTitle mBottom={'38px'} textAlign={'left'} fSize={'42px'}>{title}</SectionTitle>
+            <SectionTitle>{title}</SectionTitle>
 
             <FlexWrapper gap={33} flexDirection={'column'}>
                 {experiences.map(({buttonBody,date,location,title},index)=> <Experience key={index} buttonBody={buttonBody} date={date} location={location} title={title} /> )}

@@ -45,7 +45,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 &:focus-visible{
     border:2px solid ${theme.colors.gradient.color1};
-    background-color:${theme.colors.border};
+    /* background-color:${theme.colors.border}; */
     
 }
 }
@@ -59,7 +59,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   line-height: 1.2; 
-  
+  min-width:360px;
 }
 section{
   background-color:${theme.colors.primaryBg};

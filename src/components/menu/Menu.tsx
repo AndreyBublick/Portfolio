@@ -6,15 +6,15 @@ import { theme } from '../../styles/theme'
 
 type propsType = {
     links: Array<string>,
-    FZ?: string,
+   
 };
 type MenuStyledPorpsType = {
-    FZ?: string,
+    
 
 };
 
-export const Menu: FC<propsType> = ({ links, FZ }) => {
-    return <MenuStyled FZ={FZ}>
+export const Menu: FC<propsType> = ({ links }) => {
+    return <MenuStyled>
         <List>
 
             {links.map((link) => <li key={link}><Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask><NavLink to={`/${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}</NavLink></li>)}
@@ -35,7 +35,7 @@ overflow:hidden;
 z-index:-1;
 
 
-transform:translate(-0%,-0%) skew(0);
+transform:translate(0%,0%) skew(0);
 
 width:100%;
 height:50%;
@@ -171,6 +171,7 @@ const List = styled.ul<MenuStyledPorpsType>`
 a{
     display:inline-block;
     color:transparent;
+    
     
  }
    }

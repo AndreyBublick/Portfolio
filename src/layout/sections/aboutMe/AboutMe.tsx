@@ -69,7 +69,7 @@ export const AboutMe: FC = () => {
   return <AboutMeStyled>
     <Container>
       <FlexWrapper gap={38} flexDirection={'column'}>
-        <SectionTitle mBottom={'0px'} textAlign={'left'} fSize={'42px'}>About Me</SectionTitle>
+        <SectionTitle>About Me</SectionTitle>
         <AboutMeDescriptionStyled>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</AboutMeDescriptionStyled>
 
         <AboutMeSection title={'Work Experience'} experiences={workExperiences} />
@@ -87,7 +87,9 @@ export const AboutMe: FC = () => {
 
 const AboutMeStyled = styled.section`
 
+
 position:relative;
+z-index:0;
 ${FlexWrapper} > div{
    width:100%; 
 }
@@ -95,8 +97,18 @@ ${FlexWrapper}{
   max-width:710px;
 }
 
-z-index:0;
+${SectionTitle}{
+  text-align:left;
+  margin-bottom:0px;
+  font-size:42px;
 
+}
+
+h2{
+    margin-bottom:38px;
+    text-align:left;
+    font-size:42px;
+}
 
 &::before{
   content:'';

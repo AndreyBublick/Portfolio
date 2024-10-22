@@ -6,7 +6,7 @@ import { SectionTitle } from '../../../../components/SectionTitle';
 export const WorkExperience = () => {
   return (
     <WorkExperienceStyled>
-        <SectionTitle mBottom={'38px'} textAlign={'left'} fSize={'42px'}>Work Experience</SectionTitle>
+        <SectionTitle>Work Experience</SectionTitle>
     </WorkExperienceStyled>
   )
 }
