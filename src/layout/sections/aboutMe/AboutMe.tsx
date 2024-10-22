@@ -113,11 +113,11 @@ h2{
 &::before{
   content:'';
   position:absolute;
-  background:  url(${wall}) right center/auto no-repeat fixed;
+  background:  url(${wall}) right center/auto no-repeat;
   width:100%;
   height: 100%;
-  top: -50px;
-  left:350px;
+  top: 0px;
+  left:0px;
   z-index: -1;
 
  

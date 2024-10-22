@@ -18,14 +18,14 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
     return <ProjectStyled>
 
         <ProjectImageStyled>
-            <div className='image__body'>
+            <div>
                 <img src={image} alt="My Project" />
             </div>
         </ProjectImageStyled>
 
         <ProjectBodyStyled>
             <ProjectTitleStyled>{title}</ProjectTitleStyled>
-            <ProjectDescriptionStyled className={'description'}>{description}</ProjectDescriptionStyled>
+            <ProjectDescriptionStyled>{description}</ProjectDescriptionStyled>
             <ProjectPSStyled><span>Tech stack :</span>  HTML , JavaScript, SASS, React</ProjectPSStyled>
             <ProjectLinksStyled>
                 <FlexWrapper gap={15} alignItems={'center'} justifyContent={'space-between'}>
@@ -69,7 +69,7 @@ const LinkIconChain = styled.a`
 const ProjectImageStyled = styled.div`
 position:relative;
 z-index:0;
-.image__body{
+& > div{
     padding-left:100%;
     padding-bottom:69.335%;
     position:relative;
@@ -105,8 +105,9 @@ z-index:0;
 
 `;
 const ProjectStyled = styled.div`
-
-flex:0 0  calc(375px);
+display:flex;
+flex-direction:column;
+flex:1 0  calc(375px);
 
 /* &:not(:nth-child(3n)){
 
@@ -133,6 +134,9 @@ box-shadow:0px 0px 100px 0px gray;
 
 
 const ProjectBodyStyled = styled.div`
+display:flex;
+flex-direction:column;
+flex-grow:1;
 padding:27px 30px 25px ;
 `;
 const ProjectTitleStyled = styled.h3`
@@ -141,6 +145,7 @@ color:black;
 
 
 const ProjectDescriptionStyled = styled.p`
+flex-grow:1;
 font-size: 18px;
 font-weight: 300;
 

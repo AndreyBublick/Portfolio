@@ -22,7 +22,7 @@ export const Header: FC = () => {
 
          <FlexWrapper  justifyContent={'space-between'} gap={50}>
             <Logo />
-            <Menu links={links} />
+            <MenuStyled links={links} />
             <MobileMenu links={links} />
             <ListSocial />
          </FlexWrapper>
@@ -37,12 +37,17 @@ export const Header: FC = () => {
    </HeaderStyled>);
 
 }
-/* const MenuStyled = styled(Menu)`
-background-color:red;
-`; */
+
+
+
+ const MenuStyled = styled(Menu)`
+/* background-color:red; */
+`; 
+
+
 
 const HeaderStyled = styled.header`
-position:sticky;
+position:sticky; ///safari debug
 top:0;
 left:0;
 z-index:999;

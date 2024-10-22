@@ -35,7 +35,7 @@ export const Footer = () => {
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
                     <Menu  links={links} />
 
-                    <PS>Designed and built by <GradientWord>Pavan MG</GradientWord> with <GradientWord>Love</GradientWord> & <GradientWord>Coffee</GradientWord></PS>
+                    <PS> <GradientWord><UsualText>Designed and built by</UsualText> Pavan MG <UsualText>with</UsualText> Love <UsualText>&</UsualText> Coffee</GradientWord> </PS>
 
                 </FlexWrapper>
             </FlexWrapper>
@@ -110,7 +110,7 @@ nav{
         top: 0%;
         left:0%;
         &>span{
-            top:70%;
+            top:60%;
             transform:translateY(-50%);
     }
     }
@@ -122,7 +122,7 @@ nav{
 
     & > span{
       
-        top:-30%;
+        top:-40%;
         transform:translateY(-50%);
         
 
@@ -145,7 +145,13 @@ nav{
 
 
 
-
+const UsualText = styled.span`
+background-image: linear-gradient(270deg, ${theme.colors.title},${theme.colors.title});
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Для поддержки WebKit-браузеров */
+  background-clip: text; /* Для остальных браузеров */
+  
+`;
 const Telephone = styled.a`
 `;
 const Email = styled.a`

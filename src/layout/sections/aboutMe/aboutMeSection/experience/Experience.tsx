@@ -19,17 +19,18 @@ type propsType = {
 export const Experience: FC<propsType> = ({date,buttonBody,location,title}) => {
     return (
         <ExperienceStyled>
-            <FlexWrapper justifyContent={'space-between'}><ExperienceTitleStyled>{title}</ExperienceTitleStyled><ExperienceButtonStyled>{buttonBody}</ExperienceButtonStyled></FlexWrapper>
+            <FlexWrapper justifyContent={'space-between'}><ExperienceTitleStyled>{title}</ExperienceTitleStyled><ExperienceButtonStyled>{buttonBody}</ExperienceButtonStyled>
+            </FlexWrapper>
             
             
             
             <FlexWrapper alignItems={'center'} justifyContent={'space-between'}>
                 <FlexWrapper alignItems={'center'} gap={8}>
                     <Icon id={'smallBuilding'} width={8} height={10} viewBox={'viewBox="0 0 8 10'} /* color={'transparent'} */ /> <span>{location.building}</span>
-                 {location.country!=='' && <><Icon id={'map'} viewBox={'0 0 12 12'} width={12} height={12} /> <span>{location.country}</span></> }   
+                 {location.country !== '' && <> <Icon id={'map'} viewBox={'0 0 12 12'} width={12} height={12} /> <span>{location.country}</span></> }   
                 </FlexWrapper>
-                    <FlexWrapper gap={8} alignItems={'center'}>
-                    <Icon id={'date'} viewBox={'0 0 12 10'} width={12} height={10} /> <span>{date}</span>
+                    <FlexWrapper gap={8} alignItems={'center'} justifyContent={'flex-end'}>
+                    <Icon id={'date'} viewBox={'0 0 14 12'} width={14} height={12} /> <span>{date}</span>
                     </FlexWrapper>
 
             </FlexWrapper>
@@ -58,7 +59,11 @@ color:${theme.colors.fontLight};
 padding-bottom:24px;
 
 border-bottom:2px solid ${theme.colors.border};
+ ${FlexWrapper} > ${FlexWrapper}:first-of-type svg:not(:first-of-type){
 
+    margin-left:auto;
+
+}
 `;
 
 const ExperienceTitleStyled = styled.h3`
@@ -73,7 +78,7 @@ color:${theme.colors.font};
 const ExperienceButtonStyled = styled.button`
 font-size: 9px;
 font-weight: 600;
-line-height: calc(26/9);
+line-height: calc(24/9);
 padding:0 22px;
 
 color:${theme.colors.buttonExperience.color};

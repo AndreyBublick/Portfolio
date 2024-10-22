@@ -62,7 +62,7 @@ export const Projects: FC = () => {
             <SectionTitle>Projects</SectionTitle>
             <SectionSubTitle>Things I’ve built so far</SectionSubTitle>
 
-            <FlexWrapper alignItems={'flex-start'} justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
+            <FlexWrapper  justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
 
 
                 {projectsArray.map(({ title, description, image }) => <Project key={image} title={title} description={description} image={image} />)}
