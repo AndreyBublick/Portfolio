@@ -51,6 +51,7 @@ height:50%;
     &:first-of-type{
         top: 0%;
         left:0%;
+       
         &>span{
             top:50%;
             transform:translateY(-50%);
@@ -60,6 +61,7 @@ height:50%;
     &:last-of-type{
         left:0;
         bottom:0%;
+        
     
 
     & > span{

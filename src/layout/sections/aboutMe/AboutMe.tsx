@@ -97,10 +97,8 @@ ${FlexWrapper}{
   max-width:710px;
 }
 
-${SectionTitle}{
-  text-align:left;
+${FlexWrapper} > ${SectionTitle}{
   margin-bottom:0px;
-  font-size:42px;
 
 }
 

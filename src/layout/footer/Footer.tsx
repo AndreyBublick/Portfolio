@@ -33,9 +33,9 @@ export const Footer = () => {
 
                 </FlexWrapper>
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
-                    <Menu  links={links} />
+                    <Menu links={links} />
 
-                    <PS> <GradientWord><UsualText>Designed and built by</UsualText> Pavan MG <UsualText>with</UsualText> Love <UsualText>&</UsualText> Coffee</GradientWord> </PS>
+                    <PS>  <Mask>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></Mask> <GradientWord><UsualText>Designed and built by</UsualText> Pavan MG <UsualText>with</UsualText> Love <UsualText>&</UsualText> Coffee</GradientWord> </PS>
 
                 </FlexWrapper>
             </FlexWrapper>
@@ -47,15 +47,32 @@ export const Footer = () => {
 const PS = styled.small`
 font-size: 18px;
 line-height: calc(26/18);
+position:relative;
+z-index:0;
+line-height:1.2;
 
-span{
+${GradientWord}{
+z-index:-1;
+line-height:inherit;
 
-display:inline;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+& > span{
+    background-color:${theme.colors.primaryBg};
 }
-
+}
 `;
 
+const Mask = styled.span`
+color:${theme.colors.font};
+span{
+    color:transparent;
 
+}
+`;
 
 const FooterStyled = styled.footer`
 padding-top:100px;
@@ -95,7 +112,7 @@ margin:0 auto;
 }
 
 ${FlexWrapper}>${FlexWrapper}:first-of-type{
-    border-bottom:2px solid ${theme.colors.font };
+    border-bottom:2px solid ${theme.colors.font};
     padding-bottom:40px;
     margin-bottom:45px;
 a{
@@ -109,6 +126,7 @@ nav{
         &:first-of-type{
         top: 0%;
         left:0%;
+         transition:all 0.2s linear;
         &>span{
             top:60%;
             transform:translateY(-50%);
@@ -118,6 +136,7 @@ nav{
     &:last-of-type{
         left:0;
         bottom:0%;
+        transition:all 0.2s linear;
     
 
     & > span{
@@ -146,10 +165,10 @@ nav{
 
 
 const UsualText = styled.span`
-background-image: linear-gradient(270deg, ${theme.colors.title},${theme.colors.title});
--webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Для поддержки WebKit-браузеров */
-  background-clip: text; /* Для остальных браузеров */
+background-image: linear-gradient(270deg, transparent);
+-webkit-background-clip: border-box;
+  -webkit-text-fill-color: inherit; /* Для поддержки WebKit-браузеров */
+  background-clip: border-box; /* Для остальных браузеров */
   
 `;
 const Telephone = styled.a`
