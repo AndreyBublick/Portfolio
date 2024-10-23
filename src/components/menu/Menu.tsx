@@ -1,23 +1,25 @@
 import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
 
 
 type propsType = {
     links: Array<string>,
-   
+    fz?: string,
+    activeElement?: string,
+
 };
 type MenuStyledPorpsType = {
-    
+    fz?: string,
 
 };
 
-export const Menu: FC<propsType> = ({ links }) => {
-    return <MenuStyled>
-        <List>
+export const Menu: FC<propsType> = ({ links, fz, activeElement }) => {
+    return <MenuStyled >
+        <List fz={fz}>
 
-            {links.map((link) => <li key={link}><Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask><NavLink to={`/${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}</NavLink></li>)}
+            {links.map((link) => <LI isActive={activeElement === `${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`} key={link}><Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask><NavLink to={`${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}</NavLink></LI>)}
 
         </List>
 
@@ -84,8 +86,19 @@ height:50%;
 
 
 
-const MenuStyled = styled.nav<MenuStyledPorpsType>`
+const MenuStyled = styled.nav`
 
+`;
+
+const List = styled.ul<MenuStyledPorpsType>`
+
+
+   display:flex;
+   gap:50px;
+
+   font-size: ${props => props.fz || theme.fontSizes.link};
+   
+   
 `;
 
 
@@ -93,28 +106,10 @@ const MenuStyled = styled.nav<MenuStyledPorpsType>`
 
 
 
+const LI = styled.li<{ isActive?: boolean }>`
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const List = styled.ul<MenuStyledPorpsType>`
-   display:flex;
-   gap:50px;
-   
-   li{
     
     z-index:0;
    
@@ -132,7 +127,8 @@ const List = styled.ul<MenuStyledPorpsType>`
     transition:inherit;
     content:'';
     position:absolute;
-    z-index:-1;
+    z-index:1;
+    pointer-events:none;
     width:120%;
     top: 50%;
     left: 50%;
@@ -167,15 +163,45 @@ const List = styled.ul<MenuStyledPorpsType>`
     }
 }
 
-
-
-
 a{
     display:inline-block;
     color:transparent;
     
     
  }
-   }
-`;
+   
 
+
+${props => props.isActive && css<{ isActive?: boolean }>`
+
+
+    &::before{
+        
+            opacity:1;
+
+        
+    }
+    ${Mask}:first-of-type{
+        transform:translate(3%,-0%) skew(15deg);
+       
+    &>span{
+        color:${theme.colors.gradient.color1};
+
+    }
+
+    }
+    ${Mask}:last-of-type{
+        transform:translate(-5%,-0%) skew(15deg);
+       
+    &>span{
+        color:${theme.colors.gradient.color2};
+
+    
+}
+
+    }
+`}
+
+
+
+`;

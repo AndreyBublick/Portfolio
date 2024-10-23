@@ -6,6 +6,7 @@ import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Link } from 'react-router-dom';
 import { theme } from '../../../../styles/theme';
 import { Icon } from '../../../../components/icon/Icon';
+import { font } from '../../../../styles/Common';
 
 
 type propsType = {
@@ -29,18 +30,17 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
             <ProjectPSStyled><span>Tech stack :</span>  HTML , JavaScript, SASS, React</ProjectPSStyled>
             <ProjectLinksStyled>
                 <FlexWrapper gap={15} alignItems={'center'} justifyContent={'space-between'}>
-                    <FlexWrapper alignItems={'center'} gap={12}>
+                    
                         <LinkIconChain aria-label='ссылка live preview' href={'#'} target={'_blank'}>
-                            <Icon id={'chain'} height={20} width={20} viewBox={"0 0 20 20"} />
+                        <Icon id={'chain'} height={20} width={20} viewBox={"0 0 20 20"} />live preview
                         </LinkIconChain>
-                        <a href={'#'} target={'_blank'}>live preview</a>
-                    </FlexWrapper>
-                    <FlexWrapper alignItems={'center'} gap={12}>
+
+
                         <LinkIconGitHub aria-label='ссылка view code' href={'#'} target={'_blank'}>
-                            <Icon id={'SMALL_GIT_HUB'} height={20} width={20} viewBox={"0 0 20 20"} />
+                        <Icon id={'SMALL_GIT_HUB'} height={20} width={20} viewBox={"0 0 20 20"} />view code
                         </LinkIconGitHub>
-                        <a href={'#'} target={'_blank'}>view code</a>
-                    </FlexWrapper>
+                       
+                    
                 </FlexWrapper>
             </ProjectLinksStyled>
 
@@ -128,7 +128,17 @@ box-shadow:0px 0px 100px 0px gray;
 }
 }
 
+@media screen and (max-width:850px) {
+    flex:1 0  calc(340px);  
+}
+ @media ${theme.media.tablet} {
+    flex:1 0  calc(290px);  
+    max-width:450px;
+}
 
+@media ${theme.media.mobile} {
+    flex:1 0  100%;  
+}
 
 `;
 
@@ -137,31 +147,41 @@ const ProjectBodyStyled = styled.div`
 display:flex;
 flex-direction:column;
 flex-grow:1;
-padding:27px 30px 25px ;
+padding:25px 30px;
+
+@media ${theme.media.tablet} {
+    padding:15px 20px;
+
+}
+
 `;
 const ProjectTitleStyled = styled.h3`
-color:black;
+
+
+
+
+
 `;
 
 
 const ProjectDescriptionStyled = styled.p`
-flex-grow:1;
-font-size: 18px;
-font-weight: 300;
+flex-grow:1;///для заполнения пустого пространства
 
-line-height:1.6;
+${font({ fMax: 18, fMin: 14, weight: 300, lineHeight: 1.6 })}
+
 margin-bottom:12px;
+
+
 `;
 const ProjectPSStyled = styled.p`
 
 
-font-size: 14px;
-font-weight: 300;
+
+${font({ fMax: 14, fMin: 12, weight: 300 })}
 
 
 span{
-font-size: 16px;
-font-weight: 400;
+${font({ fMax: 16, fMin: 14 })}
 
  
 }
@@ -177,10 +197,12 @@ const ProjectLinksStyled = styled.div`
 
 
 a{
-font-size: 16px;
-line-height: calc(26/16);
+    display:flex;
 text-transform: capitalize;
-color:#000000;
+gap:10px;
+
+${font({ color: theme.colors.fontDark, lineHeight: 26 / 16, fMax: 16, fMin: 12 })}
+
 text-decoration:underline;
 transition: color 0.15s linear;
 

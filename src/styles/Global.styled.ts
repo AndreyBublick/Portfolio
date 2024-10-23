@@ -1,5 +1,8 @@
+
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
+import { font } from "../styles/Common";
+
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -64,19 +67,24 @@ body{
 section{
   background-color:${theme.colors.primaryBg};
   padding:100px 0;
+  @media ${theme.media.mobile} {
+  padding:60px 0;
+    
+  }
 }
 p{
   color:${theme.colors.font};
  font-weight: 400; 
+
 }
 h1,h2{
 
 }
 h3{
-  font-size: 28px;
-font-weight: 500;
-line-height: calc(26 / 28) ;
-margin-bottom:17px;
+
+${font({color:theme.colors.fontDark, weight:500, fMax:28, fMin:20, lineHeight:26 / 28})};
+margin-bottom:15px;
+
 
 }
 input::placeholder{

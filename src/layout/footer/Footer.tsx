@@ -33,7 +33,7 @@ export const Footer = () => {
 
                 </FlexWrapper>
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
-                    <Menu links={links} />
+                    <Menu links={links} fz={'18px'} />
 
                     <PS>  <Mask>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></Mask> <GradientWord><UsualText>Designed and built by</UsualText> Pavan MG <UsualText>with</UsualText> Love <UsualText>&</UsualText> Coffee</GradientWord> </PS>
 
@@ -44,6 +44,9 @@ export const Footer = () => {
     </FooterStyled>
 
 };
+
+
+
 const PS = styled.small`
 font-size: 18px;
 line-height: calc(26/18);
@@ -101,15 +104,10 @@ ${FlexWrapper}>${FlexWrapper}{
     }
    
 }
-@media ${theme.media.desktop} {
-    ${FlexWrapper}>${FlexWrapper} > nav{
-    display:none;   
-   
-}    
-${PS}{
-margin:0 auto;
-}
-}
+
+
+
+
 
 ${FlexWrapper}>${FlexWrapper}:first-of-type{
     border-bottom:2px solid ${theme.colors.font};
@@ -120,35 +118,15 @@ a{
 }
 }
 
-nav{
-    font-size: 18px;  
-    ul > li > span {
-        &:first-of-type{
-        top: 0%;
-        left:0%;
-         transition:all 0.2s linear;
-        &>span{
-            top:60%;
-            transform:translateY(-50%);
-    }
-    }
 
-    &:last-of-type{
-        left:0;
-        bottom:0%;
-        transition:all 0.2s linear;
-    
-
-    & > span{
-      
-        top:-40%;
-        transform:translateY(-50%);
-        
-
-    
-    }
-    }
-    } 
+@media ${theme.media.desktop} {
+    ${FlexWrapper}>${FlexWrapper} > nav{
+    display:none;   
+   
+}    
+${PS}{
+margin:0 auto;
+}
 }
 `;
 

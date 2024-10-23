@@ -19,7 +19,10 @@ const ListSocialStyled = styled.ul`
 display:flex;
 gap:20px;
 
-
+@media ${theme.media.desktop} {
+      display:none;
+      
+   }
 `;
 
 

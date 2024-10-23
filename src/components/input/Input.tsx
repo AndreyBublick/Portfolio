@@ -20,7 +20,7 @@ export const Input: FC<propsType> = ({ placeholderBody, inputType }) => {
 
 
 const InputStyled = styled.input`
-width:710px;
+width:100%;
 
 color:${theme.colors.gradient.color1};
 border:2px solid ${theme.colors.gradient.color2};

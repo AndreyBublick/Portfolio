@@ -1,12 +1,27 @@
 import styled from "styled-components";
 import { theme } from "../styles/theme";
+import { font } from "../styles/Common";
 
 export const SectionSubTitle = styled.span`
 
-font-size: 32px;
+
+
 display:block;
-line-height: 0.81;
+
 text-align: center;
 margin-bottom:124px;
-color:${theme.colors.font};
+
+@media ${theme.media.tablet} {
+margin-bottom:80px;
+    
+}
+
+@media ${theme.media.mobile} {
+margin-bottom:60px;
+    
+}
+
+${font({color:theme.colors.font,weight:700 ,lineHeight:0.81,fMax:32,fMin:20,})}
+
+
 `;

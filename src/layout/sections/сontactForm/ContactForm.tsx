@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SectionTitle } from '../../../../components/SectionTitle';
-import { SectionSubTitle } from '../../../../components/SectionSubTitle';
-import { Input } from '../../../../components/input/Input';
-import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { Textarea } from '../../../../components/textarea/Textarea';
-import { Button } from '../../../../components/button/Button';
-import { Container } from '../../../../components/Container';
+import { SectionTitle } from '../../../components/SectionTitle';
+import { SectionSubTitle } from '../../../components/SectionSubTitle';
+import { Input } from '../../../components/input/Input';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Textarea } from '../../../components/textarea/Textarea';
+import { Button } from '../../../components/button/Button';
+import { Container } from '../../../components/Container';
 
 export const ContactForm = () => {
   return (
@@ -36,4 +36,6 @@ const ContactFormStyled = styled.section`
   margin-bottom:48px;
 }
 `;
-const FormStyled = styled.form``;
+const FormStyled = styled.form`
+margin:0 auto;
+max-width:710px;`;

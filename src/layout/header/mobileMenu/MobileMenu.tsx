@@ -30,8 +30,10 @@ export const MobileMenu:FC<propsType> = ({links}) => {
 }
 
 const MobileMenuStyled = styled.div`
-
+display:none;
 `;
+
+
 const Burger = styled.button<burgerPropsType>`
 position:relative;
 z-index:100;
@@ -39,6 +41,7 @@ z-index:100;
 
 width:34px;
 height:24px;
+
 
 &::before,&::after{
     content:'';

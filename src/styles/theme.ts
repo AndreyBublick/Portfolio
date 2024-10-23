@@ -5,8 +5,11 @@ export const theme = {
 
         
         font:'#666666',
+
         fontLight:'#A7A7A7',
-        
+        fontDark:'#000',
+
+
         title:'#42446E',
         
        
@@ -21,12 +24,12 @@ export const theme = {
         },
         border:'#EBEAED',
     },
-    fontSize:{
+    fontSizes:{
         link:'20px',
     },
     container:{
-        width:'1240px',
-        leftAndRight:'20px',
+        width:'1230px',
+        leftAndRight:'15px',
     },
     media:{
         

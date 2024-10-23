@@ -25,13 +25,13 @@ export const Experience: FC<propsType> = ({date,buttonBody,location,title}) => {
             
             
             <FlexWrapper alignItems={'center'} justifyContent={'space-between'}>
-                <FlexWrapper alignItems={'center'} gap={8}>
-                    <Icon id={'smallBuilding'} width={8} height={10} viewBox={'viewBox="0 0 8 10'} /* color={'transparent'} */ /> <span>{location.building}</span>
-                 {location.country !== '' && <> <Icon id={'map'} viewBox={'0 0 12 12'} width={12} height={12} /> <span>{location.country}</span></> }   
+                <FlexWrapper flexWrap={'wrap'} alignItems={'center'} gap={8}>
+                  <div><Icon id={'smallBuilding'} width={8} height={10} viewBox={'viewBox="0 0 8 10'} /* color={'transparent'} */ /> <span>{location.building}</span></div>  
+                 {location.country !== '' && <div> <Icon id={'map'} viewBox={'0 0 12 12'} width={12} height={12} /> <span>{location.country}</span></div> }   
                 </FlexWrapper>
                     <FlexWrapper gap={8} alignItems={'center'} justifyContent={'flex-end'}>
                     <Icon id={'date'} viewBox={'0 0 14 12'} width={14} height={12} /> <span>{date}</span>
-                    </FlexWrapper>
+                </FlexWrapper>
 
             </FlexWrapper>
 

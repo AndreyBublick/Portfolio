@@ -14,6 +14,7 @@ import image6 from '.././../../assets/images/6.webp';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/theme';
 
 
 
@@ -62,20 +63,32 @@ export const Projects: FC = () => {
             <SectionTitle>Projects</SectionTitle>
             <SectionSubTitle>Things I’ve built so far</SectionSubTitle>
 
-            <FlexWrapper  justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
+            <FlexWrapperProjects  justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
 
 
                 {projectsArray.map(({ title, description, image }) => <Project key={image} title={title} description={description} image={image} />)}
 
-            </FlexWrapper>
+            </FlexWrapperProjects>
         </Container>
     </ProjectsStyled>
 
 }
 
+const FlexWrapperProjects = styled(FlexWrapper)``;
+
 
 
 const ProjectsStyled = styled.section`
+
+${FlexWrapperProjects}{
+    @media ${theme.media.tablet} {
+        gap:20px;
+        justify-content:center;
+    }    
+}
+
+
+
 
 `;
 

@@ -14,13 +14,13 @@ export const Textarea = () => {
 
 
 const TextareaStyled = styled.textarea`
-width:710px;
+
 
 
 color:${theme.colors.gradient.color1};
 
 
-
+width:100%;
 border:2px solid;
 /* border-radius:0.4em; */
 resize: none;
