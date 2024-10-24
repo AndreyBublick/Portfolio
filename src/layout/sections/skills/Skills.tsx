@@ -39,7 +39,7 @@ export const Skills: FC = () => {
             <SectionTitle>My Tech Stack</SectionTitle>
             <SectionSubTitle> Technologies I’ve been working with recently</SectionSubTitle>
             <SkillsWrapper>
-            {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)}
+            {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)};
             
            
            
