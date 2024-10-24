@@ -38,12 +38,12 @@ export const Skills: FC = () => {
 
             <SectionTitle>My Tech Stack</SectionTitle>
             <SectionSubTitle> Technologies I’ve been working with recently</SectionSubTitle>
-            <FlexWrapper justifyContent={'space-between'} gap={105} flexWrap='wrap'>
+            <SkillsWrapper>
             {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)}
             
            
            
-        </FlexWrapper>
+        </SkillsWrapper>
 
 
     </Container>
@@ -55,6 +55,13 @@ export const Skills: FC = () => {
 
 const SkillsStyled = styled.section`
 
+`;
+const SkillsWrapper = styled.div`
+display:grid;
+gap:80px;
+justify-items:center;
+align-items:center;
+grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
 `;
 
 
