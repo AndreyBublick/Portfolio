@@ -82,7 +82,7 @@ h1,h2{
 }
 h3{
 
-${font({color:theme.colors.fontDark, weight:500, fMax:28, fMin:20, lineHeight:26 / 28})};
+${font({color:theme.colors.fontDark, weight:500, fMax:28, fMin:20})};
 margin-bottom:15px;
 
 

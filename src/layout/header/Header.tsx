@@ -22,7 +22,7 @@ export const Header: FC = () => {
 
          <FlexWrapper  justifyContent={'space-between'} gap={50}>
             <Logo />
-            <MenuStyleder links={links} />
+            <Menu links={links} />
             <MobileMenu links={links} />
             <ListSocial />
          </FlexWrapper>
@@ -43,12 +43,6 @@ export const Header: FC = () => {
 
 // Создаю стилизованный компонент, оборачивая Menu
 
- const MenuStyleder = styled(Menu)`
-  background-color:red;
- color:green;
- border:2px solid red;
- ///menu
-`; 
 
 
 
@@ -81,24 +75,26 @@ font-size:20px;
    
 }
 
+
+
+   @media ${theme.media.tablet} {
+      ${FlexWrapper} > nav{display:none;
+      
+   }
+}
+   @media ${theme.media.tablet} {
+      ${FlexWrapper} > div:last-of-type{  
+          display:block;
+      
+   }
+}
 @media ${theme.media.tablet}{
    padding:20px 0px;
 }
-
- 
-
-${FlexWrapper} > nav{
-   @media ${theme.media.tablet} {
-      display:none;
-      
-   }
+@media ${theme.media.mobile}  {
+   padding:10px 0px; 
 }
-${FlexWrapper} > div:last-of-type{
-   @media ${theme.media.tablet} {
-      display:block;
-      
-   }
-}
+
 `;
 
 

@@ -7,6 +7,7 @@ import { Menu } from "../../components/menu/Menu";
 import { useState } from "react";
 import { GradientWord } from "../../components/GradientWord";
 import { Container } from "../../components/Container";
+import { font } from "../../styles/Common";
 
 
 
@@ -22,9 +23,9 @@ export const Footer = () => {
 
 
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
-                    <Logo />
+                    <Logo isDark />
 
-                    <FlexWrapper alignItems={"center"} justifyContent={"space-between"}>
+                    <FlexWrapper gap={15} alignItems={"center"} justifyContent={"space-between"}>
                         <Telephone href="tel:+1 555 505 5050">+1 555 505 5050</Telephone>
                         <Email href="mailto:info@designmodo.com">info@designmodo.com</Email>
 
@@ -50,9 +51,14 @@ export const Footer = () => {
 const PS = styled.small`
 font-size: 18px;
 line-height: calc(26/18);
+
+
+
 position:relative;
 z-index:0;
-line-height:1.2;
+
+
+
 
 ${GradientWord}{
 z-index:-1;
@@ -67,6 +73,13 @@ line-height:inherit;
     background-color:${theme.colors.primaryBg};
 }
 }
+
+
+@media ${theme.media.mobile} {
+font-size: 12px;
+text-align:center;
+    
+}
 `;
 
 const Mask = styled.span`
@@ -77,58 +90,7 @@ span{
 }
 `;
 
-const FooterStyled = styled.footer`
-padding-top:100px;
-padding-bottom:60px;
-background-color:${theme.colors.primaryBg};
 
-
-
-
-
-color:${theme.colors.title}; ///main color
-
-
-
-
-
-${FlexWrapper}>${FlexWrapper}{
-    flex:0 0 55%; 
-    a{
-        
-        font-family: DM Sans;
-        font-size: 18px;
-        line-height: calc(26/18);
-        
-
-    }
-   
-}
-
-
-
-
-
-${FlexWrapper}>${FlexWrapper}:first-of-type{
-    border-bottom:2px solid ${theme.colors.font};
-    padding-bottom:40px;
-    margin-bottom:45px;
-a{
-     color:inherit; 
-}
-}
-
-
-@media ${theme.media.desktop} {
-    ${FlexWrapper}>${FlexWrapper} > nav{
-    display:none;   
-   
-}    
-${PS}{
-margin:0 auto;
-}
-}
-`;
 
 
 
@@ -150,9 +112,71 @@ background-image: linear-gradient(270deg, transparent);
   
 `;
 const Telephone = styled.a`
+
+
 `;
 const Email = styled.a`
+
 `;
 
+
+
+const FooterStyled = styled.footer`
+padding-top:100px;
+padding-bottom:60px;
+background-color:${theme.colors.primaryBg};
+
+
+
+
+
+color:${theme.colors.title}; ///main color
+
+
+
+
+
+${FlexWrapper}>${FlexWrapper}{
+    flex:0 0 55%; 
+    a{
+        white-space:nowrap;
+        
+        ${font({family:'DM Sans,sans-serif',color:'transparent',lineHeight:26/18,fMax:18,fMin:14})};
+
+    }
+   
+}
+
+
+
+
+
+
+${FlexWrapper}>${FlexWrapper}:first-of-type{
+    border-bottom:2px solid ${theme.colors.font};
+    padding-bottom:40px;
+    margin-bottom:45px;
+a{
+     color:inherit; 
+}
+}
+
+@media ${theme.media.mobile} {
+    ${FlexWrapper}>${FlexWrapper}:first-of-type>${FlexWrapper} {
+flex-direction:column;
+align-items:flex-end;
+    
+}  
+    }
+@media ${theme.media.desktop} {
+    ${FlexWrapper}>${FlexWrapper} > nav{
+    display:none;   
+   
+}    
+${PS}{
+margin:0 auto;
+}
+}
+`;
 
 

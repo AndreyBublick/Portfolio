@@ -91,7 +91,7 @@ const AboutMeStyled = styled.section`
 position:relative;
 z-index:0;
 ${FlexWrapper} > div{
-   width:100%; 
+  
 }
 ${FlexWrapper}{
   max-width:710px;

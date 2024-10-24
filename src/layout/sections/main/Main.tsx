@@ -94,7 +94,9 @@ img{
         gap:50px;
     }
 }
-
+@media screen and (max-height:700px) {
+    padding:100px 0;
+}
 `;
 
 

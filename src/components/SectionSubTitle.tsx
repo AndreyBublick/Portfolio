@@ -21,7 +21,7 @@ margin-bottom:60px;
     
 }
 
-${font({color:theme.colors.font,weight:700 ,lineHeight:0.81,fMax:32,fMin:20,})}
+${font({color:theme.colors.font,weight:700 ,lineHeight:1.3,fMax:32,fMin:20,})}
 
 
 `;

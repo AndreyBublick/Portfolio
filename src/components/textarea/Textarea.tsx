@@ -45,6 +45,8 @@ border-image:linear-gradient(0deg,${theme.colors.gradient.color1} 0%,${theme.col
             0 -2px 3px -0px ${theme.colors.gradient.color2},
             0 2px 3px -0px ${theme.colors.gradient.color1};
 }
-
+@media screen and (max-width:450px) {
+    min-height:200px;  
+}
 `;
 

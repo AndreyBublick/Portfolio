@@ -113,6 +113,7 @@ const LI = styled.li<{ isActive?: boolean }>`
     
     z-index:0;
    
+    white-space:nowrap;
    
     position:relative;
     

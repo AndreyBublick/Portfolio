@@ -35,9 +35,7 @@ export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
 
 const AboutMeSectionStyled = styled.div`
 
-&  h3{
-    margin-bottom:0;
-}
+
 `;
 
 

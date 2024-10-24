@@ -38,4 +38,6 @@ const ContactFormStyled = styled.section`
 `;
 const FormStyled = styled.form`
 margin:0 auto;
-max-width:710px;`;
+max-width:710px;
+
+`;
