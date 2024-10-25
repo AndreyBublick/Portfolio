@@ -17,9 +17,9 @@ type MenuStyledPorpsType = {
 
 export const Menu: FC<propsType> = ({ links, fz, activeElement }) => {
     return <MenuStyled >
-        <List fz={fz}>
+        <List >
 
-            {links.map((link) => <LI isActive={activeElement === `${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`} key={link}><Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask><NavLink to={`${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}</NavLink></LI>)}
+            {links.map((link) => <LI fz={fz} isActive={activeElement === `${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`} key={link}><Mask><span>{link}</span></Mask><Mask><span>{link}</span></Mask><NavLink to={`${link.toLowerCase().split('').map((letter) => letter === ' ' ? '_' : letter).join('')}`}>{link}</NavLink></LI>)}
 
         </List>
 
@@ -37,6 +37,8 @@ overflow:hidden;
 z-index:-1;
 
 
+
+
 transform:translate(0%,0%) skew(0);
 
 width:100%;
@@ -47,7 +49,8 @@ height:50%;
     /* overflow:hidden; */
     transition:inherit;
     width:100%;
-    height:100%;    
+    height:100%;   
+     
     }
 
     &:first-of-type{
@@ -94,9 +97,9 @@ const List = styled.ul<MenuStyledPorpsType>`
 
 
    display:flex;
-   gap:50px;
+   gap:63px;
 
-   font-size: ${props => props.fz || theme.fontSizes.link};
+  
    
    
 `;
@@ -106,17 +109,19 @@ const List = styled.ul<MenuStyledPorpsType>`
 
 
 
-const LI = styled.li<{ isActive?: boolean }>`
+const LI = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
 
 
+    font-size: ${props => props.fz || theme.fontSizes.link};
+    
 
     
-    z-index:0;
    
     white-space:nowrap;
    
     position:relative;
-    
+    z-index:0;
+
     font-family: 'DM Sans',sans-serif;
    
     font-weight: 500;

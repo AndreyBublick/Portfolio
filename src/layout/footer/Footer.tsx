@@ -49,10 +49,8 @@ export const Footer = () => {
 
 
 const PS = styled.small`
-font-size: 18px;
-line-height: calc(26/18);
 
-
+${font({ color: 'inherit', lineHeight: 26 / 18, fMax: 18, fMin: 12 })}
 
 position:relative;
 z-index:0;
@@ -76,7 +74,7 @@ line-height:inherit;
 
 
 @media ${theme.media.mobile} {
-font-size: 12px;
+
 text-align:center;
     
 }
@@ -141,12 +139,17 @@ ${FlexWrapper}>${FlexWrapper}{
     a{
         white-space:nowrap;
         
-        ${font({family:'DM Sans,sans-serif',color:'transparent',lineHeight:26/18,fMax:18,fMin:14})};
+        
 
     }
-   
+    
 }
-
+${FlexWrapper}>${FlexWrapper}:first-of-type{
+    a{
+    color:red;
+    ${font({ family: 'DM Sans,sans-serif', color: 'transparent', lineHeight: 26 / 18, fMax: 18, fMin: 14 })};
+    }
+    }
 
 
 

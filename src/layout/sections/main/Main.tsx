@@ -16,7 +16,7 @@ export const Main = () => {
         
         <FlexWrapper gap={15}  alignItems={'center'} flexWrap={'wrap'}> 
             <Title>
-                Hi 👋,<br />
+                Hi <Dot>👋 ,</Dot><br />
                 My name is<br />
                 <GradientWord>Pavan MG</GradientWord>
                 I build things for web
@@ -100,13 +100,20 @@ img{
 `;
 
 
-
+const Dot = styled.span`
+font-family:Arial, Helvetica, sans-serif;
+`;
 const Title = styled.h2`
 flex-grow:1;
 
   ${font({color:theme.colors.title,weight:700,fMax:58,fMin:28})}
     
     text-align:left;
+
+letter-spacing:-1px;
+
+    
+
     @media ${theme.media.tablet} {
    
          

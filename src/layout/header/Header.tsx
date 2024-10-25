@@ -20,7 +20,7 @@ export const Header: FC = () => {
       <Container>
 
 
-         <FlexWrapper  justifyContent={'space-between'} gap={50}>
+         <FlexWrapper alignItems={'flex-start'}  /* justifyContent={'space-between'} */  gap={50}>
             <Logo />
             <Menu links={links} />
             <MobileMenu links={links} />
@@ -54,6 +54,7 @@ top:0;
 left:0;
 z-index:999;
 width:100%;
+
 color:${theme.colors.font};
 padding:40px 0px;
 background-color:${theme.colors.primaryBg};
@@ -66,7 +67,9 @@ font-size:20px;
 
 
 
-
+ul{
+   padding:10px 0;
+}
 
 @media ${theme.media.tablet} {
    ${FlexWrapper}{

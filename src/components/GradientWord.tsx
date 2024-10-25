@@ -17,6 +17,6 @@ export const GradientWord = styled.span`
   -webkit-text-fill-color: transparent; /* Для поддержки WebKit-браузеров */
   background-clip: text; /* Для остальных браузеров */
 
-  line-height:1.5;
+  /* line-height:1.2; */
   
 `; 

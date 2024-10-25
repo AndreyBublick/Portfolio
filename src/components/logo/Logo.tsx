@@ -27,6 +27,7 @@ export const Logo:FC<propsType> = ({isDark}) => {
     </LogoStyled>
 }
 const LogoStyled = styled.div`
+margin-right: auto;
 svg{
    
     border-radius:0;
