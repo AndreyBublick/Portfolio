@@ -23,7 +23,7 @@ export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
         <AboutMeSectionStyled>
             <SectionTitle>{title}</SectionTitle>
 
-            <FlexWrapper gap={33} flexDirection={'column'}>
+            <FlexWrapper gap={35} flexDirection={'column'}>
                 {experiences.map(({buttonBody,date,location,title},index)=> <Experience key={index} buttonBody={buttonBody} date={date} location={location} title={title} /> )}
                 
                 

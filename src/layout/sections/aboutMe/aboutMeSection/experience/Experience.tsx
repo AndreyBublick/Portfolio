@@ -69,7 +69,7 @@ const ExperienceFooter = styled(FlexWrapper)`
 }
 }
 & > div:first-of-type{
-    flex:0 0 50%;
+    flex:0 0 48%;
 
 }
 
@@ -93,19 +93,21 @@ letter-spacing: 1px;
 
 ${font({fMax:20, fMin:18, weight:400, color:theme.colors.font})};
 
-margin-bottom:15px;
+margin-bottom:8px;
 `;
 
 const ExperienceButtonStyled = styled.button`
 font-size: 9px;
 font-weight: 600;
 line-height: calc(24/9);
-padding:0 22px;
+/* padding:0 22px; */
+width:84px;
 white-space:nowrap;
 
 color:${theme.colors.buttonExperience.color};
 border-radius:3em;
 background-color:${theme.colors.buttonExperience.bg};
+/* transform:translateY(-5px); для pixel perfect */
 `;
 
 

@@ -10,6 +10,7 @@ import { AboutMeSection } from './aboutMeSection/AboutMeSection';
 import wall from '../../../assets/images/wall.webp';
 import svgs from '../../../assets/images/code-svg.svg';
 import { Container } from '../../../components/Container';
+import { font } from '../../../styles/Common';
 
 export type experienceType = {
 
@@ -94,7 +95,7 @@ ${FlexWrapper} > div{
   
 }
 ${FlexWrapper}{
-  max-width:710px;
+  max-width:695px;
 }
 
 ${FlexWrapper} > ${SectionTitle}{
@@ -114,8 +115,8 @@ h2{
   background:  url(${wall}) right center/auto no-repeat;
   width:100%;
   height: 100%;
-  top: 0px;
-  left:0px;
+  top: -40px;
+  left:30px;
   z-index: -1;
 
  
@@ -124,8 +125,9 @@ h2{
 `;
 
 const AboutMeDescriptionStyled = styled.p`
-font-size: 18px;
 
+
+${font({fMax:18,fMin:16,lineHeight:26/18})}
 
 `;
 
