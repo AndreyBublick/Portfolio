@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
-import { Input } from '../../../components/input/Input';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { Textarea } from '../../../components/textarea/Textarea';
 import { Button } from '../../../components/button/Button';
 import { Container } from '../../../components/Container';
+import { FormField } from '../../../components/formField/FormField';
 
 export const ContactForm = () => {
   return (
@@ -17,9 +16,11 @@ export const ContactForm = () => {
         <SectionSubTitle>Send Me</SectionSubTitle>
         <FormStyled action="#" method='post'>
         <FlexWrapper alignItems={'center'} gap={15} flexDirection={'column'}>
-        <Input placeholderBody={'your First Name'} />
-        <Input placeholderBody={'your Last Name'}/>
-        <Textarea />
+        <FormField placeholderBody={'your First Name'} />
+        <FormField placeholderBody={'your Last Name'}/>
+        <FormField as={'textarea'} placeholderBody={'your message'}/>
+      
+    
         <Button textBody={'send'} />
         </FlexWrapper>
         
@@ -39,5 +40,6 @@ const ContactFormStyled = styled.section`
 const FormStyled = styled.form`
 margin:0 auto;
 max-width:710px;
+
 
 `;

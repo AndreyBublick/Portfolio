@@ -9,3 +9,15 @@ export const spin = keyframes`
 
 }
 `;
+export const scrolling = keyframes`
+0%{
+    transform:translateX(0%);
+
+    left:0%;
+}
+100%{
+    transform:translateX(-100%);
+    left:100%;
+
+}
+`;

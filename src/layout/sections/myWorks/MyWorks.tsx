@@ -43,7 +43,7 @@ export const MyWorks:FC = () => {
 
             </MenuBody>
             <Works flexWrap={'wrap'} gap={60} >
-                {workArray.map(({description,image,title})=> <Work image={image} description={description} title={title} />)}
+                {workArray.map(({description,image,title},i)=> <Work key={i} image={image} description={description} title={title} />)}
             </Works>
 
 
