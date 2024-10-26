@@ -18,11 +18,11 @@ export const ListSocial: FC = () => {
 const ListSocialStyled = styled.ul`
 display:flex;
 gap:20px;
-
-@media ${theme.media.desktop} {
+padding:5px 0;
+/* @media ${theme.media.desktop} {
       display:none;
       
-   }
+   } */
 `;
 
 

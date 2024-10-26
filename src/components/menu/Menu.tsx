@@ -97,10 +97,13 @@ const List = styled.ul<MenuStyledPorpsType>`
 
 
    display:flex;
-   gap:63px;
+   gap:60px;
 
   
-   
+   @media screen and (max-width:900px) {
+   gap:35px;
+    
+   }
    
 `;
 

@@ -30,7 +30,7 @@ export const Projects: FC = () => {
         },
         {
             title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum gen ption random things are here in description This is sample project lorem ipsum generator for dummy contenterator for dummy content',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
             image: image2,
         },
         {
@@ -74,7 +74,9 @@ export const Projects: FC = () => {
 
 }
 
-const FlexWrapperProjects = styled(FlexWrapper)``;
+const FlexWrapperProjects = styled(FlexWrapper)`
+row-gap:62px;
+`;
 
 
 

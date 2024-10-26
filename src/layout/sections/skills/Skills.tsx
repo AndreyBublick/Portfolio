@@ -5,7 +5,7 @@ import { Icon } from '../../../components/icon/Icon';
 import { theme } from '../../../styles/theme';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
-import { Skill } from './Skill/Skill';
+import { Skill } from './skill/Skill';
 import { Container } from '../../../components/Container';
 
 export const Skills: FC = () => {
@@ -31,15 +31,16 @@ export const Skills: FC = () => {
         {id:'GIT', viewBox:"0 0 105 105", width:105, height:105,
         },
         {id:'MAN', viewBox:"0 0 102 120", width:102, height:120, 
-        },{id:'VS', viewBox:"0 0 112 112", width:112, height:112,},{id:'GIT_HUB', viewBox:"0 0 88 86", width:88, height:86,}]);
+        },{id:'VS', viewBox:"0 0 112 112", width:112, height:112,},
+        {id:'GIT_HUB', viewBox:"0 0 88 86", width:88, height:86,}])
 
     return <SkillsStyled>
         <Container>
 
             <SectionTitle>My Tech Stack</SectionTitle>
-            <SectionSubTitle> Technologies I’ve been working with recently</SectionSubTitle>
+            <SectionSubTitle mBottom={'124px'}> Technologies I’ve been working with recently</SectionSubTitle>
             <SkillsWrapper>
-            {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)};
+            {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)}
             
            
            
@@ -58,10 +59,12 @@ const SkillsStyled = styled.section`
 `;
 const SkillsWrapper = styled.div`
 display:grid;
-gap:80px;
+column-gap:90px;
+row-gap:85px;
 justify-items:center;
 align-items:center;
 grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+grid-auto-rows:1fr;
 `;
 
 

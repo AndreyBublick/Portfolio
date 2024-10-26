@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
@@ -9,22 +9,69 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 import { ListSocial } from '../../components/listSocial/ListSocial';
 import { Container } from '../../components/Container';
 import { MobileMenu } from './mobileMenu/MobileMenu';
+import { S } from './Header_Styles';
+import { DesktopMenu } from './desktopMenu/DesktopMenu';
 
 
 
 export const Header: FC = () => {
 
    const [links, setLinks] = useState(['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]);
+   const [isMobile, setIsMobile] = useState(false);
+   const [isShowSocial, setIsShowSocial] = useState(true);
 
-   return (<HeaderStyled>
+
+
+   useEffect(() => {
+      const resizeWindow = () => {
+         if (window.innerWidth <= 768) {
+            setIsMobile(true);
+         }
+         else {
+            setIsMobile(false);
+
+         }
+      };
+
+      window.addEventListener('resize', resizeWindow);
+      resizeWindow(); // Инициализация при монтировании
+
+      return () => {
+         window.removeEventListener('resize', resizeWindow);
+      };
+   }, []);
+   useEffect(() => {
+      const onResizeWindow = () => {
+         if (window.innerWidth <= 1200) {
+            setIsShowSocial(false);
+         }
+         else {
+            setIsShowSocial(true);
+
+         }
+      };
+
+      window.addEventListener('resize', onResizeWindow);
+      onResizeWindow(); // Инициализация при монтировании
+
+      return () => {
+         window.removeEventListener('resize', onResizeWindow);
+      };
+   }, []);
+
+   return (<S.Header>
       <Container>
 
 
-         <FlexWrapper alignItems={'flex-start'}  /* justifyContent={'space-between'} */  gap={50}>
+         <FlexWrapper alignItems={'flex-start'}  /* justifyContent={'space-between'} */ gap={54}>
             <Logo />
-            <Menu links={links} />
-            <MobileMenu links={links} />
-            <ListSocial />
+            
+
+            <S.LinksWrapper alignItems={'center'} gap={50}>
+            {isMobile ? <MobileMenu links={links} /> : <DesktopMenu links={links} />}
+            {isShowSocial && <ListSocial />}
+         
+            </S.LinksWrapper>
          </FlexWrapper>
 
 
@@ -34,7 +81,7 @@ export const Header: FC = () => {
 
 
 
-   </HeaderStyled>);
+   </S.Header>);
 
 }
 
@@ -46,59 +93,7 @@ export const Header: FC = () => {
 
 
 
-const HeaderStyled = styled.header`
 
-
-position:fixed; ///safari debug
-top:0;
-left:0;
-z-index:999;
-width:100%;
-
-color:${theme.colors.font};
-padding:40px 0px;
-background-color:${theme.colors.primaryBg};
-
-font-size:20px;
-
-
-
-     
-
-
-
-ul{
-   padding:10px 0;
-}
-
-@media ${theme.media.tablet} {
-   ${FlexWrapper}{
-      align-items:center;
-   }
-   
-}
-
-
-
-   @media ${theme.media.tablet} {
-      ${FlexWrapper} > nav{display:none;
-      
-   }
-}
-   @media ${theme.media.tablet} {
-      ${FlexWrapper} > div:last-of-type{  
-          display:block;
-      
-   }
-}
-@media ${theme.media.tablet}{
-   padding:20px 0px;
-}
-@media ${theme.media.mobile}  {
-   padding:10px 0px; 
-}
-
-`;
 
 
 

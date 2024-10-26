@@ -30,8 +30,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 
 *{
-    scrollbar-width:thin;
-    scrollbar-color:#E70FAA white;
+    /* scrollbar-width:thin;
+    scrollbar-color:#E70FAA white; */
     @media (prefers-reduced-motion: reduce) {
     .animated-element {
         animation: none; /* Отключите анимацию */
@@ -77,13 +77,14 @@ p{
  font-weight: 400; 
 
 }
-h1,h2{
-
+h1{}
+h2{
+  weight:700;
 }
 h3{
 
 ${font({color:theme.colors.fontDark, weight:500, fMax:28, fMin:20})};
-margin-bottom:15px;
+margin-bottom:13px;
 
 
 }
