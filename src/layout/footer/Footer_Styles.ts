@@ -67,7 +67,7 @@ const Email = styled.a`
 
 `;
 const LinksWrapper = styled(FlexWrapper)`
-padding:13px 7px;
+padding:13px 0px;
 `;
 
 

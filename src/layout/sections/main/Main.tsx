@@ -1,13 +1,9 @@
 import React, { FC } from 'react';
 
 import man from '../../../assets/images/man.webp';
-import styled from 'styled-components';
-import { spin } from '../../../styles/animations/animations';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { theme } from '../../../styles/theme';
 import { GradientWord } from '../../../components/GradientWord';
 import { Container } from '../../../components/Container';
-import { font } from '../../../styles/Common';
 import { S } from './Main_Styles';
 
 export const Main:FC = () => {
@@ -23,13 +19,13 @@ export const Main:FC = () => {
                 I build things for web
             </S.Title>
 
-            <div className='image'>
+            <S.Image>
 
-                <div className='image_body'>
-                    <img src={man} alt={'Pavan MG'} />
+                <div>
+                    <img  src={man} alt={'Pavan MG'} />
 
                 </div>
-            </div>
+            </S.Image>
         </FlexWrapper>
 
         </Container>

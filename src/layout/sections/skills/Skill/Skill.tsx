@@ -2,22 +2,20 @@
 import React, { FC } from 'react';
 import { Icon, propsIconType } from '../../../../components/icon/Icon';
 import styled from 'styled-components';
+import { S } from './Skill_Styles';
+
 
 
 
 
 export const Skill:FC<propsIconType> = ({id,viewBox,width,height}) => {
-  return  <SkillStyled>
+  return  <S.Skill>
                 <Icon id={id} viewBox={viewBox} width={width} height={height} />
       
-    </SkillStyled>
+    </S.Skill>
   
 }
 
 
 
 
-const SkillStyled = styled.div`
-/* flex:0 0 90px; */
-text-align:center;
-`;

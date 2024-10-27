@@ -1,6 +1,6 @@
 import { ContactForm } from "../layout/sections/сontactForm/ContactForm";
 import { AboutMe } from "../layout/sections/aboutMe/AboutMe";
-import { Contacts } from "../layout/sections/contacts/Contacts";
+import { MailMe } from "../layout/sections/mailMe/MailMe";
 import { Main } from "../layout/sections/main/Main";
 import { Projects } from "../layout/sections/projects/Projects";
 import { Skills } from "../layout/sections/skills/Skills";
@@ -23,7 +23,7 @@ export const routes = [{
 },
 {
     path:'/contact',
-    element:<> <Contacts /> <ContactForm/></>,
+    element:<> <MailMe /> <ContactForm/></>,
 },
 {
     path:'/home',

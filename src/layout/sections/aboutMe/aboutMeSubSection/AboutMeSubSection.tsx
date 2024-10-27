@@ -18,10 +18,10 @@ type propsType = {
     experiences:Array<experienceType>,
 };
 
-export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
+export const AboutMeSubSection:FC<propsType> = ({title,experiences}) => {
     return (
-        <AboutMeSectionStyled>
-            <SectionTitle>{title}</SectionTitle>
+        <AboutMeSubSectionStyled>
+            <SectionTitle mBottom={'38px'} >{title}</SectionTitle>
 
             <FlexWrapper gap={35} flexDirection={'column'}>
                 {experiences.map(({buttonBody,date,location,title},index)=> <Experience key={index} buttonBody={buttonBody} date={date} location={location} title={title} /> )}
@@ -29,11 +29,11 @@ export const AboutMeSection:FC<propsType> = ({title,experiences}) => {
                 
             </FlexWrapper>
             
-        </AboutMeSectionStyled>
+        </AboutMeSubSectionStyled>
     )
 }
 
-const AboutMeSectionStyled = styled.div`
+const AboutMeSubSectionStyled = styled.div`
 
 
 `;

@@ -5,16 +5,8 @@ import { spin } from "../../../styles/animations/animations";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { GradientWord } from "../../../components/GradientWord";
+const Image = styled.div`
 
-const Main = styled.section`
-
-min-height:100vh;
-display:flex;
-
-
-
-
-.image{
     margin:0 auto;
     flex: 0 0 370px;
     border-radius:50%;
@@ -35,9 +27,9 @@ display:flex;
     }
     @media screen and (max-width:850px) {
     flex: 0 0 300px; 
-} 
+
 }
-.image_body{
+& > div{
     
     padding-bottom:100%;
     padding-left:100%;
@@ -54,6 +46,16 @@ img{
     object-fit:cover;
 }
 }
+`;
+const Main = styled.section`
+
+min-height:100vh;
+display:flex;
+
+
+
+
+
 
 @media ${theme.media.tablet} {
     align-items:center;
@@ -113,6 +115,7 @@ export const S = {
     Main,
     Dot,
     Title,
+    Image,
     Hand,
 
 };

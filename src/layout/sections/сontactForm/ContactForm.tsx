@@ -6,15 +6,16 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/button/Button';
 import { Container } from '../../../components/Container';
 import { FormField } from '../../../components/formField/FormField';
+import { S } from './ContactForm_Styles';
 
 export const ContactForm = () => {
   return (
-    <ContactFormStyled>
+    <S.ContactForm>
       <Container>
 
         <SectionTitle>Contact</SectionTitle>
         <SectionSubTitle>Send Me</SectionSubTitle>
-        <FormStyled action="#" method='post'>
+        <S.Form action="#" method='post'>
         <FlexWrapper alignItems={'center'} gap={15} flexDirection={'column'}>
         <FormField placeholderBody={'your First Name'} />
         <FormField placeholderBody={'your Last Name'}/>
@@ -24,22 +25,9 @@ export const ContactForm = () => {
         <Button textBody={'send'} />
         </FlexWrapper>
         
-        </FormStyled>
+        </S.Form>
            
       </Container>
-    </ContactFormStyled>
+    </S.ContactForm>
   )
 }
-
-const ContactFormStyled = styled.section`
-
-&>span{
-  margin-bottom:48px;
-}
-`;
-const FormStyled = styled.form`
-margin:0 auto;
-max-width:710px;
-
-
-`;

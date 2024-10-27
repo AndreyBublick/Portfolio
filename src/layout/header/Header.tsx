@@ -1,16 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { theme } from '../../styles/theme';
+
 import { Logo } from '../../components/logo/Logo';
-import { Menu } from '../../components/menu/Menu';
-import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { ListSocial } from '../../components/listSocial/ListSocial';
 import { Container } from '../../components/Container';
-import { MobileMenu } from './mobileMenu/MobileMenu';
 import { S } from './Header_Styles';
-import { DesktopMenu } from './desktopMenu/DesktopMenu';
+import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
+import { MobileMenu } from './headerMenu/mobileMenu/MobileMenu';
 
 
 
@@ -88,7 +84,6 @@ export const Header: FC = () => {
 
 
 
-// Создаю стилизованный компонент, оборачивая Menu
 
 
 

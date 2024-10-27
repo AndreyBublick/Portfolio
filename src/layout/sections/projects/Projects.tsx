@@ -2,8 +2,6 @@
 
 
 import React, { FC, useState } from 'react'
-import styled from 'styled-components'
-import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Project } from './project/Project';
 import image1 from '.././../../assets/images/1.webp';
 import image2 from '.././../../assets/images/2.webp';
@@ -14,7 +12,7 @@ import image6 from '.././../../assets/images/6.webp';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Container } from '../../../components/Container';
-import { theme } from '../../../styles/theme';
+import { S } from './Projects_Styles';
 
 
 
@@ -56,43 +54,23 @@ export const Projects: FC = () => {
 
     ]);
 
-    return <ProjectsStyled>
+    return <S.Projects>
         <Container>
 
 
             <SectionTitle>Projects</SectionTitle>
             <SectionSubTitle>Things I’ve built so far</SectionSubTitle>
 
-            <FlexWrapperProjects  justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
+            <S.FlexWrapperProjects  justifyContent={'space-between'} flexWrap={'wrap'} gap={34}>
 
 
                 {projectsArray.map(({ title, description, image }) => <Project key={image} title={title} description={description} image={image} />)}
 
-            </FlexWrapperProjects>
+            </S.FlexWrapperProjects>
         </Container>
-    </ProjectsStyled>
+    </S.Projects>
 
 }
-
-const FlexWrapperProjects = styled(FlexWrapper)`
-row-gap:62px;
-`;
-
-
-
-const ProjectsStyled = styled.section`
-
-${FlexWrapperProjects}{
-    @media ${theme.media.tablet} {
-        gap:20px;
-        justify-content:center;
-    }    
-}
-
-
-
-
-`;
 
 
 
