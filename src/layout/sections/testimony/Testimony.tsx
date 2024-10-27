@@ -1,10 +1,10 @@
 
 
 
-import React from 'react';
+
 import { S } from './Testimony_Styles';
 import { Container } from '../../../components/Container';
-import { FlexWrapper } from '../../../components/FlexWrapper';
+
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Icon } from '../../../components/icon/Icon';
