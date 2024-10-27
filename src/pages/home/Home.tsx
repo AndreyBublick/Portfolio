@@ -10,6 +10,7 @@ import { MailMe } from '../../layout/sections/mailMe/MailMe'
 import { ContactForm } from '../../layout/sections/сontactForm/ContactForm'
 import { Map } from '../../layout/sections/map/Map'
 import { MyWorks } from '../../layout/sections/myWorks/MyWorks'
+import { Testimony } from '../../layout/sections/testimony/Testimony'
 
 export const Home = () => {
     return <>
@@ -17,6 +18,7 @@ export const Home = () => {
         <AboutMe />
         <MyWorks /> 
         <Skills />
+        <Testimony />
         <Projects />
         <MailMe />
         <ContactForm />
