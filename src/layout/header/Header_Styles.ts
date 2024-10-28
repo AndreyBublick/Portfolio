@@ -49,7 +49,7 @@ font-size:20px;
 `;
 
 const LinksWrapper = styled(FlexWrapper)`
-padding:0 5px;
+
 `;
 
 export const S = {

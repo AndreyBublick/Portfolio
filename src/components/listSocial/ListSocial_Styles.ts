@@ -25,12 +25,24 @@ outline:2px solid transparent;
 
 position: relative;
 
+
+@media ${theme.media.hover} {
 &:hover{
   outline:2px solid ${theme.colors.gradient.color1};
 
 
   color:white;
   filter:drop-shadow( 0px 0px 3px ${theme.colors.gradient.color2});
+}  
+}
+@media ${theme.media.notHover} {
+&:active{
+  outline:2px solid ${theme.colors.gradient.color1};
+
+
+  color:white;
+  filter:drop-shadow( 0px 0px 3px ${theme.colors.gradient.color2});
+}  
 }
 }
 

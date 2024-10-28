@@ -46,7 +46,7 @@ const Mask = styled.span`
   }
 `;
 
-const MenuStyled = styled.nav``;
+const Menu = styled.nav``;
 
 const List = styled.ul<MenuStyledPorpsType>`
   display: flex;
@@ -86,6 +86,9 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
     transform: translate(-50%, -50%);
     opacity: 0;
   }
+
+
+@media ${theme.media.hover} {
   &:hover {
     &::before {
       opacity: 1;
@@ -105,11 +108,31 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
       }
     }
   }
+}
+@media ${theme.media.notHover} {
+  &:active {
+    &::before {
+      opacity: 1;
+    }
+    ${Mask}:first-of-type {
+      transform: translate(3%, -0%) skew(15deg);
 
-  a {
-    display: inline-block;
-    color: transparent;
+      & > span {
+        color: ${theme.colors.gradient.color1};
+      }
+    }
+    ${Mask}:last-of-type {
+      transform: translate(-5%, -0%) skew(15deg);
+
+      & > span {
+        color: ${theme.colors.gradient.color2};
+      }
+    }
   }
+}
+  
+
+  
 
   ${(props) =>
     props.isActive &&
@@ -132,11 +155,36 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
         }
       }
     `}
+
+    a {
+    display: inline-block;
+    color: transparent;
+  }
+
+    a._active ~ ${Mask}{
+      
+    &:first-of-type {
+      transform: translate(3%, -0%) skew(15deg);
+
+      & > span {
+        color: ${theme.colors.gradient.color1};
+      }
+    }
+    &:last-of-type {
+      transform: translate(-5%, -0%) skew(15deg);
+
+      & > span {
+        color: ${theme.colors.gradient.color2};
+      }
+    }
+    }
+
+    
 `;
 
 export const S = {
   Mask,
-  MenuStyled,
+  Menu,
   List,
   MenuItem,
 };

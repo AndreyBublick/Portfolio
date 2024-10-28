@@ -77,6 +77,7 @@ ${props => props.isShow && css<burgerPropsType>`
 const Popup = styled.div<burgerPropsType>`
 display:flex;
 justify-content:center;
+flex-direction:column;
 align-items:center;
 position:fixed;
 top: 0;
@@ -84,9 +85,22 @@ z-index:99;
 left: 0;
 width:100%;
 height: 100%;
-background-color:rgba(0, 0, 0, 0.9);
+&::before{
+    content:'';
+    top:0;
+    left: 0;
+    width:100%;
+    z-index:-1;
+    height: 100%;
+    position:absolute;
+    background-color:${theme.colors.primaryBg};
+    opacity:0.9;
+
+}
+
 nav{
-    height:100%;
+    /* height:100%; */
+    margin-bottom:25px;
 }
 nav > ul{
     height:inherit;

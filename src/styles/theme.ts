@@ -36,6 +36,8 @@ export const theme = {
         desktop:'screen and (max-width: 1200px)',
         tablet:'screen and (max-width: 768px)',
         mobile:'screen and (max-width: 576px)',
+        hover:'(hover:hover)',
+        notHover:'(hover:none)',
     },
 
     
