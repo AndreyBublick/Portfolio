@@ -16,7 +16,7 @@ const ExperienceButton = styled.button`
   font-weight: 600;
   line-height: calc(24 / 9);
   /* padding:0 22px; */
-  width: 84px;
+  min-width: 84px;
   white-space: nowrap;
 
   color: ${theme.colors.buttonExperience.color};

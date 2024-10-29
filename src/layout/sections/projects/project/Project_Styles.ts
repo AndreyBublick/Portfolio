@@ -58,7 +58,11 @@ z-index:0;
 const Project = styled.div`
 display:flex;
 flex-direction:column;
-flex:1 0  calc(375px);
+/* flex:1 0  calc(375px); */
+
+
+flex: 1 0 300px;
+max-width:570px;
 
 /* &:not(:nth-child(3n)){
 

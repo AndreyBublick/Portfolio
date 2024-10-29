@@ -77,7 +77,9 @@ p{
  font-weight: 400; 
 
 }
-h1{}
+h1{
+  display:inline;
+}
 h2{
   weight:700;
 }

@@ -16,7 +16,7 @@ export const ContactForm = () => {
         <SectionTitle>Contact</SectionTitle>
         <SectionSubTitle>Send Me</SectionSubTitle>
         <S.Form action="#" method='post'>
-        <FlexWrapper alignItems={'center'} gap={15} flexDirection={'column'}>
+        <FlexWrapper alignItems={'center'} gap={40} flexDirection={'column'}>
         <FormField placeholderBody={'your First Name'} />
         <FormField placeholderBody={'your Last Name'}/>
         <FormField as={'textarea'} placeholderBody={'your message'}/>

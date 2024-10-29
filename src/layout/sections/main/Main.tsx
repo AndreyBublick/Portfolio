@@ -15,7 +15,7 @@ export const Main:FC = () => {
             <S.Title>
                 Hi <S.Hand>👋</S.Hand><S.Dot>,</S.Dot><br />
                 My name is<br />
-                <GradientWord>Pavan MG</GradientWord>
+                <h1><GradientWord>Pavan MG</GradientWord></h1>
                 I build things for web
             </S.Title>
 

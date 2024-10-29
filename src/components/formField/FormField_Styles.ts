@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/theme";
-import { scrolling } from "../../styles/animations/animations";
+
 const Mask = styled.span`
 text-transform: capitalize;
 transition:0.1s all linear;
@@ -8,13 +8,11 @@ position:absolute;
 top:8px;
 left:15px;
 z-index:1;
+
 pointer-events:none;
-background-image:linear-gradient(90deg,${theme.colors.gradient.color2},${theme.colors.gradient.color1});
-color:transparent;
-background-clip:text;
--moz-background-clip:text;
--webkit-background-clip:text;
-caret-color:red;
+color:${theme.colors.font};
+
+
 
 `;
 
@@ -24,12 +22,13 @@ const FormField = styled.input<{as?:React.ElementType}>`
 width:100%;
 
 /* color:${theme.colors.gradient.color1}; */
-background-image:linear-gradient(90deg,${theme.colors.gradient.color2},${theme.colors.gradient.color1});
-color:transparent;
-caret-color:violet;
-background-clip:text;
+color:${theme.colors.title};
+/* background-image:linear-gradient(90deg,${theme.colors.gradient.color2},${theme.colors.gradient.color1}); */
+/* color:transparent; */
+caret-color:${theme.colors.title};
+/* background-clip:text;
 -moz-background-clip:text;
--webkit-background-clip:text;
+-webkit-background-clip:text; */
 position:relative;
 
 line-height: 2.5;
@@ -51,6 +50,7 @@ transition:box-shadow 0.15s linear;
     top:-12px;
     left:10px;
     font-size:12px;
+    color:${theme.colors.title};
 }
 
 

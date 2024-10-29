@@ -29,8 +29,8 @@ export const MobileMenu: FC<propsType> = ({ links }) => {
     return <>
         <S.Burger onClick={onCkickBurger} isShow={isShow}><span></span></S.Burger>
 
-        {isShow && <S.Popup onClick={()=>{setIsShow(false)}} isShow={isShow}>
-                    <div onClick={e => e.stopPropagation()}>
+        {isShow && <S.Popup onClick={()=>{setIsShow(false);body.current.style.overflow = 'auto';}} isShow={isShow}>
+                    <div  /* onClick={e => e.stopPropagation()} */ >
                     <Menu links={links} />
                     <ListSocial />
                     </div>

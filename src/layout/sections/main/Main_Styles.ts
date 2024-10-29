@@ -52,10 +52,12 @@ const Main = styled.section`
 min-height:100vh;
 display:flex;
 
+margin-top:-60px;
 
 
-
-
+/* @media screen and (max-height:670px) {
+    
+} */
 
 @media ${theme.media.tablet} {
     align-items:center;
@@ -63,12 +65,12 @@ display:flex;
 @media ${theme.media.tablet} {
     ${Container} > ${FlexWrapper} {
      
-        gap:50px;
+        gap:60px;
     }
 }
-@media screen and (max-height:700px) {
+/* @media screen and (max-height:700px) {
     padding:100px 0;
-}
+} */
 `;
 
 

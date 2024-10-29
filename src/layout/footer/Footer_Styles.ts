@@ -101,7 +101,7 @@ ${FlexWrapper}>${FlexWrapper}:first-of-type{
     color:red;
     ${font({ family: 'DM Sans,sans-serif', color: 'transparent', lineHeight: 26 / 18, fMax: 18, fMin: 14 })};
     }
-    }
+}
 
 
 
@@ -133,6 +133,10 @@ align-items:flex-end;
 ${PS}{
 margin:0 auto;
 }
+}
+@media ${theme.media.mobile} {
+    padding-top:0;
+    padding-bottom:45px;
 }
 `;
 
