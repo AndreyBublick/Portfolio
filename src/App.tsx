@@ -8,6 +8,8 @@ import { Footer } from "./layout/footer/Footer";
 import { routes } from "./routes/routes";
 import { Route, Routes } from "react-router-dom";
 import { Wrapper } from "./components/Wrapper";
+import { Particle } from "./components/particle/Particle";
+
 
 
 export const App = () => {
@@ -15,7 +17,7 @@ export const App = () => {
  
     <Header />
     <Wrapper>
-      
+ <Particle  />     
     
       <Routes>
         {routes.map(({path,element}) =><Route key={path} path={path} element={element} />  )}

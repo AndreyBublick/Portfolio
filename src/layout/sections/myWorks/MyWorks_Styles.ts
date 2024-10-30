@@ -30,7 +30,7 @@ li{
 
 const MyWorks = styled.section`
 
-
+position:relative;
 
 `;
 

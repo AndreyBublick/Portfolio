@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const ContactForm = styled.section`
+position:relative;
 
 &>span{
   margin-bottom:48px;

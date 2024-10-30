@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
-
+const Skills = styled.section`
+position:relative;
+`;
 
 const SkillsWrapper = styled.div`
 display:grid;
@@ -23,5 +25,6 @@ column-gap:20px;
 
 
 export const S ={
+    Skills,
     SkillsWrapper,
 };

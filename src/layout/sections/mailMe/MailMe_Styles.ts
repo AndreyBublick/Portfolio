@@ -10,12 +10,12 @@ h2{
 
 letter-spacing: 1.2px;
 
-${font({color:theme.colors.title ,family:'DM Sans, sans-serif',fMax:58,fMin:40, weight:700,lineHeight:70/58})}
+${font({color:theme.colors.title ,family:'DM Sans, sans-serif',fMax:58,fMin:38, weight:700,lineHeight:70/58})}
 
 ${GradientWord}{
 letter-spacing: 0.5px;
 
-}
+};
 
 }
 `;

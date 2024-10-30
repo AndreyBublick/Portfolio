@@ -72,6 +72,7 @@ padding:13px 0px;
 
 
 const Footer = styled.footer`
+position: relative;
 padding-top:100px;
 padding-bottom:60px;
 background-color:${theme.colors.primaryBg};

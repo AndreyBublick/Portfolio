@@ -32,7 +32,7 @@ export const Skills: FC = () => {
         {id:'GIT_HUB', viewBox:"0 0 88 86", width:88, height:86,}
     ]);
 
-    return <section>
+    return <S.Skills>
         <Container>
 
             <SectionTitle>My Tech Stack</SectionTitle>
@@ -46,7 +46,7 @@ export const Skills: FC = () => {
 
 
     </Container>
-    </section >
+    </S.Skills >
 
 
 

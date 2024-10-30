@@ -9,7 +9,7 @@ row-gap:62px;
 
 
 const Projects = styled.section`
-
+position:relative;
 ${FlexWrapperProjects}{
     @media ${theme.media.tablet} {
         gap:20px;

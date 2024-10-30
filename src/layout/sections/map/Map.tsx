@@ -31,7 +31,7 @@ export const Map:FC = () => {
 
 
 const MapStyled = styled.section`
-
+position: relative;
 `;
 const IframeStyled = styled.iframe`
 border-radius:1rem;

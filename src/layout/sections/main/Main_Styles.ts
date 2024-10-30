@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 import { font } from "../../../styles/Common";
@@ -7,8 +8,8 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { GradientWord } from "../../../components/GradientWord";
 const Image = styled.div`
 
-    margin:0 auto;
-    flex: 0 0 370px;
+/* margin:0 auto; */
+    
     border-radius:50%;
     overflow:hidden;
     
@@ -25,10 +26,7 @@ const Image = styled.div`
         animation:${spin} 3.0s infinite linear;
         transition:transform 3.0s;
     }
-    @media screen and (max-width:850px) {
-    flex: 0 0 300px; 
-
-}
+    
 & > div{
     
     padding-bottom:100%;
@@ -51,26 +49,41 @@ const Main = styled.section`
 
 min-height:100vh;
 display:flex;
+margin-top:-100px;
 
-margin-top:-60px;
+&>${Container} > ${FlexWrapper} > div:last-of-type{
 
+    margin:0 auto;
+    flex:0 0 370px;
+    @media screen and (max-width:850px) {
+    flex: 0 0 300px; 
+@media ${theme.media.tablet} {
+    transform:none !important;
+    transition:none !important;
+    animation:none !important;
+}
+}
+}
 
-/* @media screen and (max-height:670px) {
-    
-} */
+@media screen and (max-height:700px) {
+    margin-top:-50px;
+
+}
 
 @media ${theme.media.tablet} {
+    margin-top:-80px;
+    h2{
+        flex: 1 0 100%;
+    }
     align-items:center;
 }
 @media ${theme.media.tablet} {
     ${Container} > ${FlexWrapper} {
      
-        gap:60px;
+        gap:40px;
     }
 }
-/* @media screen and (max-height:700px) {
-    padding:100px 0;
-} */
+
 `;
 
 
