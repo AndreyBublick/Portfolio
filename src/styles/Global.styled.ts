@@ -30,8 +30,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 
 *{-webkit-tap-highlight-color: transparent;
-    /* scrollbar-width:thin;
-    scrollbar-color:#E70FAA white; */
+    scrollbar-width:thin;
+    scrollbar-color:#E70FAA white; 
     @media (prefers-reduced-motion: reduce) {
     .animated-element {
         animation: none; /* Отключите анимацию */

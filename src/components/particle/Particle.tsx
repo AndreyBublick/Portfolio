@@ -29,78 +29,127 @@ export const Particle = () => {
     return (
          <Particles
             id="tsparticles"
-            
+            /* @ts-ignore */
             options={{
-                background: {
-                    color: {
-                        value: "transparent",
-                    },
-                },
-                fpsLimit: 120,
-                interactivity: {
-                    events: {
-                        /* onClick: {
-                            enable: true,
-                            mode: "push",
-                        }, */
-                        onHover: {
-                            enable: true,
-                            mode: "repulse",
-                        },
-                        /* @ts-ignore */
-                        resize: true,
-                    },
-                    modes: {
-                        push: {
-                            quantity: 4,
-                        },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
-                        },
-                    },
-                },
-                particles: {
-                    color: {
-                        value: "#ee82ee",
-                    },
-                    links: {
-                        color: "#0e00ee",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 2,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                        /* @ts-ignore */
+                "particles": {
+                  "number": {
+                    "value": 111,
+                    "density": {
+                      "enable": true,
+                    /* @ts-ignore */
 
-                            area: 1000,
-                        },
-                        value: 50,
+                      "value_area": 868.0624057955
+                    }
+                  },
+                  "color": {
+                    "value": "#0096ff"
+                  },
+                  "shape": {
+                    "type": "circle",
+                    /* @ts-ignore */
+
+                    "stroke": {
+                      "width": 1.5,
+                      "color": "#e30f7f"
                     },
-                    opacity: {
-                        value: 0.5,
+                    "polygon": {
+                      "nb_sides": 6
                     },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        value: { min: 0.5, max: 1 },
-                    },
+                    "image": {
+                      "src": "img/github.svg",
+                      "width": 100,
+                      "height": 100
+                    }
+                  },
+                  "opacity": {
+                    "value": 0.1,
+                    /* @ts-ignore */
+
+                    "random": false,
+                    "anim": {
+                      "enable": false,
+                      "speed": 1,
+                      "opacity_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "size": {
+                    "value": 40.08530152163807,
+                    /* @ts-ignore */
+
+                    "random": true,
+                    "anim": {
+                      "enable": false,
+                      "speed": 40,
+                      "size_min": 0.1,
+                      "sync": false
+                    }
+                  },
+                  "line_linked": {
+                    "enable": true,
+                    "distance": 0,
+                    "color": "#8c12a7",
+                    "opacity": 0.4,
+                    "width": 1
+                  },
+                  "move": {
+                    "enable": true,
+                    "speed": 4,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                      "enable": false,
+                    /* @ts-ignore */
+
+                      "rotateX": 600,
+                      "rotateY": 1200
+                    }
+                  }
                 },
-                detectRetina: true,
-            }}
+                "interactivity": {
+                  "detect_on": "canvas",
+                  "events": {
+                    "onhover": {
+                      "enable": true,
+                      "mode": "repulse"
+                    },
+                    "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                    },
+                    /* @ts-ignore */
+                    "resize": true
+                  },
+                  "modes": {
+                    "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                        "opacity": 1
+                      }
+                    },
+                    "bubble": {
+                      "distance": 400,
+                      "size": 36.54347455356053,
+                      "duration": 2,
+                      "opacity": 8,
+                      "speed": 3
+                    },
+                    "repulse": {
+                      "distance": 200,
+                      "duration": 0.4
+                    },
+                    "push": {
+                      "particles_nb": 4
+                    },
+                    "remove": {
+                      "particles_nb": 2
+                    }
+                  }
+                },
+                "retina_detect": true
+              }}
         />);
 };

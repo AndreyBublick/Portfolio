@@ -26,7 +26,7 @@ export const Menu: FC<propsType> = ({ links, fz, activeElement }) => {
 
             {links.map((link) => <S.MenuItem fz={fz} isActive={activeElementLowerCase === `${TextToLowerCase(link)}`} key={link}>
                 
-                <NavLink className={({isActive})=> isActive ? '_active' : ''} to={`/${TextToLowerCase(link)}`}>{link}
+                <NavLink className={({isActive})=> isActive ? '_active' : ''} to={`/${TextToLowerCase(link) !=='home' ? TextToLowerCase(link):''}`}>{link}   
                 </NavLink>
                 <S.Mask><span>{link}</span></S.Mask>
                 <S.Mask><span>{link}</span></S.Mask>

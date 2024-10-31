@@ -9,26 +9,42 @@ import { routes } from "./routes/routes";
 import { Route, Routes } from "react-router-dom";
 import { Wrapper } from "./components/Wrapper";
 import { Particle } from "./components/particle/Particle";
+import { GoTop } from "./components/goTop/GoTop";
+import { useWindowWidth } from "./hooks/useWindowWidth";
+ import { useScrollY } from "./hooks/useScrollY";
+import { useRef } from "react";
 
 
 
 export const App = () => {
-  return (<>
+
+  const [widthWindow] = useWindowWidth();
+  const rootElement = useRef(document.getElementById('root'));
+  const [Y] = useScrollY();
+
+ /* console.log(Y); */
+ 
+  
+
+return (<>
  
     <Header />
     <Wrapper>
- <Particle  />     
+      <Particle  />  
+     
+
     
       <Routes>
         {routes.map(({path,element}) =><Route key={path} path={path} element={element} />  )}
       </Routes>
-    
       <Footer />
+      
     </Wrapper>
 
 
+       
 
-
+    {rootElement.current && ((widthWindow > 1410 && Y>1500)  && <GoTop />) }  
 </>
   );
 };

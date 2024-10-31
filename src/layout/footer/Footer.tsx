@@ -1,14 +1,14 @@
-import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/logo/Logo";
 import { ListSocial } from "../../components/listSocial/ListSocial";
-import { theme } from "../../styles/theme";
 import { Menu } from "../../components/menu/Menu";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { GradientWord } from "../../components/GradientWord";
 import { Container } from "../../components/Container";
-import { font } from "../../styles/Common";
 import { S } from "./Footer_Styles";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
+import { GoTop } from "../../components/goTop/GoTop";
+
 
 
 
@@ -17,6 +17,37 @@ import { S } from "./Footer_Styles";
 export const Footer:FC = () => {
     const [links, setLinks] = useState(['Home', 'About', 'Technologies', 'Projects', 'Contact',]);
     const [isMobile, setIsMobile] = useState(false);
+   
+ 
+
+
+
+   
+
+   /* useEffect(()=>{
+    if(!timer.current){
+     
+      
+      
+    
+      timer.current = setTimeout(()=>{
+        
+        
+        setIsShowGoTop(true);
+        
+        
+       },4000);
+    }
+    
+    return ()=>{
+      if(!timer.current){
+  clearInterval(timer.current);
+} 
+};
+   },[]); */
+   
+
+
     useEffect(() => {
          const resizeWindow = () => {
            if(window.innerWidth<=768){
@@ -36,6 +67,7 @@ export const Footer:FC = () => {
          };
        }, []);
     return <S.Footer>
+     
         <Container>
 
             <FlexWrapper flexDirection={"column"} justifyContent={"center"}>

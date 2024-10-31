@@ -5,14 +5,18 @@ import { Main } from "../layout/sections/main/Main";
 import { Projects } from "../layout/sections/projects/Projects";
 import { Skills } from "../layout/sections/skills/Skills";
 import { Home } from "../pages/home/Home";
-import { MyWorks } from "../layout/sections/myWorks/MyWorks";
+import { Error } from "../components/error/Error";
 
 export const routes = [{
     path:'/main',
     element:<Main />,
 },{
     path:'/about',
-    element:<><AboutMe /> <MyWorks /> </>,
+    element:<><AboutMe /> </>,
+},
+{
+    path:'/technologies',
+    element:<><Skills /></>,
 },
 {
     path:'/tech_stack',
@@ -36,5 +40,9 @@ export const routes = [{
 {
     path:'/',
     element:<Home />,
+},
+{
+    path:'*',
+    element:<><Error /></>,
 }
 ];

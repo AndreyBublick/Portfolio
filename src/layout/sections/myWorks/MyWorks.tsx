@@ -6,7 +6,6 @@ import { Container } from '../../../components/Container';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Menu } from '../../../components/menu/Menu';
-import { Work } from './work/Work';
 
 import { S } from './MyWorks_Styles';
 import {  useParams } from 'react-router-dom';

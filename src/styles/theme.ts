@@ -39,6 +39,9 @@ export const theme = {
         hover:'(hover:hover)',
         notHover:'(hover:none)',
     },
+    animations:{
+        transition:'',
+    },
 
     
 };

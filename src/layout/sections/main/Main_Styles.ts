@@ -35,7 +35,7 @@ const Image = styled.div`
 img{
     border-radius:50%;
     overflow:hidden;
-    border:9px solid transparent;
+    border:10px solid transparent;
     position:absolute;
     top:0;
     width: 100%;

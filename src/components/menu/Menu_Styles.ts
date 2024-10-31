@@ -71,26 +71,12 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
 
   transition: all 0.2s ease-in;
 
-  &::before {
-    transition: inherit;
-    content: "";
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    width: 120%;
-    top: 50%;
-    left: 50%;
-    height: 2px;
-    background-color: ${theme.colors.title};
-
-    transform: translate(-50%, -50%);
-    opacity: 0;
-  }
+  
 
 
 @media ${theme.media.hover} {
   &:hover {
-    &::before {
+    a::before {
       opacity: 1;
     }
     ${Mask}:first-of-type {
@@ -134,33 +120,29 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
 
   
 
-  ${(props) =>
-    props.isActive &&
-    css<{ isActive?: boolean }>`
-      &::before {
-        opacity: 1;
-      }
-      ${Mask}:first-of-type {
-        transform: translate(3%, -0%) skew(15deg);
-
-        & > span {
-          color: ${theme.colors.gradient.color1};
-        }
-      }
-      ${Mask}:last-of-type {
-        transform: translate(-5%, -0%) skew(15deg);
-
-        & > span {
-          color: ${theme.colors.gradient.color2};
-        }
-      }
-    `}
+  
 
     a {
+      transition: inherit;
     display: inline-block;
     color: transparent;
-  }
+    &::before {
+      transition: inherit;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    width: 120%;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    background-color: ${theme.colors.title};
 
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  }
+  
     a._active ~ ${Mask}{
       
     &:first-of-type {
@@ -178,8 +160,34 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
       }
     }
     }
-
+    a._active{
+      &::before{
+        opacity:1;
+      }
+    }
+    ${(props) =>
+    props.isActive &&
+    css<{ isActive?: boolean }>`
+      
+      a::before{
+        opacity:1;
+      }
     
+      ${Mask}:first-of-type {
+        transform: translate(3%, -0%) skew(15deg);
+
+        & > span {
+          color: ${theme.colors.gradient.color1};
+        }
+      }
+      ${Mask}:last-of-type {
+        transform: translate(-5%, -0%) skew(15deg);
+
+        & > span {
+          color: ${theme.colors.gradient.color2};
+        }
+      }
+    `}
 `;
 
 export const S = {
