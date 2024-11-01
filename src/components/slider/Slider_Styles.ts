@@ -1,5 +1,4 @@
-import { screen } from '@testing-library/react';
-import styled, { css } from "styled-components";
+import styled  from "styled-components";
 import { FlexWrapper } from "../FlexWrapper";
 import { font } from "../../styles/Common";
 import { GradientWord } from "../GradientWord";

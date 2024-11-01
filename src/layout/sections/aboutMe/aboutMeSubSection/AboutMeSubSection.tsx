@@ -10,6 +10,7 @@ import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Experience } from './experience/Experience';
 import { experienceType } from '../AboutMe';
 import { Bounce, Fade, Hinge, Roll, Rotate, Slide, Zoom } from 'react-awesome-reveal';
+import { theme } from '../../../../styles/theme';
 
 
 
@@ -22,7 +23,7 @@ type propsType = {
 export const AboutMeSubSection:FC<propsType> = ({title,experiences}) => {
     return (
         <AboutMeSubSectionStyled>
-            <SectionTitle mBottom={'38px'} >{title}</SectionTitle>
+            <SectionTitle mBottom={`${theme.margins.subSection}px`} >{title}</SectionTitle>
 
             <FlexWrapper gap={35} flexDirection={'column'}>
                 <Slide cascade={true} damping={0.3} triggerOnce={true}>

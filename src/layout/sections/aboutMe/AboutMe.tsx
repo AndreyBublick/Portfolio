@@ -10,6 +10,7 @@ import { AboutMeSubSection } from './aboutMeSubSection/AboutMeSubSection';
 
 import "intersection-observer";
 import { useInView } from 'react-intersection-observer';
+import { theme } from '../../../styles/theme';
 
 
 export type experienceType = {
@@ -77,9 +78,9 @@ export const AboutMe: FC = () => {
 
     
     <Container>
-      <FlexWrapper  gap={38} flexDirection={'column'}>
+      <FlexWrapper  gap={theme.margins.subSection} flexDirection={'column'}>
         <div>
-        <SectionTitle mBottom = {'38px'}>About Me</SectionTitle>
+        <SectionTitle mBottom = {`${theme.margins.subSection}px`}>About Me</SectionTitle>
         <S.AboutMeDescription>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</S.AboutMeDescription>
 
         </div>

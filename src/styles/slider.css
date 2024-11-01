@@ -18,9 +18,10 @@
     span{
       width: 24px;
       cursor: default;
-      background-color: #00C0FD;
-
-      background-image: linear-gradient(90deg,#E70FAA,#00C0FD);
-    }
+      background-color: #9d33ff;
+   /*    background: radial-gradient(closest-side, rgb(132, 0, 255), #ebf8e1, #00C0FD);
+    */
+  
+  }
    
   }

@@ -1,5 +1,7 @@
 export const theme = {
-
+    margins:{
+        subSection:38,
+    },
     colors:{
         primaryBg:'#ffffff',
 
