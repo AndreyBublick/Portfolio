@@ -7,6 +7,11 @@ import { Container } from '../../../components/Container';
 import { S } from './AboutMe_Styles';
 import { AboutMeSubSection } from './aboutMeSubSection/AboutMeSubSection';
 
+
+import "intersection-observer";
+import { useInView } from 'react-intersection-observer';
+
+
 export type experienceType = {
 
   title: string,
@@ -20,6 +25,11 @@ export type experienceType = {
 };
 
 export const AboutMe: FC = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Анимация срабатывает только один раз
+    threshold: 0.5, // Срабатывает, когда 30% элемента видно на экране
+  });
+
 
   const [workExperiences, setWorkExperiences] = useState<Array<experienceType>>([
     {
@@ -62,12 +72,18 @@ export const AboutMe: FC = () => {
   ]);
 
 
-  return <S.AboutMe>
+  return <S.AboutMe ref={ref} isView={inView}>
+   
+
+    
     <Container>
-      <FlexWrapper gap={38} flexDirection={'column'}>
-        <SectionTitle mBottom = {'0px'}>About Me</SectionTitle>
+      <FlexWrapper  gap={38} flexDirection={'column'}>
+        <div>
+        <SectionTitle mBottom = {'38px'}>About Me</SectionTitle>
         <S.AboutMeDescription>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</S.AboutMeDescription>
 
+        </div>
+        
         <AboutMeSubSection title={'Work Experience'} experiences={workExperiences} />
         <AboutMeSubSection title={'Education'} experiences={educations} />
 
@@ -75,6 +91,7 @@ export const AboutMe: FC = () => {
       </FlexWrapper>
 
     </Container>
+
   </S.AboutMe>
 
 }

@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import wall from '../../../assets/images/wall.webp';
 import { font } from "../../../styles/Common";
 
-const AboutMe = styled.section`
+const AboutMe = styled.section<{isView:boolean}>`
 
 
 position:relative;
@@ -15,9 +15,11 @@ ${FlexWrapper}{
 }
 
  ${FlexWrapper} > ${SectionTitle}{
-  margin-bottom:0px;
+ /*  margin-bottom:38px; */
 
 } 
+
+
 
 h2{
     
@@ -28,16 +30,22 @@ h2{
 &::before{
   content:'';
   position:absolute;
-  background:  url(${wall}) right center/auto no-repeat;
+  transition:1s ;
+  background: url(${wall}) right center/auto no-repeat;
   width:100%;
   height: 100%;
   top: -40px;
   left:30px;
   z-index: -1;
-
+  transform:translateX(100%);
  
 
 }
+${props=> props.isView && css<{isView:boolean}>`
+&::before{
+  transform:translateX(0%);
+}
+`}
 `;
 
 const AboutMeDescription = styled.p`

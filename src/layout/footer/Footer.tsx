@@ -19,7 +19,8 @@ export const Footer:FC = () => {
     const [isMobile, setIsMobile] = useState(false);
    
  
-
+const [linksContact,setLinksContact] = useState([{href:"tel:+91 12345 09876", title:'+91 12345 09876',},
+  {title:'info@example.com', href:"mailto:info@example.com"}]);
 
 
    
@@ -77,8 +78,14 @@ export const Footer:FC = () => {
                     <Logo isDark />
 
                     <S.LinksWrapper gap={35} alignItems={"center"} justifyContent={"space-between"}>
-                        <S.Telephone href="tel:+91 12345 09876">+91 12345 09876</S.Telephone>
-                        <S.Email href="mailto:info@example.com">info@example.com</S.Email>
+
+                      {linksContact.map((link)=><S.Link>
+                        <a href={link.href}>{link.title}</a>
+                        <S.MaskEffect><span>{link.title}</span></S.MaskEffect>
+                        <S.MaskEffect><span>{link.title}</span></S.MaskEffect>
+                      </S.Link>)}
+                        
+                      
 
                         {!isMobile && <ListSocial />} 
                     </S.LinksWrapper>

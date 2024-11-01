@@ -4,6 +4,7 @@ import { SectionSubTitle } from '../../../components/SectionSubTitle';
 import { Skill } from './skill/Skill';
 import { Container } from '../../../components/Container';
 import { S } from './Skills_Styles';
+import { Bounce, Fade } from 'react-awesome-reveal';
 
 export const Skills: FC = () => {
 
@@ -37,8 +38,11 @@ export const Skills: FC = () => {
 
             <SectionTitle>My Tech Stack</SectionTitle>
             <SectionSubTitle mBottom={'124px'}> Technologies I’ve been working with recently</SectionSubTitle>
-            <S.SkillsWrapper>
-            {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)}
+            <S.SkillsWrapper >
+                <Bounce  cascade={true} damping={0.15} triggerOnce={true} /* duration={400} */>
+                {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)}
+
+                </Bounce>
             
            
            

@@ -165,6 +165,11 @@ const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
         opacity:1;
       }
     }
+    a:active {
+    &::before {
+      opacity: 1;
+    }
+    }
     ${(props) =>
     props.isActive &&
     css<{ isActive?: boolean }>`

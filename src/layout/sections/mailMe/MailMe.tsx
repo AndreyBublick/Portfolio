@@ -9,14 +9,16 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
 
 import { S } from './MailMe_Styles';
+import { Bounce } from 'react-awesome-reveal';
 
 export const MailMe = () => {
     return <S.MailMe>
         <Container>
 
             <SectionTitle mBottom={'0px'} >
-                <FlexWrapper gap={9} flexDirection={'column'} alignItems={'center'}>
-                   For any questions please mail me: <GradientWord>hi@pavanmg.in</GradientWord>
+                <FlexWrapper gap={9} flexDirection={'column'} alignItems={'center'}>  
+
+                   For any questions please mail me: <Bounce triggerOnce={true}><GradientWord>hi@pavanmg.in</GradientWord></Bounce>
 
                 </FlexWrapper>
             </SectionTitle>

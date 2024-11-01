@@ -34,7 +34,9 @@ const MapStyled = styled.section`
 position: relative;
 `;
 const IframeStyled = styled.iframe`
-border-radius:1rem;
+
+    /* border-radius:1rem; */
+outline:1px solid ${theme.colors.title};
 width:100%;
 
 @media ${theme.media.tablet} {
