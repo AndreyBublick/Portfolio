@@ -6,10 +6,10 @@ export const useScrollY = () => {
 
   const [scrollYWindow, setScrollYWindow] = useState(window.scrollY);
 
-
   const onScroll = () => {
     
-    console.log(window.scrollY);
+   
+
 
     setScrollYWindow(window.scrollY); 
     

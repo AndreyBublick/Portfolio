@@ -1,12 +1,8 @@
 
 
-import React, { FC } from 'react'
-import styled from 'styled-components'
+import { FC } from 'react'
 import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { Link } from 'react-router-dom';
-import { theme } from '../../../../styles/theme';
 import { Icon } from '../../../../components/icon/Icon';
-import { font } from '../../../../styles/Common';
 import { S } from './Project_Styles';
 
 

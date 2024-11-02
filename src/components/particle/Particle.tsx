@@ -62,10 +62,10 @@ export const Particle = () => {
               },
               particles: {
                   color: {
-                      value: "#ee82ee",
+                      value: "#00C0FD",
                   },
                   links: {
-                      color: "#0e00ee",
+                      color: "#666666",
                       distance: 150,
                       enable: true,
                       opacity: 0.5,
@@ -94,10 +94,10 @@ export const Particle = () => {
                       value: 0.5,
                   },
                   shape: {
-                      type: "circle",
+                      type: "edge",
                   },
                   size: {
-                      value: { min: 0.5, max: 1 },
+                      value: { min: 2, max: 10 },
                   },
               },
               detectRetina: true,

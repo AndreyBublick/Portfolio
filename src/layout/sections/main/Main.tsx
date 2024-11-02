@@ -22,7 +22,7 @@ export const Main: FC = () => {
             <FlexWrapper gap={15} alignItems={'center'} flexWrap={'wrap'}>
                 <S.Title>
 
-                    Hi <S.Hand><JackInTheBox >👋</JackInTheBox></S.Hand><S.Dot>,</S.Dot><br />
+                    Hi <S.Hand><JackInTheBox triggerOnce >👋</JackInTheBox></S.Hand><S.Dot>,</S.Dot><br />
                    <Bounce triggerOnce delay={200}> My name is</Bounce>
                    <Bounce triggerOnce delay={400}><GradientWord>Pavan MG</GradientWord></Bounce>
                     <Typewriter

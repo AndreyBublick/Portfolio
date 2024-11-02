@@ -5,9 +5,30 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 const Works = styled(FlexWrapper)`
 
 
+&>div{
+   display:flex;
+
+flex:1 0 380px;
+max-width:calc(50% - 15px);
+@media screen and (max-width:850px) {
+    flex:1 0  calc(340px);  
+}
+ @media ${theme.media.tablet} {
+    
+    flex:1 0  calc(50% - 15px);  
+    
+}
+
+@media ${theme.media.mobile} {
+    flex:0 0  100%;  
+max-width:100%;
+}
+}
+
 @media ${theme.media.tablet} {
     gap:30px;
-    justify-content:center;
+    justify-content:space-between;
+    
 }
 `;
 

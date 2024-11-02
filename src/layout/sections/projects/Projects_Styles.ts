@@ -4,6 +4,15 @@ import { theme } from "../../../styles/theme";
 
 const FlexWrapperProjects = styled(FlexWrapper)`
 row-gap:62px;
+&> div{
+    flex:1 0 calc(50% - 34px);
+    
+    @media ${theme.media.mobile} {
+    flex:1 0 100%;
+
+        max-width:100%;
+    }
+}
 `;
 
 

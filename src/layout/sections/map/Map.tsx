@@ -31,13 +31,16 @@ export const Map:FC = () => {
 
 
 const MapStyled = styled.section`
-position: relative;
+position:relative;
+@media ${theme.media.mobile} {
+    padding-top:0;
+}
 `;
 const IframeStyled = styled.iframe`
 
-    /* border-radius:1rem; */
+ 
 outline:1px solid ${theme.colors.title};
-width:100%;
+
 
 @media ${theme.media.tablet} {
 height:300px;
@@ -45,6 +48,7 @@ height:300px;
 @media screen and (max-width:450px) {
 height:250px;
 }
+
 
 `;
 

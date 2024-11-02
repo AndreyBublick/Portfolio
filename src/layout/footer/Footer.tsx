@@ -79,7 +79,7 @@ const [linksContact,setLinksContact] = useState([{href:"tel:+91 12345 09876", ti
 
                     <S.LinksWrapper gap={35} alignItems={"center"} justifyContent={"space-between"}>
 
-                      {linksContact.map((link)=><S.Link>
+                      {linksContact.map((link)=><S.Link key={link.href}>
                         <a href={link.href}>{link.title}</a>
                         <S.MaskEffect><span>{link.title}</span></S.MaskEffect>
                         <S.MaskEffect><span>{link.title}</span></S.MaskEffect>
