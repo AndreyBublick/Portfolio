@@ -1,13 +1,22 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useCallback, useEffect, useState } from "react";
 
 
-export const useInput = ()=>{
+export const useInput = (sent:boolean)=>{
 
    const [value,setValue] = useState('');
 
-   const changeValue =(e:ChangeEvent<HTMLInputElement>&FormEvent<HTMLTextAreaElement>)=> {
+   useEffect(()=>{
+      if(sent){
+         setValue('');
+      }
+   },[sent]);
+
+   const changeValue = useCallback((e:ChangeEvent<HTMLInputElement>&FormEvent<HTMLTextAreaElement>,sent:boolean)=> {
+      
+
+
     setValue(e.currentTarget.value); 
-   };
+   },[]);
 
 return {value,changeValue}
 };

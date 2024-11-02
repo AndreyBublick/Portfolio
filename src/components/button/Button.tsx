@@ -5,11 +5,12 @@ import { S } from './Button_Styles';
  
 type propsType = {
     textBody:string,
+    onClick?:()=>void,
 };
 
-export const Button:FC<propsType> = ({textBody}) => {
+export const Button:FC<propsType> = ({textBody,onClick}) => {
   return (
-    <S.Button>
+    <S.Button onClick={onClick}>
       {textBody}
     </S.Button>
   )
