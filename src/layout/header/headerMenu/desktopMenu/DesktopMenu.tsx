@@ -13,7 +13,7 @@ type propsType = {
 export const DesktopMenu:FC<propsType> = ({links}) => {
     return (
         <>
-            <Menu links={links} />
+            <Menu scrollTop links={links} />
 
         </>
     )

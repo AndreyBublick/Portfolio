@@ -92,7 +92,7 @@ const [linksContact,setLinksContact] = useState([{href:"tel:+91 12345 09876", ti
 
                 </FlexWrapper>
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
-                 <Menu links={links} fz={'18px'} /> 
+                 <Menu scrollTop links={links} fz={'18px'} /> 
 
                     <S.PS>  <S.Mask>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></S.Mask> <GradientWord><S.UsualText>Designed and built by</S.UsualText> Pavan MG <S.UsualText>with</S.UsualText> Love <S.UsualText>&</S.UsualText> Coffee</GradientWord> </S.PS>
 

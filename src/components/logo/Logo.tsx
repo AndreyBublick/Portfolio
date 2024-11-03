@@ -1,8 +1,8 @@
-import React, { FC, useRef } from 'react'
+import  { FC } from 'react'
 import { Link } from 'react-router-dom';
-import spriteSVG from '../../assets/images/code-svg.svg';
 import { Icon } from '../icon/Icon';
 import styled from 'styled-components';
+import { useScrollTop } from '../../hooks/scrollTop';
 
 type propsType = {
     isDark?:boolean,
@@ -10,12 +10,14 @@ type propsType = {
 
 export const Logo:FC<propsType> = ({isDark}) => {
 
-    const homePage = useRef(document.getElementById('root'));
+    /* const homePage = useRef(document.getElementById('root'));
 
 
     const onClickAnchor = () => {
         homePage.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+    }; */
+
+    const onClickAnchor = useScrollTop();
 
     return <LogoStyled>
         <Link aria-label='Логотип' onClick={onClickAnchor} to={'/'}>

@@ -16,6 +16,8 @@ export const Header: FC = () => {
    const [isMobile, setIsMobile] = useState(false);
    const [isShowSocial, setIsShowSocial] = useState(true);
 
+  
+
 
 
    useEffect(() => {

@@ -2,14 +2,13 @@ import React, { useRef } from 'react'
 import styled from 'styled-components';
 import { FaArrowUp } from "react-icons/fa";
 import { theme } from '../../styles/theme';
+import { useScrollTop } from '../../hooks/scrollTop';
 export const GoTop = () => {
 
-    const homePage = useRef(document.getElementById('root'));
+   
 
 
-    const onClickAnchor = () => {
-        homePage.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+    const onClickAnchor = useScrollTop();
 
 
   return (

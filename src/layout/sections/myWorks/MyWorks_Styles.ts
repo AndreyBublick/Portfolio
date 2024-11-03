@@ -3,6 +3,7 @@ import { theme } from "../../../styles/theme";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
 const Works = styled(FlexWrapper)`
+transition:0.2s;
 
 
 &>div{
@@ -50,7 +51,6 @@ li{
 `;
 
 const MyWorks = styled.section`
-
 position:relative;
 
 `;

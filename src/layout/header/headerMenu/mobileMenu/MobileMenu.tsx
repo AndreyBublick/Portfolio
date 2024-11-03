@@ -31,7 +31,7 @@ export const MobileMenu: FC<propsType> = ({ links }) => {
 
          <S.Popup onClick={()=>{setIsShow(false);body.current.style.overflow = 'auto';}} isShow={isShow}>
                     <div  /* onClick={e => e.stopPropagation()} */ >
-                    <Menu links={links} />
+                    <Menu scrollTop links={links} />
                     <ListSocial />
                     </div>
             
