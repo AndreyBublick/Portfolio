@@ -15,6 +15,7 @@ type propsType = {
 
 export const Menu: FC<propsType> = ({ links, fz, activeElement }) => {
 
+    console.log(activeElement);
     
 
     const activeElementLowerCase = activeElement && TextToLowerCase(activeElement);

@@ -21,7 +21,7 @@ import image6 from '.././../../assets/images/6.webp';
 import { Project } from '../projects/project/Project';
 import { AnimatePresence, motion } from "framer-motion"
 
-export type categoryType = 'spa' | 'all' | 'react' | 'landing page';
+export type categoryType = 'spa' | 'all' | 'react' | 'landing page'|'Portfolio';
 type workType = {
     title: string,
     description: string,
@@ -91,13 +91,14 @@ export const MyWorks: FC = () => {
 
 
 
-    const tabsItems: categoryType[] = ['all', 'landing page', 'react', 'spa'];
+
+    const tabsItems: categoryType[] = ['all', 'landing page', 'react','spa',];
 
     const worksFilterByCategory = useMemo(() => {
 
 
 
-        if (category === 'all' || !category) {
+        if ((category === 'all'||'Portfolio') || !category) {
             return worksArray;
         }
         return worksArray.filter((work) => TextToLowerCase(work.category) === TextToLowerCase(category));
@@ -109,7 +110,7 @@ export const MyWorks: FC = () => {
             <SectionSubTitle>Projects</SectionSubTitle>
             <S.MenuBody>
 
-                <Menu activeElement={category ? category : 'all'} fz={'14px'} links={tabsItems} />
+                <Menu activeElement={category ==='Portfolio' ? 'all' : (category ? category : 'all')} fz={'14px'} links={tabsItems} />
                 {/* <MyWorksMenu /> */}
 
             </S.MenuBody>
