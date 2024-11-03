@@ -15,8 +15,8 @@ export const Home = () => {
     return <>
     <Particle  />
         <Main />
-        <AboutMe />
         <MyWorks /> 
+        <AboutMe />
         <Skills />
         <Testimony />
        {/*  <Projects /> */}

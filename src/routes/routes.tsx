@@ -29,18 +29,23 @@ export const routes = [{
     path:'/contact',
     element:<> <MailMe /> <ContactForm/></>,
 },
-{
+/* {
     path:'/home/:category',
     element:<Home />,
-},
-{
-    path:'/:category',
+}, */
+
+ {
+    path:'/Portfolio',
     element:<Home />,
-},
+}, 
 {
     path:'/',
     element:<Home />,
 },
+/* {
+    path:'/:category',
+    element:<Home />,
+}, */
 {
     path:'*',
     element:<><Error /></>,

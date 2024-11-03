@@ -1,7 +1,7 @@
 
 
 
-import { FC, useMemo, useState } from 'react';
+import { FC, memo, useMemo, useState } from 'react';
 import { Container } from '../../../components/Container';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { SectionSubTitle } from '../../../components/SectionSubTitle';
@@ -31,7 +31,7 @@ type workType = {
 
 };
 
-export const MyWorks: FC = () => {
+export const MyWorks: FC = memo(() => {
 
 
     const [worksArray, setWorskArray] = useState<workType[]>([
@@ -82,8 +82,9 @@ export const MyWorks: FC = () => {
 
 
     ]);
+    const [category,setCategory] = useState<categoryType>('all');
 
-    const category = useParams().category as categoryType;
+    /* const category = useParams().category as categoryType; */
 
 
 
@@ -96,9 +97,11 @@ export const MyWorks: FC = () => {
 
     const worksFilterByCategory = useMemo(() => {
 
-
+        
+        
 
         if ((category === 'all'||category ==='Portfolio') || !category) {
+           
             return worksArray;
         }
         return worksArray.filter((work) => TextToLowerCase(work.category) === TextToLowerCase(category));
@@ -109,10 +112,14 @@ export const MyWorks: FC = () => {
             <SectionTitle>My Works</SectionTitle>
             <SectionSubTitle>Projects</SectionSubTitle>
             <S.MenuBody>
-
-                <Menu activeElement={category ==='Portfolio' ? 'all' : (category ? category : 'all')} fz={'14px'} links={tabsItems} />
+            {tabsItems.map((item)=><S.MenuItem isActive = {item===category} onClick={()=>{setCategory(item)}}>
+            <S.ItemElement  to={''}>{item}</S.ItemElement>
+            <S.Mask><span>{item}</span></S.Mask>
+            <S.Mask><span>{item}</span></S.Mask>
+            </S.MenuItem>)}
+                {/* <Menu activeElement={category ==='Portfolio' ? 'all' : (category ? category : 'all')} fz={'14px'} links={tabsItems} /> */}
                 {/* <MyWorksMenu /> */}
-
+                
             </S.MenuBody>
 
 
@@ -121,7 +128,7 @@ export const MyWorks: FC = () => {
 
 
                     {worksFilterByCategory.map(({ description, image, title, id }) =>
-                        <motion.div layout key={id} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                        <motion.div  key={id} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} layout>
                             <Project key={id} image={image} description={description} title={title} />
 
                         </motion.div>
@@ -136,4 +143,4 @@ export const MyWorks: FC = () => {
         </Container>
     </S.MyWorks>
 
-}
+});

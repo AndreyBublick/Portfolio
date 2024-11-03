@@ -10,6 +10,7 @@ export const Error = () => {
 }
 
 const ErrorStyled = styled.div`
+padding-top:100px;
 font-weight: 700;
 font-size:100px;
 text-align:center;

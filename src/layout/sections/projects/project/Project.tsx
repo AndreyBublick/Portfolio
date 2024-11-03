@@ -1,6 +1,6 @@
 
 
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Icon } from '../../../../components/icon/Icon';
 import { S } from './Project_Styles';
@@ -12,7 +12,7 @@ type propsType = {
     description: string,
 };
 
-export const Project: FC<propsType> = ({ title, image, description }) => {
+export const Project: FC<propsType> = memo(({ title, image, description }) => {
     return <S.Project>
 
         <S.ProjectImage>
@@ -46,7 +46,7 @@ export const Project: FC<propsType> = ({ title, image, description }) => {
 
     </S.Project>
 
-}
+});
 
 
 
