@@ -98,7 +98,7 @@ export const MyWorks: FC = () => {
 
 
 
-        if ((category === 'all'||'Portfolio') || !category) {
+        if ((category === 'all'||category ==='Portfolio') || !category) {
             return worksArray;
         }
         return worksArray.filter((work) => TextToLowerCase(work.category) === TextToLowerCase(category));
