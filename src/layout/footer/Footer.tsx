@@ -6,8 +6,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import { GradientWord } from "../../components/GradientWord";
 import { Container } from "../../components/Container";
 import { S } from "./Footer_Styles";
-import { useWindowWidth } from "../../hooks/useWindowWidth";
-import { GoTop } from "../../components/goTop/GoTop";
+
 
 
 
