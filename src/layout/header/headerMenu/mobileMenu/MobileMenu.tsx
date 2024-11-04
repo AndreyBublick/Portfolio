@@ -27,9 +27,9 @@ export const MobileMenu: FC<propsType> = ({ links }) => {
 
 
     return <>
-        <S.Burger onClick={onCkickBurger} isShow={isShow}><span></span></S.Burger>
+        <S.Burger aria-haspopup={true} aria-controls="menu" onClick={onCkickBurger} isShow={isShow}><span></span></S.Burger>
 
-         <S.Popup onClick={()=>{setIsShow(false);body.current.style.overflow = 'auto';}} isShow={isShow}>
+         <S.Popup role="menu"  aria-modal={true} onClick={()=>{setIsShow(false);body.current.style.overflow = 'auto';}} isShow={isShow}>
                     <div  /* onClick={e => e.stopPropagation()} */ >
                     <Menu scrollTop links={links} />
                     <ListSocial />

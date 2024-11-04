@@ -112,7 +112,7 @@ export const MyWorks: FC = memo(() => {
             <SectionTitle>My Works</SectionTitle>
             <SectionSubTitle>Projects</SectionSubTitle>
             <S.MenuBody>
-            {tabsItems.map((item)=><S.MenuItem isActive = {item===category} onClick={()=>{setCategory(item)}}>
+            {tabsItems.map((item)=><S.MenuItem aria-label='Элемент фильтрации по проектам' key={item} isActive = {item===category} onClick={()=>{setCategory(item)}}>
             <S.ItemElement  to={''}>{item}</S.ItemElement>
             <S.Mask><span>{item}</span></S.Mask>
             <S.Mask><span>{item}</span></S.Mask>
