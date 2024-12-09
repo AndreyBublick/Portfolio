@@ -15,6 +15,7 @@ const Slide:FC<slidePropsType> = ({userEmail,description})=>{
             <S.SliderDescription>{description}</S.SliderDescription>
             <GradientWord>@{userEmail}</GradientWord>
             </>
+
     };
 
 export const Slider = () => {

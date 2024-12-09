@@ -29,7 +29,8 @@ export const Skills: FC = () => {
         {id:'GIT', viewBox:"0 0 105 105", width:105, height:105,
         },
         {id:'MAN', viewBox:"0 0 102 120", width:102, height:120, 
-        },{id:'VS', viewBox:"0 0 112 112", width:112, height:112,},
+        },
+        {id:'VS', viewBox:"0 0 112 112", width:112, height:112,},
         {id:'GIT_HUB', viewBox:"0 0 88 86", width:88, height:86,}
     ]);
 
