@@ -12,7 +12,7 @@ type propsType = {
 };
 
 export const font=({family,weight,color,lineHeight,fMin,fMax}:propsType)=>`
-font-family: ${family || 'Poppins'};
+font-family: ${family || 'Rubik'};
 font-weight: ${weight || 400};
 color: ${color || theme.colors.font};
 line-height: ${lineHeight || 1.2 };

@@ -2,10 +2,11 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/logo/Logo";
 import { ListSocial } from "../../components/listSocial/ListSocial";
 import { Menu } from "../../components/menu/Menu";
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useState } from "react";
 import { GradientWord } from "../../components/GradientWord";
 import { Container } from "../../components/Container";
 import { S } from "./Footer_Styles";
+import {useResize} from "../../hooks/useResize";
 
 
 
@@ -14,58 +15,15 @@ import { S } from "./Footer_Styles";
 
 
 export const Footer:FC = () => {
-    const [links, setLinks] = useState(['Home', 'About', 'Technologies', 'Projects', 'Contact',]);
-    const [isMobile, setIsMobile] = useState(false);
-   
- 
-const [linksContact,setLinksContact] = useState([{href:"tel:+91 12345 09876", title:'+91 12345 09876',},
-  {title:'info@example.com', href:"mailto:info@example.com"}]);
+    const [links] = useState(['Home', 'About', 'Technologies', 'Projects', 'Contact',]);
+
+const [linksContact] = useState([{href:"tel:+79892682290", title:'+7-989-268-22-90',},
+  {title:'shamara_andrey@mail.ru', href:"mailto:shamara_andrey@mail.ru"}]);
 
 
-   
 
-   /* useEffect(()=>{
-    if(!timer.current){
-     
-      
-      
-    
-      timer.current = setTimeout(()=>{
-        
-        
-        setIsShowGoTop(true);
-        
-        
-       },4000);
-    }
-    
-    return ()=>{
-      if(!timer.current){
-  clearInterval(timer.current);
-} 
-};
-   },[]); */
-   
+   const isMobile =  useResize();
 
-
-    useEffect(() => {
-         const resizeWindow = () => {
-           if(window.innerWidth<=768){
-             setIsMobile(true);
-           }
-           else{
-             setIsMobile(false);
-    
-           }
-         };
-     
-         window.addEventListener('resize', resizeWindow);
-         resizeWindow(); // Инициализация при монтировании
-     
-         return () => {
-           window.removeEventListener('resize', resizeWindow);
-         };
-       }, []);
     return <S.Footer>
      
         <Container>
@@ -83,8 +41,8 @@ const [linksContact,setLinksContact] = useState([{href:"tel:+91 12345 09876", ti
                         <S.MaskEffect><span>{link.title}</span></S.MaskEffect>
                         <S.MaskEffect><span>{link.title}</span></S.MaskEffect>
                       </S.Link>)}
-                        
-                      
+
+
 
                         {!isMobile && <ListSocial />} 
                     </S.LinksWrapper>
@@ -93,7 +51,7 @@ const [linksContact,setLinksContact] = useState([{href:"tel:+91 12345 09876", ti
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
                  <Menu scrollTop links={links} fz={'18px'} /> 
 
-                    <S.PS>  <S.Mask>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></S.Mask> <GradientWord><S.UsualText>Designed and built by</S.UsualText> Pavan MG <S.UsualText>with</S.UsualText> Love <S.UsualText>&</S.UsualText> Coffee</GradientWord> </S.PS>
+                    <S.PS>  <S.Mask>Спроектировано <span>Андрей Ш.Р</span> на <span>Вдохновении</span> & <span>Кофе</span></S.Mask> <GradientWord><S.UsualText>Спроектировано</S.UsualText> Андрей Ш.Р <S.UsualText>на</S.UsualText> Вдохновении <S.UsualText>&</S.UsualText> Кофе</GradientWord> </S.PS>
 
                 </FlexWrapper>
             </FlexWrapper>

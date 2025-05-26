@@ -2,14 +2,14 @@ import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import { S } from './Menu_Styles';
 import { TextToLowerCase } from '../../utils/utils';
-import { categoryType } from '../../layout/sections/myWorks/MyWorks';
+import { Categories } from '../../layout/sections/myWorks/MyWorks';
 import { useScrollTop } from '../../hooks/scrollTop';
 
 
 type propsType = {
     links: Array<string>,
     fz?: string,
-    activeElement?: categoryType,
+    activeElement?: Categories,
     scrollTop?:boolean,
 
 };

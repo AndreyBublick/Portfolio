@@ -7,37 +7,18 @@ import { Container } from '../../components/Container';
 import { S } from './Header_Styles';
 import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
 import { MobileMenu } from './headerMenu/mobileMenu/MobileMenu';
+import {useResize} from "../../hooks/useResize";
 
 
 
 export const Header: FC = () => {
 
-   const [links, setLinks] = useState(['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]);
-   const [isMobile, setIsMobile] = useState(false);
+   const [links] = useState(['Home', 'About', 'Tech Stack', 'Projects', 'Contact',]);
    const [isShowSocial, setIsShowSocial] = useState(true);
 
-  
 
+   const isMobile =  useResize();
 
-
-   useEffect(() => {
-      const resizeWindow = () => {
-         if (window.innerWidth <= 768) {
-            setIsMobile(true);
-         }
-         else {
-            setIsMobile(false);
-
-         }
-      };
-
-      window.addEventListener('resize', resizeWindow);
-      resizeWindow(); // Инициализация при монтировании
-
-      return () => {
-         window.removeEventListener('resize', resizeWindow);
-      };
-   }, []);
    useEffect(() => {
       const onResizeWindow = () => {
          if (window.innerWidth <= 1200) {

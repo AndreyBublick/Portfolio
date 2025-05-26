@@ -7,8 +7,6 @@ import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { GradientWord } from "../../../components/GradientWord";
 const Image = styled.div`
-
-/* margin:0 auto; */
     
     border-radius:50%;
     overflow:hidden;
@@ -42,6 +40,7 @@ img{
     height: 100%;
     left: 0;
     object-fit:cover;
+    object-position: center 38%;
 }
 }
 `;

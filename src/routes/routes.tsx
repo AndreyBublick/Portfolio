@@ -2,10 +2,10 @@ import { ContactForm } from "../layout/sections/сontactForm/ContactForm";
 import { AboutMe } from "../layout/sections/aboutMe/AboutMe";
 import { MailMe } from "../layout/sections/mailMe/MailMe";
 import { Main } from "../layout/sections/main/Main";
-import { Projects } from "../layout/sections/projects/Projects";
 import { Skills } from "../layout/sections/skills/Skills";
 import { Home } from "../pages/home/Home";
 import { Error } from "../components/error/Error";
+import {MyWorks} from "../layout/sections/myWorks/MyWorks";
 
 export const routes = [{
     path:'/main',
@@ -23,7 +23,7 @@ export const routes = [{
     element:<Skills />,
 },{
     path:'/projects',
-    element:<Projects />,
+    element:<MyWorks />,
 },
 {
     path:'/contact',

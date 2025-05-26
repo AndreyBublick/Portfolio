@@ -1,18 +1,15 @@
 
 
-import { FC, memo } from 'react'
+import { memo } from 'react'
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { Icon } from '../../../../components/icon/Icon';
 import { S } from './Project_Styles';
+import type {Work} from "../MyWorks";
 
 
-type propsType = {
-    title: string,
-    image: string,
-    description: string,
-};
+type Props = Omit<Work,'category'>;
 
-export const Project: FC<propsType> = memo(({ title, image, description }) => {
+export const Project = memo(({ title, image, description, link,gitLink }:Props) => {
     return <S.Project>
 
         <S.ProjectImage>
@@ -28,12 +25,12 @@ export const Project: FC<propsType> = memo(({ title, image, description }) => {
             <S.ProjectLinks>
                 <FlexWrapper gap={50} alignItems={'center'} >
                     
-                        <S.LinkIconChain aria-label='ссылка live preview' href={'#'} target={'_blank'}>
+                        <S.LinkIconChain aria-label='ссылка live preview' href={gitLink} target={'_blank'}>
                         <Icon id={'chain'} height={20} width={20} viewBox={"0 0 20 20"} />live preview
                         </S.LinkIconChain>
 
 
-                        <S.LinkIconGitHub aria-label='ссылка view code' href={'#'} target={'_blank'}>
+                        <S.LinkIconGitHub aria-label='ссылка view code' href={link} target={'_blank'}>
                         <Icon id={'SMALL_GIT_HUB'} height={20} width={20} viewBox={"0 0 20 20"} />view code
                         </S.LinkIconGitHub>
                        

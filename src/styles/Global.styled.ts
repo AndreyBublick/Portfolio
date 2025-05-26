@@ -60,7 +60,7 @@ body{
   background-color:${theme.colors.primaryBg};
   color:${theme.colors.font};
    overflow-x:hidden;
-  font-family: 'Poppins','DM Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Rubik','DM Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
