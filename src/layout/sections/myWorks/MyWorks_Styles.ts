@@ -26,8 +26,8 @@ const Mask = styled.span`
   }
 
   &:first-of-type {
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
 
     & > span {
       top: 50%;
@@ -47,34 +47,40 @@ const Mask = styled.span`
 `;
 
 const Works = styled(FlexWrapper)`
-/* transition:0.2s; */
+    /* transition:0.2s; */
 
 
-&>div{
-   display:flex;
+    & > div {
+        display: flex;
 
-flex:1 0 380px;
-max-width:calc(50% - 15px);
-@media screen and (max-width:850px) {
-    flex:1 0  calc(340px);  
-}
- @media ${theme.media.tablet} {
+        flex: 0 0 calc(33.33% - 20px); 
+
+        max-width: calc(50% - 15px);
+        @media screen and (max-width: 850px) {
+            flex: 1 0 calc(340px);
+        }
+        @media ${theme.media.tablet} {
     
-    flex:1 0  calc(50% - 15px);  
-    
-}
+            flex: 1 0 calc(50% - 15px);
 
-@media ${theme.media.mobile} {
-    flex:0 0  100%;  
-max-width:100%;
-}
-}
+        }
 
-@media ${theme.media.tablet} {
-    gap:30px;
-    justify-content:space-between;
-    
-}
+        @media ${theme.media.mobile} {
+
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    & > div > div {
+        flex: 1;
+    }
+
+    @media ${theme.media.tablet} {
+        gap: 30px;
+        justify-content: space-between;
+
+    }
 `;
 
 const ItemElement = styled(Link)`
@@ -84,8 +90,8 @@ const ItemElement = styled(Link)`
     display: inline-block;
     color: transparent;
     &::before {
-      transition: inherit;
     content: "";
+      transition: inherit;
     position: absolute;
     z-index: 1;
     pointer-events: none;
@@ -107,7 +113,8 @@ const MenuItem = styled.li<{isActive:boolean}>`
 
 
     display:block;
-    width:content;
+  /*  width:100%;*/
+    
     text-transform: uppercase;
     white-space: nowrap;
     font-size:20px;

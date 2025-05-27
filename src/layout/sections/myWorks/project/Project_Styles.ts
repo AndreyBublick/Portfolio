@@ -10,9 +10,17 @@ const LinkIconGitHub = styled.a`
 `;
 const LinkIconChain = styled.a`
 
-
-
-
+    align-items: center;
+    line-height: 0;
+svg{
+transform: rotate(-90deg);
+position: relative;
+    right: -5px;
+    top: -2px;
+}
+&>span{
+    
+}
  
 `;
 
