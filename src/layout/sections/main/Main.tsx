@@ -35,13 +35,9 @@ export const Main: FC = () => {
 
                 <Zoom>
                     <Tilt scale={1.1} transitionSpeed={2500}>
-
                         <S.Image>
-
-
                             <div>
                                 <img src={man} alt={'Pavan MG'}/>
-
                             </div>
 
                         </S.Image>
