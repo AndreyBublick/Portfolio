@@ -4,7 +4,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import { App } from './App';
-import { BrowserRouter } from 'react-router-dom';
+import {HashRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/Global.styled';
 
 const root = ReactDOM.createRoot(
@@ -13,13 +13,13 @@ const root = ReactDOM.createRoot(
 root.render(
 
   <React.StrictMode>
-    <BrowserRouter basename={'/'}>
+    <HashRouter basename={'/'}>
 
     <GlobalStyles />
 
       <App />
 
-    </BrowserRouter>
+    </HashRouter>
 
   </React.StrictMode>
 );
