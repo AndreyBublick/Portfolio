@@ -24,9 +24,9 @@ export const Slider = () => {
 
     const items = [
         
-        <Slide userEmail={'ivan ivanov'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} />,
-        <Slide userEmail={'fedor fedorovich'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>,
-        <Slide userEmail={'vector vectorovich'} description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>,
+        <Slide userEmail={'Анна, Ментор'} description={'«Андрей выделялся среди других студентов глубоким пониманием React и TypeScript. Всегда предлагал нестандартные, но рабочие решения. Уверен, что станет ценным специалистом в любой команде.»'} />,
+        <Slide userEmail={'Анна, студент курса Frontend'} description={'«Работали вместе над учебным проектом. Андрей ответственно подходит к задачам, всегда готов помочь разобраться с проблемой. Приятно было сотрудничать.»'}/>,
+        <Slide userEmail={'Екатерина, участник команды'} description={'«Когда мы работали в группе над итоговым проектом, Андрей взял на себя сложную часть с настройкой роутинга и сделал всё качественно.»'}/>,
         
     ];
 

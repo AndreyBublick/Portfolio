@@ -11,23 +11,25 @@ type propsType = {
     date: experienceType['date'],
     title: experienceType['title'],
     location: experienceType['location'],
-    buttonBody: experienceType['buttonBody'],
+    linkBody: experienceType['linkBody'],
 };
 
 
-export const Experience: FC<propsType> = ({ date, buttonBody, location, title }) => {
+export const Experience: FC<propsType> = ({ date, linkBody, location, title }) => {
     return (
         <S.Experience>
             <S.ExperienceHeader gap={10} alignItems={'flex-start'} justifyContent={'space-between'}>
                 <S.ExperienceTitle>{title}</S.ExperienceTitle>
-                <S.ExperienceButton>{buttonBody}</S.ExperienceButton>
+                <S.ExperienceLink to={linkBody}>Перейти</S.ExperienceLink>
             </S.ExperienceHeader>
 
 
 
             <S.ExperienceFooter alignItems={'flex-start'} justifyContent={'space-between'}>
                 <FlexWrapper justifyContent={'space-between'} flexWrap={'wrap'} alignItems={'center'} gap={8} >
-                    <S.Item alignItems={'center'} gap={8}><Icon id={'smallBuilding'} width={8} height={10} viewBox={'viewBox="0 0 8 10'} /* color={'transparent'} */ /> <span>{location.building}</span></S.Item>
+                    <S.Item alignItems={'center'} gap={8}>
+                        <Icon id={'smallBuilding'} width={8} height={10} viewBox={'viewBox="0 0 8 10'} /* color={'transparent'} */ /> <span>{location.building}</span>
+                    </S.Item>
                     {location.country !== '' && <S.Item alignItems={'center'} gap={8}> <Icon id={'map'} viewBox={'0 0 12 12'} width={12} height={12} /><span>{location.country}</span></S.Item>}
                 </FlexWrapper>
                 <S.Item gap={8} alignItems={'center'} justifyContent={'flex-end'}>

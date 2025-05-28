@@ -8,9 +8,8 @@ import { Bounce, Fade } from 'react-awesome-reveal';
 
 export const Skills: FC = () => {
 
-    const [skills, setSkills] = useState([
-        {
-            id: 'HTML', viewBox: "0 0 120 120", width: 120, height: 120,
+    const [skills] = useState([
+        {id: 'HTML', viewBox: "0 0 120 120", width: 120, height: 120,
         },
         {id:'CSS', viewBox:"0 0 120 119", width:120, height:119,
         },
@@ -36,8 +35,8 @@ export const Skills: FC = () => {
     return <S.Skills>
         <Container>
 
-            <SectionTitle>My Tech Stack</SectionTitle>
-            <SectionSubTitle mBottom={'124px'}> Technologies I’ve been working with recently</SectionSubTitle>
+            <SectionTitle>Мой Tech Stack</SectionTitle>
+            <SectionSubTitle mBottom={'124px'}>Технологии, с которыми я работал</SectionSubTitle>
             <S.SkillsWrapper >
                 <Bounce  cascade={true} damping={0.15} triggerOnce={true} /* duration={400} */>
                 {skills.map(({height,id,viewBox,width})=> <Skill id={id} height={height} key={id} viewBox={viewBox} width={width} />)}

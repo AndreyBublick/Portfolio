@@ -13,8 +13,8 @@ import { Slider } from '../../../components/slider/Slider';
 export const Testimony = () => {
     return <S.Testimony>
         <Container>
-            <SectionTitle>Testimony</SectionTitle>
-            <SectionSubTitle>Mony</SectionSubTitle>
+            <SectionTitle>Рекомендации коллег</SectionTitle>
+            <SectionSubTitle>с предыдущего проекта</SectionSubTitle>
           
             <S.TestimonyWrapper flexDirection={'column'} alignItems={'center'}>
                 <S.IconWrapper>

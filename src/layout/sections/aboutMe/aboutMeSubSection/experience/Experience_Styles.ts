@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { font } from "../../../../../styles/Common";
 import { theme } from "../../../../../styles/theme";
 import { FlexWrapper } from "../../../../../components/FlexWrapper";
+import {Link} from "react-router-dom";
 
 const ExperienceTitle = styled.h3`
   letter-spacing: 1px;
@@ -11,13 +12,13 @@ const ExperienceTitle = styled.h3`
   margin-bottom: 8px;
 `;
 
-const ExperienceButton = styled.button`
+const ExperienceLink = styled(Link)`
   font-size: 9px;
   font-weight: 600;
   line-height: calc(24 / 9);
-  /* padding:0 22px; */
   min-width: 84px;
   white-space: nowrap;
+  text-align: center;
 
   color: ${theme.colors.buttonExperience.color};
   border-radius: 3em;
@@ -36,6 +37,7 @@ const Experience = styled.div`
   border-bottom: 2px solid ${theme.colors.border};
 `;
 const Item = styled(FlexWrapper)`
+  align-self: center;///
   svg {
     width: 12px;
   }
@@ -44,7 +46,8 @@ const Item = styled(FlexWrapper)`
   }
 `;
 
-const ExperienceHeader = styled(FlexWrapper)``;
+const ExperienceHeader = styled(FlexWrapper)`
+padding-right: 5px`;
 const ExperienceFooter = styled(FlexWrapper)`
   & > ${FlexWrapper} {
     & > ${Item}:nth-of-type(2) {
@@ -70,7 +73,7 @@ const ExperienceFooter = styled(FlexWrapper)`
 
 export const S = {
   ExperienceTitle,
-  ExperienceButton,
+  ExperienceLink,
   Experience,
   Item,
   ExperienceHeader,

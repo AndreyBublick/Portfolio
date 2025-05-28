@@ -16,7 +16,7 @@ import { theme } from '../../../styles/theme';
 export type experienceType = {
 
   title: string,
-  buttonBody: 'Full Time' | 'Internship',
+  linkBody: string,
   date: string,
   location: {
     building: string,
@@ -35,7 +35,7 @@ export const AboutMe: FC = () => {
   const [workExperiences, setWorkExperiences] = useState<Array<experienceType>>([
     {
       title: 'Junior Web Developer',
-      buttonBody: 'Full Time',
+      linkBody: 'Full Time',
       date: 'Sep 2021 - Dec 2021',
       location: {
         building: 'Dr. Rajkumar’s Learning App',
@@ -44,7 +44,7 @@ export const AboutMe: FC = () => {
     },
     {
       title: 'Web Development Intern',
-      buttonBody: 'Internship',
+      linkBody: 'Internship',
       date: 'Sep 2021 - Dec 2021',
       location: {
         building: 'IonPixelz Web Solutions',
@@ -53,22 +53,32 @@ export const AboutMe: FC = () => {
     },
     {
       title: 'SEO / SEM Specialist',
-      buttonBody: 'Internship',
+      linkBody: 'Internship',
       date: 'Sep 2021 - Dec 2021',
       location: {
         building: 'HAAPS',
         country: 'Bengaluru',
       },
     },]);
-  const [educations, setEducations] = useState<Array<experienceType>>([
+  const [educations] = useState<Array<experienceType>>([
     {
-      title: 'Bachelor in Electronics & Communication',
-      buttonBody: 'Full Time',
-      date: 'Aug 2015 - Dec 2020',
+      title: 'Техник-Программист',
+      linkBody: 'https://ktyis.ru/',
+      date: 'Сентябрь 2018 - Июнь 2021',
       location: {
-        building: 'Bangalore Instutute of Technology',
+        building: 'Краснодарский техникум управления информатизации и сервиса',
         country: '',
       },
+
+    },
+    {
+      title: 'Учебное заведение в Минске',
+      linkBody: 'https://it-incubator.io/',
+      date: 'Октябрь 2024 - Март 2025',
+      location: {
+        building: 'IT-INCUBATOR',
+        country: '',
+      }
     }
   ]);
 
@@ -80,13 +90,16 @@ export const AboutMe: FC = () => {
     <Container>
       <FlexWrapper  gap={theme.margins.subSection} flexDirection={'column'}>
         <div>
-        <SectionTitle mBottom = {`${theme.margins.subSection}px`}>About Me</SectionTitle>
-        <S.AboutMeDescription>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</S.AboutMeDescription>
+        <SectionTitle mBottom = {`${theme.margins.subSection}px`}>Обо мне</SectionTitle>
+        <S.AboutMeDescription>Frontend-разработчик с опытом создания адаптивных и производительных веб-приложений.
+          Специализируюсь на <b>React</b>, <b>TypeScript</b> и современных инструментах  (<b>Next.js, RTK Query, Vite</b>).
+          Умею превращать дизайн в чистый код, уделяя внимание <b>UX</b>, доступности и оптимизации.
+          Люблю сложные задачи и изучать новые технологии</S.AboutMeDescription>
 
         </div>
         
-        <AboutMeSubSection title={'Work Experience'} experiences={workExperiences} />
-        <AboutMeSubSection title={'Education'} experiences={educations} />
+        {/*<AboutMeSubSection title={'Work Experience'} experiences={workExperiences} />*/}
+        <AboutMeSubSection title={'Образование'} experiences={educations} />
 
 
       </FlexWrapper>

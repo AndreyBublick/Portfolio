@@ -1,18 +1,11 @@
-
-
-
-
-
-import React, { FC } from 'react'
+import React, {FC} from 'react'
 import styled from 'styled-components'
-import { SectionTitle } from '../../../../components/SectionTitle';
-import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { Experience } from './experience/Experience';
-import { experienceType } from '../AboutMe';
-import { Bounce, Fade, Hinge, Roll, Rotate, Slide, Zoom } from 'react-awesome-reveal';
-import { theme } from '../../../../styles/theme';
-
-
+import {SectionTitle} from '../../../../components/SectionTitle';
+import {FlexWrapper} from '../../../../components/FlexWrapper';
+import {Experience} from './experience/Experience';
+import {experienceType} from '../AboutMe';
+import {Slide} from 'react-awesome-reveal';
+import {theme} from '../../../../styles/theme';
 
 
 type propsType = {
@@ -27,7 +20,7 @@ export const AboutMeSubSection:FC<propsType> = ({title,experiences}) => {
 
             <FlexWrapper gap={35} flexDirection={'column'}>
                 <Slide cascade={true} damping={0.3} triggerOnce={true}>
-                {experiences.map(({buttonBody,date,location,title},index)=> <Experience key={index} buttonBody={buttonBody} date={date} location={location} title={title} /> )}
+                {experiences.map(({linkBody,date,location,title},index)=> <Experience key={index} linkBody={linkBody} date={date} location={location} title={title} /> )}
 
                 </Slide>
                 

@@ -69,8 +69,8 @@ const name = e.target.name;
 <S.ContactForm>
       <Container>
 
-        <SectionTitle>Contact</SectionTitle>
-        <SectionSubTitle>Send Me</SectionSubTitle>
+        <SectionTitle>Контакт</SectionTitle>
+        <SectionSubTitle>Написать мне прямо сейчас</SectionSubTitle>
         <S.Form onSubmit={handleSubmit}>
           
         <FlexWrapper alignItems={'center'} gap={40} flexDirection={'column'}>
