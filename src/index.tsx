@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { App } from './App';
 import {HashRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/Global.styled';
-import 'focus-visible'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
