@@ -23,9 +23,8 @@ export const Menu: FC<propsType> = ({ scrollTop,links, fz, activeElement }) => {
     
     
 
-    return <S.Menu >
+    return <S.Menu>
         <S.List >
-
             {links.map((link) => scrollTop ? <S.MenuItem fz={fz} onClick={onClickAnchor} isActive={activeElementLowerCase === `${TextToLowerCase(link)}`} key={link}>
                 
                 <NavLink className={({isActive})=> isActive ? '_active' : ''} to={`/${TextToLowerCase(link) !=='home' ? TextToLowerCase(link):''}`}>{link}   

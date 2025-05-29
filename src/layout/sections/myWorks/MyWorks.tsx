@@ -161,7 +161,7 @@ export const MyWorks: FC = memo(() => {
 
 
 
-    const tabsItems: Categories[] = ['all', 'lp', 'react','spa'];
+    const tabsItems: Categories[] = ['all', 'lp', 'react','spa','pet prj'];
 
     const worksFilterByCategory = useMemo(() => {
         if ((category === 'all'||category ==='Portfolio') || !category) {

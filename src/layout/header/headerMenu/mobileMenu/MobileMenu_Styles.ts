@@ -97,15 +97,34 @@ const Popup = styled.div<burgerPropsType>`
     background-color: ${theme.colors.primaryBg};
     opacity: 0.9;
   }
-
+& > div{
+    width: 100%;
+    @media screen and (max-width: 1050px) {
+        overflow-y: auto;
+    };
+}
   nav {
     transition: 0.3s 0.3s;
     margin-bottom: 25px;
+     
+      
     
     ${(props) => !props.isShow && css<burgerPropsType>`
         margin-bottom: 0px;
 
         `};
+
+      @media screen and (max-width: 1050px) {
+        & + ul{
+        justify-content: center;
+        padding-bottom: 20px;
+    
+}
+         
+              padding-top: 20px;
+         
+      };
+      
   }
   nav > ul {
     height: inherit;
@@ -120,7 +139,11 @@ const Popup = styled.div<burgerPropsType>`
     ${(props) => !props.isShow && css<burgerPropsType>`
         gap: 0px;
         `};
+     
   }
+
+
+    
 `;
 
 export const S = {

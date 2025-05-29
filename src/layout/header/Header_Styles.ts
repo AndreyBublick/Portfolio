@@ -13,7 +13,7 @@ z-index:999;
 width:100%;
 
 color:${theme.colors.font};
-padding:40px 0px;
+padding:15px 0px;
 background-color:${theme.colors.primaryBg};
 
 font-size:20px;
@@ -22,30 +22,30 @@ font-size:20px;
 
      
 
-
-
-
-
-@media ${theme.media.tablet} {
-   ${FlexWrapper}{
-      align-items:center;
-   }
-   
+&>div>div>div:first-of-type{
+display:flex;
+    align-items: center;    
 }
 
 
 
-   
 
-   
+@media screen and (max-width: 1050px) {
+    
+  
+    div > div> div{
 
-@media ${theme.media.tablet}{
-   padding:20px 0px;
+        align-self: center;
+    }
 }
+    
 @media ${theme.media.mobile}  {
-   padding:10px 0px;
-}
 
+    padding:10px 0;
+}
+    
+    
+  
 `;
 
 const LinksWrapper = styled(FlexWrapper)`
@@ -55,4 +55,5 @@ const LinksWrapper = styled(FlexWrapper)`
 export const S = {
     Header,
     LinksWrapper,
+
 };

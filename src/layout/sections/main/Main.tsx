@@ -22,7 +22,7 @@ export const Main: FC = () => {
 
                     Привет <S.Hand><JackInTheBox triggerOnce>👋</JackInTheBox></S.Hand><S.Dot>,</S.Dot><br/>
                     <Bounce triggerOnce delay={200}> Меня зовут</Bounce>
-                    <Bounce triggerOnce delay={400}><GradientWord>Андрей Ш.Р</GradientWord></Bounce>
+                    <Bounce triggerOnce delay={400}><GradientWord>Шамара А.Р</GradientWord></Bounce>
                     <Typewriter
                         options={{
                             strings: ['Я делаю Веб-материю', 'Я воплощаю идеи'],

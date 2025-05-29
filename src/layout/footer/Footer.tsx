@@ -51,7 +51,7 @@ const [linksContact] = useState([{href:"tel:+79892682290", title:'+7-989-268-22-
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
                  <Menu scrollTop links={links} fz={'18px'} /> 
 
-                    <S.PS>  <S.Mask>Спроектировано <span>Андрей Ш.Р</span> на <span>Вдохновении</span> & <span>Кофе</span></S.Mask> <GradientWord><S.UsualText>Спроектировано</S.UsualText> Андрей Ш.Р <S.UsualText>на</S.UsualText> Вдохновении <S.UsualText>&</S.UsualText> Кофе</GradientWord> </S.PS>
+                    <S.PS>  <S.Mask>Спроектировано <span>Шамара А.Р</span> на <span>Вдохновении</span> & <span>Кофе</span></S.Mask> <GradientWord><S.UsualText>Спроектировано</S.UsualText> Шамара А.Р <S.UsualText>на</S.UsualText> Вдохновении <S.UsualText>&</S.UsualText> Кофе</GradientWord> </S.PS>
 
                 </FlexWrapper>
             </FlexWrapper>

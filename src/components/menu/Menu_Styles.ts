@@ -46,7 +46,9 @@ const Mask = styled.span`
   }
 `;
 
-const Menu = styled.nav``;
+const Menu = styled.nav`
+    
+`;
 
 const List = styled.ul<MenuStyledPorpsType>`
   display: flex;
@@ -55,6 +57,7 @@ const List = styled.ul<MenuStyledPorpsType>`
   @media screen and (max-width: 900px) {
     gap: 35px;
   }
+    
 `;
 
 const MenuItem = styled.li<{ isActive?: boolean } & MenuStyledPorpsType>`
