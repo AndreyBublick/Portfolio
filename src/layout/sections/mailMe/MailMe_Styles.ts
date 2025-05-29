@@ -16,7 +16,11 @@ ${GradientWord}{
 letter-spacing: 0.5px;
 
 };
-
+    @media (max-width: 600px) { 
+       /* display:none;*/
+        white-space: wrap;
+        word-break: break-word;
+    }
 }
 `;
 export const S = {

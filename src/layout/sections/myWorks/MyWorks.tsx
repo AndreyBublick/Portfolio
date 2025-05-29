@@ -22,7 +22,7 @@ import image11 from '.././../../assets/images/11.webp';
 import {Project} from './project/Project';
 import {AnimatePresence, motion} from "framer-motion"
 
-export type Categories = 'spa' | 'all' | 'react' | 'landing page'|'Portfolio' | 'pet project';
+export type Categories = 'spa' | 'all' | 'react' | 'lp'|'Portfolio' | 'pet prj';
 
 export type Work = {
     title: string,
@@ -56,7 +56,7 @@ export const MyWorks: FC = memo(() => {
             title: 'PUNK',
             description: 'Сайт визитка для компании занимающейся неоновым искусством',
             image: image2,
-            category: 'landing page',
+            category: 'lp',
             techStack:'HTML, JavaScript, SASS',
         },
         {
@@ -76,7 +76,7 @@ export const MyWorks: FC = memo(() => {
             title: 'GREENCO',
             description: 'Сайт карточка, для цветочного магазина',
             image: image4,
-            category: 'landing page',
+            category: 'lp',
             techStack:'HTML, JavaScript, SASS',
         },
         {
@@ -96,7 +96,7 @@ export const MyWorks: FC = memo(() => {
             title: 'Cozy House',
             description: 'Main page для приюта Cozy House',
             image: image6,
-            category: 'landing page',
+            category: 'lp',
              techStack:'HTML, SASS',
         },
         {
@@ -106,7 +106,7 @@ export const MyWorks: FC = memo(() => {
             title: 'Text Shadow generator',
             description: 'Проект для генерации теневых стилей для текста',
             image: image7,
-            category: 'pet project',
+            category: 'pet prj',
              techStack:'HTML, JavaScript, SASS',
         },
         {
@@ -116,7 +116,7 @@ export const MyWorks: FC = memo(() => {
             title: 'Метакуб-RGB',
             description: 'Метакуб меняющий цвет при наведении',
             image: image8,
-            category: 'pet project',
+            category: 'pet prj',
              techStack:'HTML, SASS',
         },{
             id: 9,
@@ -125,7 +125,7 @@ export const MyWorks: FC = memo(() => {
             title: 'Counter',
             description: 'Счётчик чисел в указанном диапазоне',
             image: image9,
-            category: 'pet project',
+            category: 'pet prj',
              techStack:'HTML, JavaScript, SASS, React',
         },
         {
@@ -135,7 +135,7 @@ export const MyWorks: FC = memo(() => {
             title: 'Cuba',
             description: 'Шаблонная карточка сайта для Cuba',
             image: image10,
-            category: 'landing page',
+            category: 'lp',
              techStack:'HTML, SASS',
         },
         {
@@ -161,7 +161,7 @@ export const MyWorks: FC = memo(() => {
 
 
 
-    const tabsItems: Categories[] = ['all', 'landing page', 'react','spa',"pet project"];
+    const tabsItems: Categories[] = ['all', 'lp', 'react','spa'];
 
     const worksFilterByCategory = useMemo(() => {
         if ((category === 'all'||category ==='Portfolio') || !category) {
