@@ -12,7 +12,6 @@ export type propsIconType = {
 };
 
 /**/
-/**/
 
 export const Icon: FC<propsIconType> = ({ id, width, height, viewBox, color }) => {
   return <S.Svg color={color} width={width} height={height} viewBox={viewBox}>
