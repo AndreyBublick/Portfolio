@@ -13,6 +13,7 @@ export type propsIconType = {
 
 /**/
 /**/
+
 /**/
 
 export const Icon: FC<propsIconType> = ({ id, width, height, viewBox, color }) => {
